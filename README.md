@@ -3,6 +3,12 @@
 <img width="1080" height="499" alt="de1c37eca6cc944c7d6f1e55c07d91ca" src="https://github.com/user-attachments/assets/b27f1769-e950-497d-abb2-7d0f620bc6b4" />
 
 <p align="center">
+[![GitHub stars](https://img.shields.io/github/stars/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/watchers)
+[![GitHub issues](https://img.shields.io/github/issues/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/commits/main/)
+
 A working HTML5 revival of <strong>1v1.LOL</strong>, based on <strong>v446.UNITY</strong>.
 </p>
 
