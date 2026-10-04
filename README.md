@@ -2,7 +2,7 @@
 <img width="1080" height="499" alt="de1c37eca6cc944c7d6f1e55c07d91ca" src="https://github.com/user-attachments/assets/b27f1769-e950-497d-abb2-7d0f620bc6b4" />
 
 <p align="center">
-A working HTML5 revival of <strong>1v1.LOL</strong>, based on <strong>v446.UNITY</strong>.
+A working HTML5 revival of <strong>1v1.LOL</strong>, based on <strong>v446.</strong>
 </p>
 
 [![GitHub stars](https://img.shields.io/github/stars/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/stargazers)
