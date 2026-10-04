@@ -4,32 +4,11 @@
   <script>!function(){try{if(localStorage.getItem("1v1_debug_console"))return;}catch(e){}var n=function(){};console.log=n;console.info=n;console.debug=n;console.warn=n;console.trace=n;console.table=n;console.group=n;console.groupEnd=n;console.time=n;console.timeEnd=n;}();</script>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reloaded v446</title>
+  <title>1v1:Reloaded v446</title>
   <link rel="icon" type="image/png" sizes="32x32" href="https://ws.ankomstudios.com/icons/1v1lol/icon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="https://ws.ankomstudios.com/icons/1v1lol/icon.png">
   <meta name="robots" content="noindex, nofollow">
 
-  <!-- ★[2026-08-25] This page is the bare Unity shell: it is noindex, and hosts embed it in an
-       iframe. Anyone sharing it (fullscreen tab, a host copying the frame URL) used to unfurl a
-       leftover dev title with no image. Point every sharing signal at the LANDING instead, so the
-       share renders the real site and the ranking signal consolidates there rather than on a
-       noindex shell. -->
-  <link rel="canonical" href="https://1v1lolreloaded.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://1v1lolreloaded.com/">
-  <meta property="og:site_name" content="1v1.LOL RELOADED">
-  <meta property="og:title" content="1v1.LOL RELOADED - Play Free Online">
-  <meta property="og:description" content="Play 1v1.LOL free in your browser: Battle Royale, ranked 1v1 Clash, Box Fight and Zone Wars. No download, no signup, live servers.">
-  <meta property="og:image" content="https://1v1lolreloaded.com/logo.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="1v1.LOL RELOADED - Play Free Online">
-  <meta name="twitter:description" content="Play 1v1.LOL free in your browser. No download, no signup, live servers.">
-  <meta name="twitter:image" content="https://1v1lolreloaded.com/logo.png">
-  <!-- ★2026-06-21 showcase console hygiene + clean tab title: on the PUBLIC build (non-localhost) silence the
-       dev/mock console spam (keep warn/error for real issues) and use a clean tab title. Runs FIRST, before the
-       mocks/firebase/Unity load. Localhost dev is untouched → full logs + the descriptive build title kept. -->
   <script>
     (function () {
       var h = location.hostname;
@@ -467,40 +446,6 @@
         frames = 0; sumDur = 0; maxDur = 0; longFrames = 0; sumGap = 0; maxGap = 0;
       }, 3000);
       console.log('%c[FRAME] rAF frame-timing instrumentation installed', 'color:#0a0');
-    })();
-  </script>
-
-  <script>
-    // "Powered by" banner, only inside an iframe on EXTERNAL sites (ported verbatim from the 3.8 game page
-    // root index.html:205-232; lost in the Chapter 2 page migration). On our own landing (apex iframes the
-    // game same-hostname) the banner stays hidden; on a third-party embed the cross-origin parent access
-    // throws → isExternal=true → banner links back to 1v1lolreloaded.com.
-    (function() {
-      if (window.parent === window) return; // not in iframe
-      var isExternal = false;
-      try { isExternal = window.parent.location.hostname !== window.location.hostname; } catch(e) { isExternal = true; }
-      if (!isExternal) return;
-
-      var b = document.createElement('a');
-      b.href = 'https://1v1lolreloaded.com';
-      b.target = '_blank';
-      b.rel = 'noopener';
-      b.style.cssText = 'position:fixed;bottom:8px;left:8px;z-index:99999;display:flex;align-items:center;gap:8px;padding:6px 12px;background:rgba(0,0,0,0.75);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.1);border-radius:8px;text-decoration:none;font-family:\'Dimbo\',Impact,Arial,sans-serif;transition:opacity 0.3s,transform 0.3s;opacity:0.7;';
-      b.onmouseenter = function(){ b.style.opacity='1'; b.style.transform='scale(1.03)'; };
-      b.onmouseleave = function(){ b.style.opacity='0.7'; b.style.transform='scale(1)'; };
-
-      // Brand mini-logo: `1` white + `v` red + `1` white, matches landing hero
-      var icon = document.createElement('span');
-      icon.style.cssText = 'width:22px;height:22px;border-radius:4px;background:linear-gradient(135deg,#6366f1,#00d4ff);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:normal;color:#fff;font-family:\'Dimbo\',Impact,Arial,sans-serif;letter-spacing:0.5px;line-height:1;';
-      icon.innerHTML = '1<span style="color:#ef4444;">v</span>1';
-      b.appendChild(icon);
-
-      var txt = document.createElement('span');
-      txt.style.cssText = 'font-size:13px;color:rgba(255,255,255,0.85);letter-spacing:1px;line-height:1;font-family:\'Dimbo\',Impact,Arial,sans-serif;';
-      txt.innerHTML = 'Powered by <span style="color:#fff;">1<span style="color:#ef4444;">v</span>1.LOL</span> <span style="background:linear-gradient(135deg,#818cf8,#00d4ff,#b24dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;">RELOADED</span>';
-      b.appendChild(txt);
-
-      document.body.appendChild(b);
     })();
   </script>
 
