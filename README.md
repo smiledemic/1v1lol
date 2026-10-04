@@ -123,9 +123,9 @@ The game supports **keyboard + mouse** as well as **controller input**.
 
 The game includes cosmetic systems such as:
 
-* **Free skins**
+* **Free skins (watch ads)**
 * **LOL Pass**
-* **Daily Shop**
+* **Shop**
 * **Skin offers**
 * **Sprays**
 * **Emotes**
