@@ -1,0 +1,398 @@
+1v1lol BUILD - MISSING REFERENCES AUDIT
+=======================================
+Scanned: index.html, js/boot.js, js/bridges.js, js/cdn-mirror.js,
+         mocks/server-mock.js (string table decoded), mocks/firebase.js,
+         mocks/login.js, mocks/firebase-config.js, Build/WebGL.loader.js
+
+Files in the zip (10): index.html, weird.js, Build/WebGL.loader.js,
+  js/{boot,bridges,cdn-mirror}.js, mocks/{firebase,firebase-config,login,server-mock}.js
+
+----------------------------------------------------------------------
+A. LOCAL FILES REFERENCED BUT NOT PRESENT
+----------------------------------------------------------------------
+1. loader-ch2-bg.jpg
+   Referenced by : index.html:62  url('loader-ch2-bg.jpg')  (relative, next to index.html)
+   Purpose       : blurred Chapter-2 loading-screen backdrop (~96 KB jpg per the page comment)
+   Expected path : <build root>/loader-ch2-bg.jpg
+   If missing    : loading screen falls back to flat #0a0e1e. Cosmetic only.
+
+2. fonts/dimbo.ttf
+   Referenced by : index.html:43  url('/fonts/dimbo.ttf')  (ROOT-absolute, not relative)
+   Purpose       : "Dimbo" brand font for the loading logo, RELOADED text, CHAPTER badge,
+                   and the "Powered by" embed banner
+   Expected path : <web root>/fonts/dimbo.ttf  (served from the site root, outside this folder)
+   If missing    : falls back to Impact / Arial Black. Cosmetic only.
+
+3. StreamingAssets/   (entire directory)
+   Referenced by : js/boot.js:82  streamingAssetsUrl: 'StreamingAssets'
+   Purpose       : Unity/Addressables runtime data. server-mock.js recognises requests for
+                   catalog.json, settings.json, *.bundle, and /aa/ locale paths, so the game
+                   requests these at runtime.
+   Expected path : <build root>/StreamingAssets/...
+   Contents      : NOT knowable from the zip (no catalog present). Needs a copy from the
+                   original build or the CDN.
+
+----------------------------------------------------------------------
+B. CORE UNITY BUILD FILES (referenced by absolute CDN URL, not in the zip)
+----------------------------------------------------------------------
+Build/WebGL.loader.js is present locally. The three payloads it loads are not:
+
+4. https://cdn.1v1lolreloaded.com/Build/WebGL.data.c0de4610.unityweb
+   Referenced by : js/boot.js:79 (dataUrl)         Size: ~128 MB (per cdn-mirror.js)
+
+5. https://cdn.1v1lolreloaded.com/Build/WebGL.framework.js.c0de4610.unityweb
+   Referenced by : js/boot.js:80 (frameworkUrl)
+   SHA-256       : 2b62ca2583cef63914636f4a6de22866152cae9490b8475372d84406956678ff
+
+6. https://cdn.1v1lolreloaded.com/Build/WebGL.wasm.c0de4610.unityweb
+   Referenced by : js/boot.js:81 (codeUrl)         Size: ~63 MB (per cdn-mirror.js)
+   SHA-256       : 5b46c2fab82fc30b3091193cf2645a35da33cda2978bc53b0ffe6273487c0ab3
+
+   Self-hosting: either copy these three into Build/ and change the 3 URLs in boot.js to
+   relative paths, or keep the CDN. Note server-mock.js deliberately skips the mock for
+   cdn.1v1lolreloaded.com and any .unityweb/.bundle URL, so these must be real files.
+
+7. https://cdn.1v1lolreloaded.com/WebGL/<bundle files>   (~63 MB of addressables bundles)
+   Referenced by : js/cdn-mirror.js (rule: ^(Build|WebGL)/[^/]+$)
+   File names    : NOT in the zip; they come from the Addressables catalog.
+
+   Russian mirror (cdn-mirror.js, only active when framed by 1v1lol.ru):
+   https://1v1lol.ru/cdn446/Build/...   and   https://1v1lol.ru/cdn446/WebGL/...
+
+----------------------------------------------------------------------
+C. SERVER ENDPOINT NOT INCLUDED
+----------------------------------------------------------------------
+8. /api/v446/migrate_guest   (POST, root-relative)
+   Referenced by : js/bridges.js:159
+   Purpose       : migrates an install-ID guest to an anonymous Firebase account.
+   Needs         : a backend on the same origin. Without it the migration step reports
+                   a failure and the player stays a guest.
+
+----------------------------------------------------------------------
+D. REMOTE (NOT LOCAL) REFERENCES, FOR COMPLETENESS
+----------------------------------------------------------------------
+- https://www.gstatic.com/firebasejs/7.24.0/firebase-{app,auth,firestore,remote-config}.js
+- https://static.cloudflareinsights.com/beacon.min.js/... (analytics, optional)
+- https://1v1lolreloaded.com/logo.png (og:image / twitter:image, share previews only)
+- http://localhost:19099/cap (bridges.js:16, dev capture, only when localStorage 1v1_capture=1; ignore)
+
+----------------------------------------------------------------------
+E. NOTES
+----------------------------------------------------------------------
+- weird.js is in the zip but nothing references it (no <script> tag or string reference found).
+  It looks like an unpacked copy of the Unity framework JS (starts with function unityFramework(Module)).
+- All local scripts referenced by index.html exist: mocks/server-mock.js, mocks/firebase.js,
+  mocks/login.js, mocks/firebase-config.js, js/bridges.js, js/cdn-mirror.js,
+  Build/WebGL.loader.js, js/boot.js.
+- server-mock.js and firebase-config.js are string-obfuscated; they were decoded and no
+  additional local file paths turned up beyond the ones above. firebase-config.js only
+  names offer banners (Offer_13.png etc.) as values, with no path attached.
+
+MINIMUM TO RUN FULLY OFFLINE/SELF-HOSTED
+  Build/WebGL.data.c0de4610.unityweb, Build/WebGL.framework.js.c0de4610.unityweb,
+  Build/WebGL.wasm.c0de4610.unityweb, StreamingAssets/ (catalog + bundles),
+  then edit js/boot.js:79-81 to point at local paths.
+
+======================================================================
+G. API / WEBSOCKET AUDIT (offline build) - added after decoding all 3 obfuscated mocks
+======================================================================
+Method: decoded the string tables of mocks/server-mock.js, firebase-config.js, login.js,
+firebase.js and searched every endpoint. Nothing here was tested against the live server.
+
+CORRECTION to section A.3: the "catalog.json / settings.json / .bundle / /aa/" strings in
+server-mock.js are only console diagnostic labels, not mock handlers. StreamingAssets is
+still referenced by boot.js, but server-mock does not serve it.
+
+G1. HTTP GAME API - all built from location.origin  (needs prefix)
+  server-mock.js: 63 uses of location.origin. It rewrites the game's original requests to
+  <origin>/api/... so on localhost they all hit a server that doesn't exist.
+    /api/firebase/v446_player/login      /api/v446/login?_uid=
+    /api/v446/guest_login                /api/v446/player?_uid=
+    /api/v446/guest_mmr?_aid=            /api/v446/guest_nickname?_aid=
+    /api/v446/claim_spins_guest?_aid=    /api/v446/time
+    /api/v446/nickname, settings, settings_group, report, update_mmr, account_deletion,
+      ads_pref, agegate_guardian, agegate_popup, leaderboard_claims    (all ?_uid=)
+    /api/v446/equip_skin, equip_weapon_skins, equip_emotes, unlock_lootbox
+    /api/v446/open_gacha, claim_spins, coin_purchase, multi_purchase,
+      daily_spin_data, daily_spin_consume, dailyreward_claim, influencer_claimed
+    /api/v446/bp_refresh, bp_boost, bp_buypremium, bp_tierup, bp_engage
+    /api/v446/ch_defs, ch_user, ch_update, ch_claim
+    /api/v446/ugs/auth, ugs/tickets, ugs/tickets/status
+    /api/v446_friends, v446_recordmatch, v446_claimroadreward, v446_trophyclaim, v446_bp_claim
+    /api/v446/migrate_guest   (already made absolute in updated-1v1lol.zip)
+
+G2. OTHER ROOT-RELATIVE API CALLS (needs prefix)
+  mocks/login.js:  POST /api/auth/google   (2 places: skip-popup + sign-in)
+                   fetch /api/auth/logout
+  mocks/firebase-config.js:  fetch <origin>/api/match-rules
+
+G3. LOCAL ASSET FOLDERS (images, built from location.origin; missing from the zip)
+  firebase-config.js builds these bases:
+    <origin>/assets/bp/en            battle pass art
+    <origin>/assets/weaponskins/en   weapon skin art
+    <origin>/assets/archive          archive art
+    <origin>/assets/lootboxes/en     lootbox art
+  (the "http://localhost:3000" in that file is only a fallback when location is undefined)
+
+G4. WEBSOCKETS (server-mock.js, WebSocket constructor wrapper)
+  - Any ws URL containing "messaging-nucleus" -> handled by a built-in FakeStompWS.
+    The /stomp/auth, https://onevone.psf.playtika.com/messaging-nucleus/stomp address and
+    the CONNECT/SUBSCRIBE flow are faked locally. No external server needed.
+  - Photon (exitgames / photonengine, paths /ns, /master, /game):
+      * page on localhost/127.0.0.1/0.0.0.0 ->  ws://<host>:19090/<original-host>/<path>
+        That is a LOCAL RELAY ON PORT 19090 which is NOT in the zip. This is the offline-
+        build blocker.
+      * any other host -> wss://<location.host>/ws/ns | /ws/master | /ws/game
+        region "eu" -> wss://eu.<domain>/ws/...   (domain = 1v1lolreloaded.com or
+        onecloudcdn.site, whichever matches the page host, else 1v1lolreloaded.com)
+  - uid / gaid / gnick / bv query params are appended to ws://...:19090 and /ws/ URLs.
+
+G5. FIREBASE (no prefix, third party)
+  firebase.js uses Firebase project "test1v1lol-reloaded" with the Firebase SDK from
+  gstatic.com. Sign-in popups need the page domain in that project's authorized domains.
+
+G6. IGNORE
+  http://localhost:19099/cap (capture logger, only if localStorage 1v1_capture=1).
+
+----------------------------------------------------------------------
+H. HOW TO PUT THESE THROUGH A PREFIX
+----------------------------------------------------------------------
+Option 1 (no code edits, recommended): serve the build from a small local reverse proxy
+  that forwards /api/*, /assets/* and /ws/* to https://1v1lolreloaded.com (wss for /ws).
+  Everything above then works as if the build were on that origin. Keep the page on
+  localhost and set the WS path so the 19090 branch is skipped (needs the Option 2 WS patch,
+  or run the proxy's websocket on :19090).
+
+Option 2 (patch the code): define window.__API_ORIGIN = 'https://1v1lolreloaded.com' in
+  index.html before the mocks load, then:
+    - server-mock.js (63) and firebase-config.js (5): replace location.origin with
+      (window.__API_ORIGIN || location.origin). The startsWith(location.origin) "already
+      rewritten" checks must use the same value.
+    - login.js: prefix /api/auth/google (x2) and /api/auth/logout.
+    - server-mock.js WebSocket wrapper: when __API_ORIGIN is set, skip the localhost ->
+      :19090 branch and use the __API_ORIGIN host instead of location.host.
+  Caveat: cross-origin calls need the live server to send CORS headers for your origin,
+  and /api/auth/* may rely on cookies, which browsers can block cross-site. If that
+  happens, use Option 1.
+
+======================================================================
+I. LIVE CHECK RESULTS (checkRefs.js run by the user, GET/HEAD only)
+======================================================================
+CONFIRMED ONLINE
+  CDN  cdn.1v1lolreloaded.com : /Build/WebGL.data|framework.js|wasm.c0de4610.unityweb  (200)
+  MAIN 1v1lolreloaded.com     : /fonts/dimbo.ttf, /loader-ch2-bg.jpg, /logo.png, /Build/WebGL.loader.js
+                                /StreamingAssets/aa/catalog.json, /StreamingAssets/aa/settings.json
+  MAIN API (GET 200, 30 routes): time, match-rules, ch_defs, guest_login, login, player,
+    firebase/v446_player/login, nickname, guest_mmr, guest_nickname, claim_spins_guest, settings,
+    update_mmr, leaderboard_claims, daily_spin_data, influencer_claimed, bp_refresh, bp_boost,
+    ch_user, ugs/auth, ugs/tickets, ugs/tickets/status, /api/v446_friends, /api/v446_recordmatch
+  => The StreamingAssets guess in the zip is correct: boot.js points at
+     https://1v1lolreloaded.com/StreamingAssets and the Addressables catalog lives under /aa/.
+  => The CDN serves ONLY the three .unityweb files. Everything else is on the main domain.
+  => Prefix plan: API, assets, fonts and StreamingAssets = https://1v1lolreloaded.com
+                  Build/*.unityweb                         = https://cdn.1v1lolreloaded.com
+
+SHOWN AS "MISSING" BUT NOT PROVEN MISSING (34 paths)
+  A GET 404 does not mean the route is absent. Mutating routes are normally POST-only and a
+  server answers 404 (or 405) to a GET. Almost all of these are write actions:
+    claim_spins, settings_group, report, account_deletion, ads_pref, agegate_guardian,
+    agegate_popup, equip_skin, equip_weapon_skins, equip_emotes, unlock_lootbox, open_gacha,
+    coin_purchase, multi_purchase, daily_spin_consume, dailyreward_claim, bp_buypremium,
+    bp_tierup, bp_engage, ch_update, ch_claim, v446_claimroadreward, v446_trophyclaim,
+    v446_bp_claim, migrate_guest, auth/google, auth/logout
+  => Re-run with:  node checkRefs.js --post --only api
+     It retries those routes with an empty, credential-free POST (account_deletion is skipped).
+     400/401/403/415/422 = route exists. 404 on POST too = genuinely missing.
+
+STILL UNKNOWN (directory URLs, not files)
+  /WebGL/, /assets/bp/en/, /assets/weaponskins/en/, /assets/archive/, /assets/lootboxes/en/
+  Directory URLs normally 404 even when the files exist. checkRefs.js now also tests real
+  file names: /assets/bp/en/Season9_Banner_01.png, Season9_Web_ActivatePopup_01.png and
+  guesses /assets/archive/Offer_10.png, Offer_12.png. weaponskins/lootboxes file names are
+  not in the build; find them in DevTools > Network on the live game.
+  /StreamingAssets/catalog.json and settings.json (without /aa/) are not used; ignore.
+
+======================================================================
+J. FINAL LIVE RESULTS (checkRefs-v2.js --post, run by the user; Node v24)
+======================================================================
+Everything the build needs externally exists on the live site. Nothing is truly missing.
+
+CDN  https://cdn.1v1lolreloaded.com
+  /Build/WebGL.data.c0de4610.unityweb, WebGL.framework.js.c0de4610.unityweb,
+  WebGL.wasm.c0de4610.unityweb                                    200   (CDN serves nothing else)
+
+MAIN https://1v1lolreloaded.com
+  Static    /fonts/dimbo.ttf, /loader-ch2-bg.jpg, /logo.png, /Build/WebGL.loader.js        200
+  Streaming /StreamingAssets/aa/catalog.json, /StreamingAssets/aa/settings.json            200
+  Images    /assets/bp/en/Season9_Banner_01.png, Season9_Web_ActivatePopup_01.png,
+            /assets/archive/Offer_10.png, Offer_12.png                                     200
+            (bare directory URLs 404, which is normal; the files exist)
+  API       all 51 routes exist:
+            - 36 answered normally: GET 200, or an empty POST gave 200/400
+              (migrate_guest, auth/logout, settings_group, report, ads_pref, agegate_guardian,
+               agegate_popup, unlock_lootbox, dailyreward_claim, bp_engage, ch_update = POST 200;
+               auth/google = POST 400)
+            - 15 answered 403 to an empty, credential-free POST. They are auth-gated write
+              routes, so they exist but need the real _uid / token:
+              claim_spins, equip_skin, equip_weapon_skins, equip_emotes, open_gacha,
+              coin_purchase, multi_purchase, daily_spin_consume, bp_buypremium, bp_tierup,
+              ch_claim, v446_claimroadreward, v446_trophyclaim, v446_bp_claim
+            - account_deletion: GET returned an application JSON 404 (route exists);
+              it was deliberately not POSTed.
+  Websocket wss://1v1lolreloaded.com/ws/ns | /ws/master | /ws/game   handshake OPEN
+            wss://eu.1v1lolreloaded.com/ws/ns | /ws/master | /ws/game  handshake OPEN
+            (tested from Node with no Origin header and no uid params)
+
+FINAL PREFIX MAP
+  https://cdn.1v1lolreloaded.com  ->  /Build/*.unityweb
+  https://1v1lolreloaded.com      ->  /api/*, /assets/*, /fonts/*, /StreamingAssets/*, /ws/*
+  wss://1v1lolreloaded.com/ws/... (eu.1v1lolreloaded.com for the EU region)
+
+NOT YET VERIFIED (cannot be tested from Node)
+  - CORS: does the live API answer a browser page on http://localhost? Test in DevTools:
+      fetch('https://1v1lolreloaded.com/api/v446/time').then(r=>r.text()).then(console.log)
+    run from a page served on localhost. A "blocked by CORS policy" error means the
+    browser-side prefix will not work and a local reverse proxy is needed instead.
+  - Websocket Origin check: browsers send Origin: http://localhost, which the server may reject.
+  - The 403 routes were tested without a uid, so their real behavior with a uid is unknown.
+
+======================================================================
+K. FINAL BUILD (updated-1v1lol.zip) - what changed and why
+======================================================================
+All URLs below were confirmed live in section J. Nothing is guessed.
+
+NEW  js/prefix.js   (loaded in index.html right BEFORE mocks/server-mock.js)
+  server-mock.js captures fetch, XMLHttpRequest.open and WebSocket when it loads and wraps them,
+  so prefix.js has to sit underneath. It sees the URLs server-mock produces and redirects them:
+    http://localhost/api/*, /assets/*, /fonts/*, /ws/*   -> https://1v1lolreloaded.com/...
+    .../StreamingAssets/*  (page-relative too)          -> https://1v1lolreloaded.com/StreamingAssets/...
+    ws://localhost:19090/<photon host>/...               -> wss://1v1lolreloaded.com/ws/{ns|master|game}?<same query>
+      region "eu" (window.__photonRegion)                -> wss://eu.1v1lolreloaded.com/ws/...
+    cdn.1v1lolreloaded.com/Build/*.unityweb              untouched (already absolute in boot.js)
+    every other host (gstatic, firebase, ...)            untouched
+  This covers server-mock.js (63 origin uses), firebase-config.js (/api/match-rules and the
+  /assets/{bp,weaponskins,archive,lootboxes} image bases) and login.js (/api/auth/google, /logout)
+  WITHOUT editing those obfuscated files.
+  Switches: localStorage '1v1_api_origin' = another origin, or 'off' to disable.
+            The shim does nothing if the page is served from the API origin itself.
+
+REVERTED  js/boot.js   streamingAssetsUrl is the original 'StreamingAssets'
+REVERTED  js/bridges.js  fetch("/api/v446/migrate_guest") is the original relative path
+  Reason: server-mock.js treats any ABSOLUTE https URL that is not this origin, the CDN, gstatic,
+  google or firebase as a request to answer locally with canned JSON. Making these two absolute
+  would have been mocked instead of reaching the server. Relative paths pass through and
+  prefix.js redirects them.
+
+KEPT  index.html   /fonts/dimbo.ttf and loader-ch2-bg.jpg point at https://1v1lolreloaded.com
+                   (CSS url(), not fetch, so no mock involved)
+KEPT  js/boot.js   dataUrl / frameworkUrl / codeUrl on cdn.1v1lolreloaded.com (unchanged)
+ADDED tools/checkRefs-v2.js   the live checker (node tools/checkRefs-v2.js --post)
+
+HOW TO RUN: serve the folder over http (the page cannot run from file://), e.g.
+    cd 1v1lol
+    npx serve -l 8080      or      python -m http.server 8080
+  then open http://localhost:8080/ . Open DevTools > Network and watch for red entries.
+
+KNOWN LIMITS (cannot be tested without a browser; this is what to report back)
+  1. CORS. If the live server does not allow your localhost origin, API/asset/websocket calls fail
+     with "blocked by CORS policy". Fix: use a local reverse proxy instead of prefix.js.
+  2. Websocket Origin. Browsers send Origin: http://localhost; the server may refuse it.
+  3. Login. /api/auth/* and the Authorization header need CORS credentials and cross-site cookies;
+     guest play is the most likely to work first.
+  4. The 15 auth-gated write routes were only proven to exist, not proven to work with a uid.
+
+======================================================================
+L. LOCALIZED BUILD (based on the package.html run: 35 saved, 2 failed)
+======================================================================
+LOCAL (33 files, listed with their source URL in LOCAL_FILES.txt; you upload them to these paths,
+relative to index.html; "node tools/checkLocal.js" shows which are still missing):
+  Build/WebGL.{data,framework.js,wasm}.c0de4610.unityweb, Build/WebGL.loader.js
+  fonts/dimbo.ttf, loader-ch2-bg.jpg, logo.png
+  StreamingAssets/aa/catalog.json, settings.json
+  assets/bp/en/Season9_Banner_01.png, Season9_Web_ActivatePopup_01.png
+  assets/archive/Offer_10.png, Offer_12.png
+  WebGL/<the 16 .bundle files from catalog.json>
+  vendor/firebasejs/7.24.0/firebase-{app,auth,firestore,remote-config}.js
+
+REFERENCES CHANGED
+  js/boot.js     dataUrl / frameworkUrl / codeUrl  -> Build/WebGL.*.unityweb (relative)
+  index.html     font-face -> fonts/dimbo.ttf ; loader background -> loader-ch2-bg.jpg
+  index.html     4 Firebase SDK <script> tags -> vendor/firebasejs/7.24.0/...
+  js/prefix.js   LOCAL list. A request for any listed file, including the catalog's absolute
+                 https://cdn.1v1lolreloaded.com/WebGL/<name>.bundle URLs, is served from this build.
+                 Works whether the build sits at the web root or in a subfolder.
+
+STILL REMOTE (not downloaded, or not a static file)
+  https://1v1lolreloaded.com/                (download failed; only used by og:url / canonical)
+  https://1v1lolreloaded.com/api/match-rules (download failed, redirected by prefix.js)
+  all other /api/* routes, including /api/v446/time and /api/v446/ch_defs. These downloaded fine
+    but are live endpoints, not assets (time must stay current), so they are NOT localized.
+  /assets/* images that were not downloaded (weaponskins, lootboxes, other bp/archive files) and any
+    StreamingAssets file not listed -> https://1v1lolreloaded.com
+  wss://1v1lolreloaded.com/ws/{ns,master,game}  (eu.1v1lolreloaded.com for EU)
+  index.html og:image / twitter:image keep https://1v1lolreloaded.com/logo.png (social crawlers
+    need an absolute public URL). logo.png is still in the local list for you to place.
+
+HOSTING NOTES
+  - Serve *.unityweb with the Content-Encoding header the files were built with (gzip or br).
+    Without it the Unity loader stops with "Unable to parse Build/...unityweb ... Content-Encoding".
+    python -m http.server does NOT add it; use a server/CDN where you can set it.
+  - Serve .bundle, .unityweb and .wasm without rewriting them (binary).
+  - Local files need no CORS. Remaining remote calls (API, assets, websockets) still do.
+
+======================================================================
+M. HTTPS / WSS FIX, READABLE MOCKS, SPIN + SIGNUP (applies to externalBuild AND localBuild)
+======================================================================
+WEBSOCKET ON GITHUB PAGES
+  Cause: on any non-localhost host server-mock builds wss://<this page's host>/ws/<ns|master|game>, e.g.
+  wss://user.github.io/ws/ns. GitHub Pages has no /ws, so it never connected; the old prefix.js only caught
+  ws://localhost:19090.
+  Fix (js/prefix.js): every socket URL is mapped to wss://1v1lolreloaded.com/ws/<kind>?<same query>
+  (wss://eu.1v1lolreloaded.com for EU). All three shapes server-mock produces are handled, the result is
+  always wss://, and any other plain ws:// URL on an https page is upgraded to wss://.
+  HTTP (/api, /assets, /fonts, /StreamingAssets) from any page origin goes to https://1v1lolreloaded.com.
+  Overrides: ?api=https://other.host  |  localStorage 1v1_api_origin  |  window.__API_ORIGIN  ('off' disables).
+  STILL REQUIRED FROM THE SERVER SIDE (cannot be fixed in the browser):
+   - the live API/websocket must accept your page origin (CORS / Origin check), e.g. https://user.github.io
+   - Firebase: add your github.io domain under Authentication > Settings > Authorized domains for login.
+  If the server refuses your origin, point ?api= at a CORS proxy you control (for example a Cloudflare Worker).
+
+READABLE MOCKS
+  mocks/server-mock.js, firebase-config.js, firebase.js, login.js: string tables decoded, constants folded,
+  dead decoder removed (181 KB -> 104 KB for server-mock). Public globals compared with the originals in a
+  stubbed run: identical. Variable names are still _0x... (they carry no information to recover).
+
+INDEX.HTML
+  <title>1v1:Reloaded v446</title>, two icon links (32x32, 16x16) to https://ws.ankomstudios.com/icons/1v1lol/icon.png,
+  og:title / twitter:title match. Removed the injected block that overwrote document.title on non-localhost hosts.
+  Kept: the history.pushState guard (it only blocks Unity's URL mutation) and the Cloudflare rum beacon.
+
+SPINS WITHOUT ADS
+  - consumeRv2 (the rewarded-video spin) now calls the normal spin endpoint (rv=0), so no ad step is involved.
+  - Mock spin data reports no rewarded-video spins and never runs out of free spins.
+  - Backend spins: the live server still decides how many free spins you get per day. To get unlimited spins, run
+    localStorage.setItem('1v1_local_spins','1') in the console and reload: spins are then answered locally
+    (no ads, unlimited), but the rewards are NOT saved to the server account.
+
+SIGNUP
+  js/signup.js adds a "Sign up" pill (bottom-left, hidden once signed in) opening a dialog with Sign up with
+  Google / log in. Accounts are Google accounts (Firebase popup + POST /api/auth/google), so sign-up and login
+  are the same flow and the backend creates the player on first sign-in; the page reloads after success so Unity
+  picks up the account. The login screen inside the Unity canvas itself cannot be edited from JavaScript.
+  window.showSignup() opens the dialog from code.
+
+======================================================================
+N. HTTPS DEPLOY CHECK (GitHub Pages)
+======================================================================
+Tested with the REAL js/prefix.js and the REAL mocks/server-mock.js loaded in that order, page = https://user.github.io/repo/index.html
+(stubbed browser, no network): every Photon socket shape (wss://ns.exitgames.com, app-eu..., gs.photonengine.io, unknown host, plain
+ws://) reaches the native WebSocket as wss://1v1lolreloaded.com/ws/{ns,master,game}?... (wss://eu.1v1lolreloaded.com for EU), and
+/api/* fetches reach https://1v1lolreloaded.com/api/*. No plain ws:// is ever opened from an https page.
+Code that enforces it:
+  js/prefix.js      mapWs(): every socket URL -> wss, plus upgrade of any other ws:// when location.protocol is https:
+  mocks/server-mock.js  the localhost relay builder now emits wss:// on https pages (was always ws://)
+NOT testable offline: whether the live server accepts https://<you>.github.io (CORS for /api, Origin for /ws).
+  Open  https://<you>.github.io/<repo>/?selftest  after deploying. It prints OK/FAIL for the API call and each websocket.
+  FAIL = the server refuses your origin; use ?api=<your CORS proxy> (or window.__API_ORIGIN) instead.
+GitHub Pages notes: externalBuild has no large files (deploy this one; localBuild contains >100 MB assets which GitHub rejects),
+  .nojekyll included, add your github.io domain to Firebase Authorized domains for login.

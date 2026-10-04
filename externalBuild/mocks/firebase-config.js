@@ -1,3024 +1,2841 @@
-const _0xd95be6 = _0x4928;
-(function(_0x38cb8e, _0x20ab6a) {
-    const _0x535f20 = _0x4928
-      , _0x15ad07 = _0x38cb8e();
-    while (!![]) {
-        try {
-            const _0x1b231f = parseInt(_0x535f20(0x360)) / 0x1 * (parseInt(_0x535f20(0x1b4)) / 0x2) + parseInt(_0x535f20(0x176)) / 0x3 + -parseInt(_0x535f20(0x530)) / 0x4 + parseInt(_0x535f20(0x2c5)) / 0x5 * (parseInt(_0x535f20(0x4b8)) / 0x6) + parseInt(_0x535f20(0x1b3)) / 0x7 + parseInt(_0x535f20(0x54a)) / 0x8 * (-parseInt(_0x535f20(0x1f4)) / 0x9) + -parseInt(_0x535f20(0x11c)) / 0xa * (parseInt(_0x535f20(0x2c2)) / 0xb);
-            if (_0x1b231f === _0x20ab6a)
-                break;
-            else
-                _0x15ad07['push'](_0x15ad07['shift']());
-        } catch (_0x3fcbdf) {
-            _0x15ad07['push'](_0x15ad07['shift']());
-        }
-    }
-}(_0x5a05, 0x96841));
+// Readable version of the original obfuscated file: string table decoded, constants folded, dead decoder removed. Behaviour unchanged.
 let conf;
-function _0x4928(_0x353d65, _0x35b051) {
-    _0x353d65 = _0x353d65 - 0x10d;
-    const _0x5a05f1 = _0x5a05();
-    let _0x49288d = _0x5a05f1[_0x353d65];
-    if (_0x4928['hETBOr'] === undefined) {
-        var _0x557608 = function(_0x596ec1) {
-            const _0x1993dd = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789+/=';
-            let _0x3a20c4 = ''
-              , _0x2e0a1f = '';
-            for (let _0x409281 = 0x0, _0x3e405f, _0x239ad6, _0x448588 = 0x0; _0x239ad6 = _0x596ec1['charAt'](_0x448588++); ~_0x239ad6 && (_0x3e405f = _0x409281 % 0x4 ? _0x3e405f * 0x40 + _0x239ad6 : _0x239ad6,
-            _0x409281++ % 0x4) ? _0x3a20c4 += String['fromCharCode'](0xff & _0x3e405f >> (-0x2 * _0x409281 & 0x6)) : 0x0) {
-                _0x239ad6 = _0x1993dd['indexOf'](_0x239ad6);
-            }
-            for (let _0x3d494c = 0x0, _0x328197 = _0x3a20c4['length']; _0x3d494c < _0x328197; _0x3d494c++) {
-                _0x2e0a1f += '%' + ('00' + _0x3a20c4['charCodeAt'](_0x3d494c)['toString'](0x10))['slice'](-0x2);
-            }
-            return decodeURIComponent(_0x2e0a1f);
-        };
-        _0x4928['tbISoJ'] = _0x557608,
-        _0x4928['JvpLEp'] = {},
-        _0x4928['hETBOr'] = !![];
-    }
-    const _0x2685de = _0x5a05f1[0x0]
-      , _0x1b1f75 = _0x353d65 + _0x2685de
-      , _0x5da12b = _0x4928['JvpLEp'][_0x1b1f75];
-    return !_0x5da12b ? (_0x49288d = _0x4928['tbISoJ'](_0x49288d),
-    _0x4928['JvpLEp'][_0x1b1f75] = _0x49288d) : _0x49288d = _0x5da12b,
-    _0x49288d;
-}
-const _DAILY_SKINS = (function() {
-    const _0x33da1e = _0x4928;
+const _DAILY_SKINS = function () {
     try {
-        return !(typeof window !== _0x33da1e(0x288) + 'd' && window[_0x33da1e(0x1d6) + _0x33da1e(0x14d)] && localStorage['getItem']('DAILY_SK' + 'INS') === '0');
+      return !(typeof window !== 'undefined' && window.localStorage && localStorage.getItem('DAILY_SKINS') === '0');
     } catch (_0x3a20c4) {
-        return !![];
+      return true;
     }
-}())
-  , OFFER_TS = _0xd95be6(0x510) + '14T00:00' + _0xd95be6(0x25a)
-  , OFFER_DEFS = [{
-    'key': 'offer_x4' + _0xd95be6(0x3e0),
-    'name': _0xd95be6(0x247),
-    'box': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2cf),
-    'amount': 0x4,
-    'rarity': 0x0,
-    'currency': 'LC',
-    'regular': 0xdc,
-    'sale': 0xb4,
-    'banner': _0xd95be6(0x268) + _0xd95be6(0x134)
-}, {
-    'key': _0xd95be6(0x4e0) + _0xd95be6(0x228),
-    'name': _0xd95be6(0x172),
-    'box': 'lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x486),
-    'amount': 0x3,
-    'rarity': 0x2,
-    'currency': 'LC',
-    'regular': 0x10e,
-    'sale': 0xd7,
-    'banner': 'Offer_13' + '.png'
-}, {
-    'key': _0xd95be6(0x350) + _0xd95be6(0x414),
-    'name': _0xd95be6(0x333) + _0xd95be6(0x467),
-    'box': 'lol.1v1.' + 'lootbox.' + _0xd95be6(0x17c),
-    'amount': 0x1,
-    'rarity': 0x4,
-    'currency': 'LC',
-    'regular': 0xc80,
-    'sale': 0x640,
-    'banner': _0xd95be6(0x1c6) + '.png'
-}]
-  , OFFER_BUNDLE_ID = _0x2e0a1f => 'lol.1v1.' + _0xd95be6(0x274) + _0xd95be6(0x500) + _0x2e0a1f;
+  }(),
+  OFFER_TS = '2026-06-14T00:00:00Z',
+  OFFER_DEFS = [{
+    key: 'offer_x4_common',
+    name: 'x4 Spins',
+    box: 'lol.1v1.lootbox.GS1',
+    amount: 4,
+    rarity: 0,
+    currency: 'LC',
+    regular: 220,
+    sale: 180,
+    banner: 'Offer_12.png'
+  }, {
+    key: 'offer_x3_rare',
+    name: 'x3 Spins',
+    box: 'lol.1v1.lootbox.GS2',
+    amount: 3,
+    rarity: 2,
+    currency: 'LC',
+    regular: 270,
+    sale: 215,
+    banner: 'Offer_13.png'
+  }, {
+    key: 'offer_legendary',
+    name: 'Legendary Spin',
+    box: 'lol.1v1.lootbox.GSL',
+    amount: 1,
+    rarity: 4,
+    currency: 'LC',
+    regular: 3200,
+    sale: 1600,
+    banner: 'Offer_10.png'
+  }],
+  OFFER_BUNDLE_ID = _0x2e0a1f => 'lol.1v1.bundlepacks.' + _0x2e0a1f;
 try {
-    if (typeof window !== _0xd95be6(0x288) + 'd')
-        window[_0xd95be6(0x222) + _0xd95be6(0x19e)] = {
-            'keys': OFFER_DEFS[_0xd95be6(0x481)](function(_0x409281) {
-                return _0x409281['key'];
-            }),
-            'ts': OFFER_TS
-        };
+  if (typeof window !== 'undefined') window.__OFFERS_446 = {
+    keys: OFFER_DEFS.map(function (_0x409281) {
+      return _0x409281.key;
+    }),
+    ts: OFFER_TS
+  };
 } catch (_0x3e405f) {}
-const _BR_MIN_SOLO = 0x1
-  , _BR_MIN_DUOS = 0x2;
+const _BR_MIN_SOLO = 1,
+  _BR_MIN_DUOS = 2;
 function _applyBrRule() {
-    const _0x3b9771 = _0xd95be6;
-    try {
-        var _0x239ad6 = typeof window !== _0x3b9771(0x288) + 'd' && window[_0x3b9771(0x526)];
-        if (!_0x239ad6 || typeof conf !== _0x3b9771(0x1f1) || !conf || typeof conf[_0x3b9771(0x45e) + _0x3b9771(0x2ed)] !== _0x3b9771(0x49b))
-            return;
-        var _0x448588 = JSON[_0x3b9771(0x53b)](conf['GameMode' + _0x3b9771(0x2ed)])
-          , _0x3d494c = {
-            'GrandBattleRoyale': _0x239ad6[_0x3b9771(0x4e5) + 'o'],
-            'GrandBattleRoyale_Duos': _0x239ad6[_0x3b9771(0x158) + 's']
-        }
-          , _0x328197 = 0x0;
-        Object['keys'](_0x448588 && _0x448588[_0x3b9771(0x2c4)] || {})[_0x3b9771(0x2c9)](function(_0x55ce41) {
-            const _0x1d96d7 = _0x3b9771;
-            var _0x30c2da = _0x448588[_0x1d96d7(0x2c4)][_0x55ce41] && _0x448588[_0x1d96d7(0x2c4)][_0x55ce41][_0x1d96d7(0x41c) + 'fo'];
-            if (!_0x30c2da)
-                return;
-            Object[_0x1d96d7(0x24f)](_0x3d494c)[_0x1d96d7(0x2c9)](function(_0x52f633) {
-                const _0xe21f68 = _0x1d96d7;
-                _0x30c2da[_0x52f633] && _0x3d494c[_0x52f633] > 0x0 && (_0x30c2da[_0x52f633][_0xe21f68(0x493) + 'rs'] = _0x3d494c[_0x52f633],
-                _0x328197++);
-            });
-        });
-        if (!_0x328197)
-            return;
-        conf[_0x3b9771(0x45e) + 'sV4'] = JSON['stringif' + 'y'](_0x448588),
-        console['log'](_0x3b9771(0x136) + _0x3b9771(0x1c8) + _0x3b9771(0x4e6) + 'rver:\x20Mi' + _0x3b9771(0x539) + _0x3b9771(0x1a3) + _0x239ad6[_0x3b9771(0x4e5) + 'o'] + _0x3b9771(0x4ba) + _0x239ad6[_0x3b9771(0x158) + 's'] + (window[_0x3b9771(0x28a) + _0x3b9771(0x328)] ? '\x20—\x20⚠️\x20AFT' + _0x3b9771(0x399) + 'C\x20went\x20t' + 'o\x20Unity\x20' + _0x3b9771(0x129) + _0x3b9771(0x45a) + 'eps\x20the\x20' + _0x3b9771(0x22a) + _0x3b9771(0x496) : ''), _0x3b9771(0x2a7) + _0x3b9771(0x10f) + 'weight:b' + _0x3b9771(0x275));
-    } catch (_0x3aee65) {}
+  try {
+    var _0x239ad6 = typeof window !== 'undefined' && window.__brRule;
+    if (!_0x239ad6 || typeof conf !== 'object' || !conf || typeof conf.GameModesV4 !== 'string') return;
+    var _0x448588 = JSON.parse(conf.GameModesV4),
+      _0x3d494c = {
+        GrandBattleRoyale: _0x239ad6.brMinSolo,
+        GrandBattleRoyale_Duos: _0x239ad6.brMinDuos
+      },
+      _0x328197 = 0;
+    Object.keys(_0x448588 && _0x448588.Configs || {}).forEach(function (_0x55ce41) {
+      var _0x30c2da = _0x448588.Configs[_0x55ce41] && _0x448588.Configs[_0x55ce41].modes_info;
+      if (!_0x30c2da) return;
+      Object.keys(_0x3d494c).forEach(function (_0x52f633) {
+        _0x30c2da[_0x52f633] && _0x3d494c[_0x52f633] > 0 && (_0x30c2da[_0x52f633].MinPlayers = _0x3d494c[_0x52f633], _0x328197++);
+      });
+    });
+    if (!_0x328197) return;
+    conf.GameModesV4 = JSON.stringify(_0x448588), console.log('%c[BR] start from the server: MinPlayers solo ' + _0x239ad6.brMinSolo + ' / duos ' + _0x239ad6.brMinDuos + (window._rcDispatched ? ' — ⚠️ AFTER the RC went to Unity (this session keeps the previous values)' : ''), 'color:#fa0;font-weight:bold');
+  } catch (_0x3aee65) {}
 }
-(function() {
-    const _0x35677d = _0xd95be6;
-    try {
-        if (typeof window === 'undefine' + 'd' || typeof fetch !== _0x35677d(0x3f0) || typeof location === _0x35677d(0x288) + 'd' || !/^https?:$/[_0x35677d(0x32c)](location[_0x35677d(0x473)] || ''))
-            return;
-        if (window[_0x35677d(0x1d6) + _0x35677d(0x14d)] && localStorage[_0x35677d(0x4dd)]('BR_CANON' + _0x35677d(0x2fe)) === '0')
-            return;
-        fetch(location[_0x35677d(0x3dd)] + (_0x35677d(0x4e3) + 'ch-rules'), {
-            'cache': _0x35677d(0x125)
-        })['then'](function(_0x3b241b) {
-            const _0xd897c5 = _0x35677d;
-            return _0x3b241b['ok'] ? _0x3b241b[_0xd897c5(0x229)]() : null;
-        })['then'](function(_0x149c7d) {
-            const _0x54e475 = _0x35677d;
-            _0x149c7d && _0x149c7d['brMinSol' + 'o'] > 0x0 && _0x149c7d[_0x54e475(0x158) + 's'] > 0x0 && (window[_0x54e475(0x526)] = _0x149c7d,
-            _applyBrRule());
-        })[_0x35677d(0x447)](function() {});
-    } catch (_0x510d36) {}
-}());
-const _LOC_TEST = (function() {
-    const _0x5e9825 = _0xd95be6;
-    try {
-        return typeof window !== _0x5e9825(0x288) + 'd' && window[_0x5e9825(0x1d6) + 'rage'] && localStorage['getItem']('LOC_TEST') === '1';
-    } catch (_0x43173e) {
-        return ![];
-    }
-}());
+(function () {
+  try {
+    if (typeof window === 'undefined' || typeof fetch !== 'function' || typeof location === 'undefined' || !/^https?:$/.test(location.protocol || '')) return;
+    if (window.localStorage && localStorage.getItem('BR_CANON_START') === '0') return;
+    fetch(location.origin + '/api/match-rules', {
+      cache: 'no-store'
+    }).then(function (_0x3b241b) {
+      return _0x3b241b.ok ? _0x3b241b.json() : null;
+    }).then(function (_0x149c7d) {
+      _0x149c7d && _0x149c7d.brMinSolo > 0 && _0x149c7d.brMinDuos > 0 && (window.__brRule = _0x149c7d, _applyBrRule());
+    })['catch'](function () {});
+  } catch (_0x510d36) {}
+})();
+const _LOC_TEST = function () {
+  try {
+    return typeof window !== 'undefined' && window.localStorage && localStorage.getItem('LOC_TEST') === '1';
+  } catch (_0x43173e) {
+    return false;
+  }
+}();
 try {
-    console[_0xd95be6(0x52d)](_0xd95be6(0x1a9) + 'is_local' + _0xd95be6(0x263) + _0xd95be6(0x33f) + _LOC_TEST, _0xd95be6(0x2a7) + _0xd95be6(0x10f) + 'weight:b' + _0xd95be6(0x275));
+  console.log('%c[LOC] is_localization_enabled=' + _LOC_TEST, 'color:#fa0;font-weight:bold');
 } catch (_0x52053b) {}
 try {
-    console['log'](_0xd95be6(0x2fb) + '_SKINS]\x20' + _0xd95be6(0x2c7) + _DAILY_SKINS + ('\x20(localS' + _0xd95be6(0x253) + _0xd95be6(0x373) + _0xd95be6(0x444)) + (window[_0xd95be6(0x1d6) + _0xd95be6(0x14d)] ? localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x364) + _0xd95be6(0x4d1)) : '?') + (')\x20→\x20limi' + _0xd95be6(0x420) + _0xd95be6(0x28c) + _0xd95be6(0x26d) + 'erEnable' + 'd=') + _DAILY_SKINS + (',\x20Limite' + _0xd95be6(0x17d) + _0xd95be6(0x499) + 'ig.is_en' + _0xd95be6(0x531)) + _DAILY_SKINS, _0xd95be6(0x3d2) + _0xd95be6(0x30f) + _0xd95be6(0x2e4) + _0xd95be6(0x275));
+  console.log('%c[DAILY_SKINS] flag=' + _DAILY_SKINS + ' (localStorage.DAILY_SKINS=' + (window.localStorage ? localStorage.getItem('DAILY_SKINS') : '?') + ') → limited_locker IsLimitedLockerEnabled=' + _DAILY_SKINS + ', LimitedLockerSpinsConfig.is_enabled=' + _DAILY_SKINS, 'color:#0fa;font-weight:bold');
 } catch (_0x50eaec) {}
 function initRemoteConfig() {
-    const _0x8d739b = _0xd95be6;
-    conf = {},
-    setDefaultValuesDirect(conf),
-    console['log'](_0x8d739b(0x2bd) + 'v446]\x20bu' + 'ilt\x20RC\x20d' + 'ict,\x20key' + 's:', Object[_0x8d739b(0x24f)](conf)[_0x8d739b(0x485)]());
-    if (conf[_0x8d739b(0x405) + 'V7'])
-        console[_0x8d739b(0x52d)](_0x8d739b(0x2bd) + _0x8d739b(0x20d) + _0x8d739b(0x428) + _0x8d739b(0x198) + conf[_0x8d739b(0x405) + 'V7']['length'] + _0x8d739b(0x1e3) + conf[_0x8d739b(0x405) + 'V7'][_0x8d739b(0x497)](0x0, 0x96));
-    if (conf[_0x8d739b(0x385) + _0x8d739b(0x413)])
-        console[_0x8d739b(0x52d)](_0x8d739b(0x2bd) + 'v446]\x20St' + _0x8d739b(0x55e) + _0x8d739b(0x113) + conf[_0x8d739b(0x385) + _0x8d739b(0x413)]);
-    _applyBrRule();
-    if (conf['GameMode' + _0x8d739b(0x2ed)])
-        console[_0x8d739b(0x52d)](_0x8d739b(0x2bd) + _0x8d739b(0x4c7) + _0x8d739b(0x3f9) + '4\x20=\x20' + conf[_0x8d739b(0x45e) + _0x8d739b(0x2ed)]);
+  conf = {}, setDefaultValuesDirect(conf), console.log('[Config v446] built RC dict, keys:', Object.keys(conf).sort());
+  if (conf.ProductsV7) console.log('[Config v446] ProductsV7 size=' + conf.ProductsV7.length + ' starts=' + conf.ProductsV7.slice(0, 150));
+  if (conf.StoreSettingsV9) console.log('[Config v446] StoreSettingsV9 = ' + conf.StoreSettingsV9);
+  _applyBrRule();
+  if (conf.GameModesV4) console.log('[Config v446] GameModesV4 = ' + conf.GameModesV4);
 }
-const _BP_TIERS = !(typeof localStorage !== 'undefine' + 'd' && localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x323)) === '0')
-  , _BP_IMG_BASE = (typeof location !== 'undefine' + 'd' ? location[_0xd95be6(0x3dd)] : _0xd95be6(0x48f) + _0xd95be6(0x3b5) + _0xd95be6(0x153)) + ('/assets/' + _0xd95be6(0x450))
-  , _RENDER_BISECT = typeof localStorage !== 'undefine' + 'd' && typeof location !== 'undefine' + 'd' && /[?&]rcbisect=1/[_0xd95be6(0x32c)](location[_0xd95be6(0x16c)]) && localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x478) + _0xd95be6(0x4ac)) === '1'
-  , _urlImg = _0xe5f4db => ({
-    'image_data_type': 0x0,
-    'image_data': _RENDER_BISECT ? {} : {
-        'url': _0xe5f4db
+const _BP_TIERS = !(typeof localStorage !== 'undefined' && localStorage.getItem('BP_TIERS') === '0'),
+  _BP_IMG_BASE = (typeof location !== 'undefined' ? location.origin : 'http://localhost:3000') + '/assets/bp/en',
+  _RENDER_BISECT = typeof localStorage !== 'undefined' && typeof location !== 'undefined' && /[?&]rcbisect=1/.test(location.search) && localStorage.getItem('RENDER_BISECT') === '1',
+  _urlImg = _0xe5f4db => ({
+    image_data_type: 0,
+    image_data: _RENDER_BISECT ? {} : {
+      url: _0xe5f4db
     }
-})
-  , _YELLOW_TILE_BG = !(typeof localStorage !== _0xd95be6(0x288) + 'd' && localStorage[_0xd95be6(0x4dd)]('NO_YELLO' + 'W_TILE') === '1')
-  , battlePassV3_S9 = {
-    'Configs': {
-        'default': {
-            'current_season': 0x1,
-            'banner_image': _urlImg(_BP_IMG_BASE + (_0xd95be6(0x163) + _0xd95be6(0x233) + _0xd95be6(0x484))),
-            'BackgroundImage': {
-                'image_data_type': 0x0,
-                'image_data': {}
-            },
-            'LobbyButtonImage': {
-                'image_data_type': 0x0,
-                'image_data': {}
-            },
-            'premium_popup_config': {
-                'background_image': _urlImg(_BP_IMG_BASE + (_0xd95be6(0x163) + _0xd95be6(0x302) + 'ivatePop' + _0xd95be6(0x14f) + 'g'))
-            },
-            'is_timer_visible': !![],
-            'display_new_bp_popup': ![],
-            'start_date': '2024-01-' + _0xd95be6(0x2cc) + _0xd95be6(0x175) + _0xd95be6(0x355),
-            'end_date': _0xd95be6(0x562) + '06T00:00' + _0xd95be6(0x175) + '00:00',
-            'activate_button_action': null,
-            'battle_pass': {
-                'placement_xp': [0xa, 0x3],
-                'tiers': [{
-                    'xp': 0x0,
-                    'tier_up_price': 0xa,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x2cf)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x1b2) + _0xd95be6(0x18c) + _0xd95be6(0x42f) + 'e.scifih' + 'ammer']
-                }, {
-                    'xp': 0x64,
-                    'tier_up_price': 0xa,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x38b)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0xc8,
-                    'tier_up_price': 0xa,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x486)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x334)]
-                }, {
-                    'xp': 0x12c,
-                    'tier_up_price': 0xa,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + _0xd95be6(0x1ad)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + 'p.10']
-                }, {
-                    'xp': 0x19a,
-                    'tier_up_price': 0xf,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x52f) + _0xd95be6(0x345) + _0xd95be6(0x166)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0x212,
-                    'tier_up_price': 0xf,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x1a8)],
-                    'premium_rewards': ['lol.1v1.' + 'playerem' + _0xd95be6(0x3c8) + _0xd95be6(0x341)]
-                }, {
-                    'xp': 0x294,
-                    'tier_up_price': 0x14,
-                    'free_rewards': ['lol.1v1.' + _0xd95be6(0x39b) + _0xd95be6(0x1ad)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x42a) + '.50']
-                }, {
-                    'xp': 0x320,
-                    'tier_up_price': 0x19,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2cf)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x486)]
-                }, {
-                    'xp': 0x3b6,
-                    'tier_up_price': 0x19,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x1a8)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x39b) + 'p.10']
-                }, {
-                    'xp': 0x456,
-                    'tier_up_price': 0x1e,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS1'],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0x500,
-                    'tier_up_price': 0x23,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x1a8)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.283']
-                }, {
-                    'xp': 0x5b4,
-                    'tier_up_price': 0x28,
-                    'free_rewards': ['lol.1v1.' + 'tokens.b' + _0xd95be6(0x1ad)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x52f) + 'ickers.p' + _0xd95be6(0x218)]
-                }, {
-                    'xp': 0x672,
-                    'tier_up_price': 0x32,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2cf)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0x73a,
-                    'tier_up_price': 0x37,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x1a8)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x39b) + _0xd95be6(0x39f)]
-                }, {
-                    'xp': 0x80c,
-                    'tier_up_price': 0x3c,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x2cf)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x486)]
-                }, {
-                    'xp': 0x8e8,
-                    'tier_up_price': 0x41,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x52f) + 'ickers.p' + _0xd95be6(0x457)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x550)]
-                }, {
-                    'xp': 0x9ce,
-                    'tier_up_price': 0x4b,
-                    'free_rewards': ['lol.1v1.' + 'coins.bp' + _0xd95be6(0x1a8)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + 'tokens.b' + 'p.10']
-                }, {
-                    'xp': 0xabe,
-                    'tier_up_price': 0x50,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + 'GS1'],
-                    'premium_rewards': ['lol.1v1.' + 'coins.bp' + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0xbb8,
-                    'tier_up_price': 0x55,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + _0xd95be6(0x1ad)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS2']
-                }, {
-                    'xp': 0xcbc,
-                    'tier_up_price': 0x55,
-                    'free_rewards': ['lol.1v1.' + 'coins.bp' + _0xd95be6(0x1a8)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x2ba)]
-                }, {
-                    'xp': 0xdca,
-                    'tier_up_price': 0x5a,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS1'],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + _0xd95be6(0x39f)]
-                }, {
-                    'xp': 0xee2,
-                    'tier_up_price': 0x5f,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'coins.bp' + _0xd95be6(0x1a8)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x561) + 'otes.pac' + 'k.16']
-                }, {
-                    'xp': 0x1004,
-                    'tier_up_price': 0x5f,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'tokens.b' + 'p.5'],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + 'p.10']
-                }, {
-                    'xp': 0x1130,
-                    'tier_up_price': 0x64,
-                    'free_rewards': ['lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x2cf)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + '.50']
-                }, {
-                    'xp': 0x1266,
-                    'tier_up_price': 0x64,
-                    'free_rewards': ['lol.1v1.' + 'coins.bp' + _0xd95be6(0x1a8)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x486)]
-                }, {
-                    'xp': 0x139c,
-                    'tier_up_price': 0x64,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2cf)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.286']
-                }, {
-                    'xp': 0x14dc,
-                    'tier_up_price': 0x64,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x38b)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x486)]
-                }, {
-                    'xp': 0x161c,
-                    'tier_up_price': 0x64,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x2cf)],
-                    'premium_rewards': ['lol.1v1.' + _0xd95be6(0x52f) + _0xd95be6(0x345) + 'ack.75']
-                }, {
-                    'xp': 0x175c,
-                    'tier_up_price': 0x69,
-                    'free_rewards': [_0xd95be6(0x4e2) + 'tokens.b' + 'p.5'],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS3']
-                }, {
-                    'xp': 0x1888,
-                    'tier_up_price': 0x69,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x486)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x561) + _0xd95be6(0x3c8) + _0xd95be6(0x1e9)]
-                }, {
-                    'xp': 0x19aa,
-                    'tier_up_price': 0x69,
-                    'free_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3ed)],
-                    'premium_rewards': [_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x29a)]
-                }]
-            }
+  }),
+  _YELLOW_TILE_BG = !(typeof localStorage !== 'undefined' && localStorage.getItem('NO_YELLOW_TILE') === '1'),
+  battlePassV3_S9 = {
+    Configs: {
+      'default': {
+        current_season: 1,
+        banner_image: _urlImg(_BP_IMG_BASE + '/Season9_Banner_01.png'),
+        BackgroundImage: {
+          image_data_type: 0,
+          image_data: {}
+        },
+        LobbyButtonImage: {
+          image_data_type: 0,
+          image_data: {}
+        },
+        premium_popup_config: {
+          background_image: _urlImg(_BP_IMG_BASE + '/Season9_Web_ActivatePopup_01.png')
+        },
+        is_timer_visible: true,
+        display_new_bp_popup: false,
+        start_date: '2024-01-01T00:00:00.000+00:00',
+        end_date: '2026-10-06T00:00:00.000+00:00',
+        activate_button_action: null,
+        battle_pass: {
+          placement_xp: [10, 3],
+          tiers: [{
+            xp: 0,
+            tier_up_price: 10,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.weaponskins.melee.pickaxe.scifihammer']
+          }, {
+            xp: 100,
+            tier_up_price: 10,
+            free_rewards: ['lol.1v1.coins.bp.30'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 200,
+            tier_up_price: 10,
+            free_rewards: ['lol.1v1.lootbox.GS2'],
+            premium_rewards: ['lol.1v1.lootbox.GS3']
+          }, {
+            xp: 300,
+            tier_up_price: 10,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 410,
+            tier_up_price: 15,
+            free_rewards: ['lol.1v1.playerstickers.pack.71'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 530,
+            tier_up_price: 15,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.playeremotes.pack.18']
+          }, {
+            xp: 660,
+            tier_up_price: 20,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 800,
+            tier_up_price: 25,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.lootbox.GS2']
+          }, {
+            xp: 950,
+            tier_up_price: 25,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 1110,
+            tier_up_price: 30,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 1280,
+            tier_up_price: 35,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.playerskins.pack.283']
+          }, {
+            xp: 1460,
+            tier_up_price: 40,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.playerstickers.pack.70']
+          }, {
+            xp: 1650,
+            tier_up_price: 50,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 1850,
+            tier_up_price: 55,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 2060,
+            tier_up_price: 60,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.lootbox.GS2']
+          }, {
+            xp: 2280,
+            tier_up_price: 65,
+            free_rewards: ['lol.1v1.playerstickers.pack.73'],
+            premium_rewards: ['lol.1v1.playerskins.pack.284']
+          }, {
+            xp: 2510,
+            tier_up_price: 75,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 2750,
+            tier_up_price: 80,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 3000,
+            tier_up_price: 85,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.lootbox.GS2']
+          }, {
+            xp: 3260,
+            tier_up_price: 85,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 3530,
+            tier_up_price: 90,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 3810,
+            tier_up_price: 95,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.playeremotes.pack.16']
+          }, {
+            xp: 4100,
+            tier_up_price: 95,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.tokens.bp.10']
+          }, {
+            xp: 4400,
+            tier_up_price: 100,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.coins.bp.50']
+          }, {
+            xp: 4710,
+            tier_up_price: 100,
+            free_rewards: ['lol.1v1.coins.bp.15'],
+            premium_rewards: ['lol.1v1.lootbox.GS2']
+          }, {
+            xp: 5020,
+            tier_up_price: 100,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.playerskins.pack.286']
+          }, {
+            xp: 5340,
+            tier_up_price: 100,
+            free_rewards: ['lol.1v1.coins.bp.30'],
+            premium_rewards: ['lol.1v1.lootbox.GS2']
+          }, {
+            xp: 5660,
+            tier_up_price: 100,
+            free_rewards: ['lol.1v1.lootbox.GS1'],
+            premium_rewards: ['lol.1v1.playerstickers.pack.75']
+          }, {
+            xp: 5980,
+            tier_up_price: 105,
+            free_rewards: ['lol.1v1.tokens.bp.5'],
+            premium_rewards: ['lol.1v1.lootbox.GS3']
+          }, {
+            xp: 6280,
+            tier_up_price: 105,
+            free_rewards: ['lol.1v1.lootbox.GS2'],
+            premium_rewards: ['lol.1v1.playeremotes.pack.1']
+          }, {
+            xp: 6570,
+            tier_up_price: 105,
+            free_rewards: ['lol.1v1.playerskins.pack.285'],
+            premium_rewards: ['lol.1v1.lootbox.RLB1']
+          }]
         }
+      }
     }
-}
-  , battlePassV3 = _BP_TIERS ? battlePassV3_S9 : {
-    'Configs': {}
-};
+  },
+  battlePassV3 = _BP_TIERS ? battlePassV3_S9 : {
+    Configs: {}
+  };
 try {
-    window['__BP_TIE' + _0xd95be6(0x1c3)] = battlePassV3_S9[_0xd95be6(0x2c4)]['default'][_0xd95be6(0x19f) + _0xd95be6(0x23c)][_0xd95be6(0x1e4)] || [];
+  window.__BP_TIERS_446 = battlePassV3_S9.Configs['default'].battle_pass.tiers || [];
 } catch (_0x551775) {}
-function _0x5a05() {
-    const _0x25442b = ['qLaTBM8Tzge', 'vw5PDhLnyxq', 'qwvNBM9Y', 'rwXPBwLUyxq', 'lNq0', 'u2HHBMK', 'yNaVzw4', 'v2L6yxjKifm', 'q2XHChbPBMC', 'lJi0nW', 'y2TZlNn0yxi', 'qM94rMLNAhq', 'uhjVzhvJDa', 'ywnRlJCZ', 'u3rHCNm', 'rMLYzw1HBIa', 'C3nPB24GA2u', 'mxyXienSyxm', 'ugfYA291CIa', 'lJeZoq', 'r2fTzu1Vzgu', 'lJe3mW', 'vw5SAwTL', 'sM9Szw5L', 'mxyXx0n1C3q', 'iokgKIbZzwfZBW', 'u3f1AwqGs2K', 'CgXHEwvYC2S', 'tM92yq', 'EsbtCgLU', 'lJeZmG', 'u3rLCgHHBMK', 'u2TPBNm', 'r29SzgvUieK', 'lKXptcbszwW', 'r2vUzxjHBem', 'yMvZDa', 'lJe4oq', 'y29PBNmUCge', 'yxjJAgL2zq', 'zw5LCMD5', 'ChjVDg9JB2W', 'EwnUAwm', 'rvmTqLa', 'lJeXoa', 'C3rYAw5NAwy', 'uKvorevsx0i', 'qwrHBq', 'rgLZy28GqMe', 'ifnTyxnOzxi', 'r2LHBM5H', 'lJm0', 'wwvLluHHDYe', 'vgHVBwfZ', 'y2TZlNjHCMu', 'BwfW', 'zxnwmG', 'C0LK', 'mdeUCg5N', 'C29YDa', 'r1mY', 'zw1VDgu', 'AwXSCYbPBIa', 'yMf0DgXLlNa', 'lJiWmq', 'ihDPDgGGzNi', 'lJy4', 'qLaTB25SEs0', 'rNjLzsbqCMK', 'Ahr0CdOVl2W', 'lJiXmG', 'vg91CMLZDca', 'lJiWnW', 'twLUugXHEwu', 'tufmta', 'r251Ba', 'ihzHBhvLCYK', 'C2XPy2u', 'lJeZmq', 'CgLUC0nVBMy', 'lJeYoq', 'C3rYAw5N', 'qwDLBNqGtg8', 'DgXLifjVEwe', 'B21HBG', 'qNvUiej1BG', 'u2nVB2jH', 'vw5JBguGu2e', 'lJiZmW', 'lJiWmW', 'BguSihrLC3q', 'qwXPy2u', 'q0vqvc1nt0q', 'q0HbteXftKC', 'qLjptLPf', 'x19squ5luK8', 'sg93zhKGuge', 'qvjeuY1TywW', 'svnfq1q', 'DgfIx29MzMu', 'vgH1BxbLCG', 'lJe1nW', 'u2LSDMvY', 'rMLLC3rHifq', 'q2fYCMLL', 'AxqTA2v5', 'zw5Kx2rHDgu', 'rM9YyMvZ', 'AxjS', 'x2PZB24', 'mtmWode4DLjpvg5R', 'r3jHBMrcyxq', 'ic8GzhvVCYa', 'mJaYnY0Wms0', 'lJeZnW', 'CMfPBG', 'Af9dDxn0B20', 'Dhnwna', 'CMfUA19LBgK', 'qY1UBY1Nzw4', 'y2HFq3vZDg8', 'vhDPC3qGrge', 't09clxbYB2q', 'kg9MzIK', 'te9mifbHC3m', 'DJq0nL0Gr2e', 'lJyZ', 'wM9TyMLLieC', 'lJiYnq', 'u2fMzxr5iey', 'C2vYDMLJzq', 'rMLYzsbtA3u', 'lNrPzxiUuLy', 'q29TBw9Uifm', 'DMLJzs1UB3C', 'su5t', 'lJe0nW', 'B25LBKDh', 'u2fRDxjH', 'tMf0AgfU', 'CgXHy2vTzw4', 'qwTVzgLH', 'txL0AgLJu2S', 'C3vIlMr1Bw0', 'qMvYBMfYza', 'qxn0CM8', 'lJC4', 'z2v0sxrLBq', 'lJq4', 'BwvKAwm', 'B2zMzxjFEdm', 'uNL1AMLU', 'Bg9SlJf2ms4', 'l2fWAs9Tyxq', 'uMfLBhLUBG', 'yNjnAw5tB2W', 'Bsb0AguGC2u', 'C3nwmW', 'wM9TyMLLifC', 'vw5JB21TB24', 'C3bSAxq', 'Dhnjra', 'rgfUy2uGv2e', 'lJe5nq', 'tu9ervmTBwe', 't29WCW', 'lJe3mG', 'vsbsB2nR', 'lJqW', 'lJiZmG', 'te9mieTPBMC', 'Bg9VDgjVEc4', 'twfZDgvYt2G', 'BgvFy29TBw8', 'CM1Lza', 'lJy1', 'u2fNzq', 'uxvLzw4', 'y2TZlMvWAwm', 'lJiWoq', 'EhbVBMX5', 'mJuGr2vTCW', 'y2TZlG', 'v2L0y2GGrg8', 'lJiYmW', 'qNjLywTKyw4', 'BxbPB25FmW', 'q3vWy2fRzq', 'lJiZmq', 'r0vorvjbtc0', 'C2TPBG', 'r0fdseeTBwe', 'DgLUDw1Fmq', 'lJe2mG', 'BgLTyIb0Agu', 'BNPV', 'u2THDgLUzYa', 'Dwn0CY1UBY0', 'mJaYnI0WnI0', 'AwDUx2rHDge', 'lJiY', 'lNq4', 'q0vqvc1nquK', 'DMvYxZm', 'BM55', 'AcWGyw5Kigm', 'BwfNzq', 'tgLRzq', 'Dg9Rzw4', 'r2fTzxbSyxK', 'q2HHChrLCIa', 'u2THDgvYiei', 'BNPLxZi', 'tML0CM8GqM8', 'vhjHAw5LCIa', 'q29Szq', 'lJe1nG', 'A2v5', 'tu9ervmTBNu', 'igzVCIbLEgm', 'x19ICLj1Bgu', 'qw51yMLZ', 'lJe1na', 'ANvZDhbSyxK', 'svzf', 'lJe2nq', 'BMnL', 'Bg9N', 'EvnRAw5Z', 'CgXHEwvYC3q', 'mZCWodrvEhHgzeC', 'ywjSzwq9', 'lJGW', 'BgvFzxbPyW', 'sgf6Bwf0ieC', 'qwXPzw4', 'mIbVzIaXDJe', 'qLaTmxrPzxi', 'lJG2', 'BLbSyxLLCNm', 't09clw5Vlxa', 'CgfYC2u', 'wfbcyw5R', 's19QCgXJuxG', 't2zMAwnLCIa', 'Cc4X', 'rwXPDgu', 'lNqY', 'lJyX', 'B2zMzxi', 'B2nRzxjtCgK', 'sgvHCNq', 'lJe2ma', 'lJi0', 'te9m', 'mdjumda6mda', 'nJK4mdu4nezAq1zOEq', 'u2fKifBdOxnX', 'sMvZDgvY', 'CNrUzxi', 'u29UEwe', 'wM9L', 'lJi4na', 'u3bHy2uGqNu', 'sgfWChKGq28', 'lJe0oa', 'q2HHBxbPB24', 'D3D3lMLUC3q', 'tgLHBq', 'wMv1CW', 'iefYCM93', 'zf8Z', 'B2XLDa', 'te9mu3r5Bgu', 'uMfYzq', 'Aw5qzxjhyw0', 'B3jLu2v0DgK', 'yw5Rzwq', 'wM9TyMLLC18', 'CgXHEwvYzw0', 'mJaYnI0Xmc0', 'u3vUBNK', 'yxvSDa', 'Bg9VDgjVEa', 'u3rLCMvV', 'lJe1mG', 'lJi0mW', 'yta7zM9UDc0', 'sgLWieHVCca', 'rvfvsvbnru4', 'uMvIzwnJyq', 'BMDZvJKGpsa', 'zw9UzW', 'sgLSzge', 'ywnRlG', 'qMvHy2GGr2K', 'rgeGqM9TyG', 'DeLe', 'lJi4', 's2f5Bge', 'odbUCNfXrLu', 'sgfUzgn1zMy', 'u2fTDxjHAsa', 'txLZDgvYAw8', 'lJuX', 'tgf1z2HPBMC', 'ywnJB3vUDf8', 'zxiGmIe', 'wM9Uzv9dDxm', 'BM8TC3rVCMu', 'qwXPzw4Gsgu', 'u29MAwe', 'DgXLuM95ywW', 'khrOAxmGC2u', 'ifvUAwnVCM4', 'rw1PBgLH', 'CYb0BYb1BMW', 'BwvUDfHq', 'te9mifb1Bxa', 'sg9YAxPVBNq', 'lJqZ', 'lJe3nW', 'ChvZAa', 'lJe2oq', 'lNbUzW', 'lJeYna', 'jwnBqLjDihm', 'vMLJDg9YEsa', 'revbierPzwC', 'lJeZma', 'q2f0Eq', 'yxjKC0Le', 'u3rYyw5Nzxi', 'zu1Vzgvjza', 'lJi1ma', 'uMfYzvnRAw4', 'uM9IAw4', 'lJe5mW', 'uKvbtf9ts0K', 'ifnVBM55', 'tL9eqvrb', 'DxjU', 't3n3ywXK', 'uMfJzsbgBge', 'lJG3', 'B25MAwDjra', 'uMfJzsbdDxa', 'BgzVCM1Lza', 'sM9Zzq', 'CMfNzq', 'lNqXnq', 'DxbFmdeUCg4', 'u3vUifrVBMC', 'qtfHmq', 'Bg9VDgjVEgu', 'oJmWmda', 'B2XKo2zVBNq', 'lJe1oq', 'lJeXma', 'qLaTzw1WDhK', 'yNjnAw5eDw8', 'BgvFCMfYzq', 'lJe5nG', 'x19ts0Lou18', 'BwfYA3nTyw4', 'lJeXmq', 'iezVCNDHCMq', 'tI0X', 'lNq3', 'BKjHDhrSzva', 'q2L0Ev9AB24', 'l1nLyxnVBJK', 'zxnPzq', 'yw1VDw50', 'ywnRlJCX', 'BMTLza', 'tgLSEq', 'yxnZlNrPzxi', 'lxjLD2fYzhm', 'zcbnywW', 'C2vHCMnO', 'D3D3lNLVDxq', 'yNvJA3nOB3q', 'tw9Kzq', 'qwLTvhjHAw4', 'lJeXmW', 'EdmGu3bPBNm', 'CMfPzgvY', 'CMfUA19ZAwW', 'oJaWlJaWmcS', 'mZy4mdaXmejmEhjABW', 'C0Le', 'uhLYBW', 'C3nFEhbFyMe', 'BxbPB25Fmq', 'qw5NCNKGq2G', 'r1nm', 'zeXVy2TLCLm', 'mYbhzw1Z', 'CMfUA19JAge', 'lJeWnW', 'twfKAxnVBG', 'CMfYAxr5', 'lJCY', 'r2vHCNmGrxG', 'lJy2', 'r29SzgvUie0', 'Dg8Gq2HHChq', 'lJC5', 'y2TZlNzHBhu', 'iZeGsgf0', 'u3vYzMvYieG', 'Aw5ZlM1LBgu', 'lJiWnG', 'B2XKAwvY', 'lJe0mq', 'te9mq29PBNm', 'Aw1L', 'uMf2ywDLCG', 'zYb0AguGD2e', 'yxnPBgLZ', 'u3bHCNrHBG', 't3DLBG', 'lJe3ma', 'ihnPEMu9', 'q2HLBwLJywW', 'BNvSBa', 'wxvL', 'uhjPBMnLieG', 'q2f5zgvU', 'xZq0nG', 'yMf0DgXLx3a', 'rfvdvfmTu1q', 'sxjPCW', 'zxDHCMrZiokaLa', 'ihnVBg8G', 'ru1qvfKTueW', 'lxbSywnLBwu', 'u0LmvKvs', 'zgvMyxvSDa', 'lJe1', 'jwnBte9dxsa', 'BM90AwvYCW', 'lJG5', 'lNqXmG', 'Cc41', 'u3bHy2uGrMW', 'qwnOAwXSzxm', 'qNvUBNKGt24', 'iefYAwvSyq', 'D2vHCg9UC2S', 'mtK5mZmXm0rcqwvJuW', 'mZK3ndaYrfnuwhPl', 'Aw5MBhvLBMm', 'ifbYzw1PDw0', 'CMvWBgfJzq', 'vg9Kza', 'uM9VC3rLCG', 'ifnVBgrPzxi', 'EMvZ', 'q29TBw9Uu2S', 'C3bPBL90Axq', 'lJe1mW', 'lJe4nq', 'C2T1CW', 'CML2ywn5lxa', 'vgfUBMvY', 'uLnFndq2', 'v2vSy29Tzsa', 'qxLHA2e', 't2zMzxjFmta', 'rNbdB2LUnq', 'DgfYDcbMCM8', 'q29Uzq', 'lJeWna', 'zxjTCY1VzI0', 'BKLe', 'lJmX', 'BMTFCMvMAwW', 'rwXSyq', 'rv0G', 'CM9WigLUDg8', 'lJeXna', 'AwnR', 'DgvFmW', 'rgLZy28Gu3q', 'Bg9JywXtDg8', 'lJiZnG', 'q2LJzxjV', 'tgLNAhrUAw4', 'r2vTCW', 'zu1Vzgu', 'E2LUDMfSAwq', 'uhjPBMnLieu', 'lJiXnq', 'D2jVEq', 'lJe3oa', 'CM9Hzf9Kyxq', 'u2HVB3rPBMC', 'ihn0yxj0CZ0', 'DgLLCNm', 'sgfYDq', 'BMrLieDHBwu', 'tg9ZzxiGsge', 'qxzH', 'AY4X', 'lJeY', 'vgfRyxnOAq', 'lJG0', 'zMy7zM9UDc0', 'v2LSBgLHBq', 'C2XVDc5Kzwy', 'qM9I', 'B2jQzwn0', 'u2T1BgWGtwe', 'qY1UBY1ZDg8', 'ounJwe5WtG', 'u2THDgvYida', 'Bs8XDJeUBg8', 'lJiZoa', 'rLjfrv9tueK', 'y29UC3rYDwm', 'lJeWoq', 'BM5LCG', 'rxf1AxbTzw4', 'lJe1ma', 'lJiYma', 'Dwv6', 'qMvU', 'lJiZ', 'lJiZnW', 'q2HHCMXVDhq', 'lJe4', 'u2THDgvYieC', 'yxnZugXHy2u', 'rxjPBG', 'Cc4Z', 'yw5K', 'rhjPzNq', 'r29SzgvUiei', 'lJuZ', 'DJq0nL0Guhi', 'swnLienYzwe', 't09clw5Vlxm', 'lNqXmW', 'vhLSzxi', 'u2fTyw50Age', 'ugXHDgLUDw0', 'zhvJDhm', 'qMfYza', 't09clw5VlwC', 'q1qGqunusvy', 'ywnRlJCW', 'Aw5Zl2vU', 'y3rVCG', 'u2fSDMf0B3i', 'twLH', 'msbhzw0', 'Bg93lMLVl3q', 'zf8Y', 'ru1qvfKTrvG', 'CMfUA19WBge', 'x19prKzfuLm', 'CcbiB3aGrge', 'thvJyxm', 'uM9JAYbnyw4', 'lJy3', 'DgLUDw1FmG', 'x3jHCMu', 'ANnVBG', 'ChjLDMLVDxm', 'A19LBxb0Ev8', 'u3vUifn3zwe', 'BxbPB25FmG', 'lJe5', 'qxjYB3C', 'BNndB25MAwC', 'rwfZDgvYieu', 'rgLZy28GqM8', 'x0jHBM5LCL8', 'lJC3', 'lw1HBgzVCM0', 'y2XLCW', 'zYbnyxnR', 'lJeYmq', 'qLaTBwLUAw0', 'Cg9W', 'qMfYyMfYB3m', 'yxnZ', 'jwnBvfjpueG', 'BNnjza', 'q3LIzxiGqNu', 'zxnjra', 'r29Sza', 'lJK5', 'vc1TywXMB3i', 'lJe5na', 'tMLUAMeGsge', 'CML2ywn5lw4', 'EdqGu3bPBNm', 'yNaUChjLBwK', 'ChjVzc5Zzxi', 'u2LYifjVyMu', 'C2TPBNm', 'twfZDgvYieO', 'sgfYCgvY', 'q3LJBMLJ', 'A2v5CW', 'q3b0lIbmDw4', 'sM9OBNnVBG', 'lJeX', 'Dg9YywDLlKq', 'sg90ierVzW', 'u1Dbva', 'lJu5', 'ihrOzxjLiq', 'rvmTqLaTrfi', 'rgvZzxj0ifm', 'oJaWwG', 'r1m1', 'q2fTAwXSyq', 'DhrSzs1Wyxm', 'lJe4oa', 'tgLVCG', 'sMfJAW', 'yNbWCMvTAxu', 'sw5Kzq', 'AxPHDgLVBL8', 'Dg9Rzw5ZlNa', 'AxvTx2rHDge', 'DgLSzq', 'AwDjra', 't2zMzxjFmti', 'lJe0nG', 'lJe5mG', 'wM9TyMLLie0', 'BwvYy2vUyxi', 'AxrLzeXVy2S', 'DwjLlMnVBs8', 'igXPDMu9', 'u2v0DgLUz3m', 'rxbPyW', 'ug9PBNrPBMC', 'q29UC3rYDwm', 'yNvUzgXLCge', 'B2XK', 'sg9WCgvY', 'vfjpueHzx0W', 'BNPLxZe', 'rgfUAwvS', 'u21HBgXLC3q', 'tg92zsbiyw4', 'qMf0DgXLuge', 'qY1VBMX5lxa', 'uKnFvKvs', 'vw5Py29YBIa', 'lxrPzxiTB2i', 'mJaZmc0Wms0', 'twf5yq', 'vfjpueHzx0q', 'vMfZC2u', 'l2fZC2v0CY8', 'AxzPyq', 'qMXHAxi', 'Dw5KzwzPBMu', 'lJiYmG', 'x3jJrgLZCge', 'y2TZlKDtm18', 'zxiGsxnmAw0', 'qM95', 'C0DHy2HH', 'lJiXmW', 'ienVBhrVBG', 'lJe2nG', 'AwXHCW', 's2fYyxrL', 'qw1LBgLH', 'BwvK', 'rMX5Aw5NieS', 'sMfUzq', 'lJe2nW', 'EsbtA2LU', 'uKXcmq', 'rNbhzw0Z', 'y29PBNm', 'v2L6yxjKiee', 'B3iTA2LKCW', 'lJC2', 'DgvZ', 'zxjZ', 'tML0CM8Gmdu', 'Cc4Ynq', 'qxrOzw5H', 'uhjPy2TSEsa', 'lJi0oa', 'y29SB3i6i2y', 'lJCW', 'tu9ervmTzw0', 'lJGX', 'uKXcmG', 'lJi0ma', 'CMuGyMvPBMC', 'DwLZ', 'lJqY', 'qw5UAwu', 'zxbHy2SUC2e', 'tMvIDwXH', 'uMfUA1jVywq', 'u2LYifjVBwu', 'lJiXoq', 'r2vTAw5P', 'C3rYB25HDxq', 'uKXcna', 'lJiXma', 'lJuW', 'BMv0', 'lJe5oa', 'w0nVBMzPzYa', 'qNjVBNPL', 'u2vYidf2mwe', 'lJi0mG', 'Bg9S', 'mti4mdq5oxrYA3vvvq', 'A2LU', 'q29UzMLNCW', 'mty1s25OsLrO', 'q2fJDhvZ', 'zMXHzZ0', 'y2uGrNjLzxO', 'zM9YrwfJAa', 'lJq3', 'zxbHy2S', 'mdfumda6mda', 'ig1Vzgu9', 'q3b0lIbtyxq', 'r1mX', 'vvmTufjprfu', 'Bg9SlNDLyMy', 'lJe4mq', 'lJe3nq', 'rgfPBhLszxC', 'lNq1', 'sMLSBa', 'uKfos19st0e', 'rNbdB2LUmtu', 'rNbhzw01', 'qLbfEha', 'lJiWna', 'lJyY', 'lJq0', 'r2fSywn0Awm', 'ie1vvefuruq', 'Bg93lMLVl3a', 'lJe1oa', 'qLaTBM8TyMe', 'ievSAwfUyq', 'D2vPz2H0oMi', 's2fPDg8', 'lJeW', 'BhvJAYbVDxq', 'tgf6', 'q29PBNm', 'qxzLCNK', 'lJi2', 'sgf6Bwf0iei', 'C1y0', 'DMvYxZi', 'ruXjveu', 'CM9KDwn0CW', 'u3bHCMTSzxm', 'qNjHBMr5', 'rxbPy1nRAw4', 'mxyXlMXVBa', 'lJi3', 'vgHHBMSGww8', 'CMfUA191BNi', 'lJe3na', 'rxjPyW', 'vMLJDg9Y', 'jwnBrefjtfK', 'vhjHBNnTAxm', 'rNbdB2LUmJu', 'x1nuqvju', 'rwXSAwu', 'twfS', 'lJeWoa', 'x1DLyL9by3q', 'mJaYmc0Wms0', 'lxnPEMu6mtm', 'lJiX', 'sMfTzxm', 'lJeXoq', 'tgvHzgvYyM8', 'lw5LDYbcyxq', 'q3vIzsbgywm', 'ie1HC2S', 'r3jHy2u', 'lNqXna', 'twLUzxj2yq', 'zMe7zM9UDc0', 'lJe3mq', 'qw5H', 'rhjL', 'me8WjNq9oda', 'u3rYzwfRq28', 'CMfUA19NB2W', 'q2X5zgu', 'lJe1nq', 'ihnLCNzLzca', 'uhjPBMnLC3m', 'Bw9KzsK', 'tK8Gu0vbu08', 'wc1IB3q', 'lJe0nq', 'uMv5', 'BhvL', 'uMfPBMjVDYa', 'ywrjra', 'Ahr0Chm6lY8', 'qLbFveLfuLm', 'lJe4nG', 'zw5YEq', 'q2fYCM90', 'lJCZ', 'DgnOzwq', 'Chr5', 'qNjVA2vUieG', 'r2fTzuv2zw4', 'DgvZDa', 'B2nRigfSB24', 'r09mra', 'lJi0mq', 'twfYAwe', 'rvmTBwfSzM8', 'tu9ervmTB20', 'tgvNzw5Kyxi', 'r1mZ', 'u2HHzg93', 'u2LSBhKGrge', 'Dg9Yzq', 'lJiWoa', 'rxbPyYbtA2K', 'ueXbveLovu0', 'rLrvrs1TywW', 'y2TZlKDtmL8', 'q29TBw9U', 'sMvUBNK', 'zw5HyMXLzd0', 'DfyX', 'AY4Xoa', 'q2HHBgXLBMC', 'rMLZAcbcywK', 'uMfJzsbxAgu', 'AwnRzxjZlNa', 'lJeZnG', 'lJuY', 'rxHLy3v0Aw8', 'rM9VDgjHBgW', 'qY1UBY1TB2q', 'uMfYzsbtA2K', 'q0Hbtvbjt04', 'mJa5os0Wms0', 'lJi1mq', 'tMfTzq', 'B2zMzxjFBgu', 'rwXPAMfO', 'u2HHEq', 'vgvKzhK', 'Edbpma', 'mda6mda', 'zwfYDa', 'sgvSBwv0iee', 'wfbcyw5Rsuq', 'lJm4', 'revbiePHy28', 'Dg9YiePHy2S', 'qtfI', 'q2fYBg9Z', 'Aw5JBhvKzxm', 'yMfUBMvYx2K', 'muHWAu5lwq', 'DwvLBG', 'vvmTu1rpuKu', 'q3b0lIbbCMK', 'refjtfLFu0S', 'DgLVBNnjza', 'ywrwmG', 'Dg9Yie1VBgW', 'q29ZBw8', 'v2fUzge', 'txiUiePVBMu', 'tgLTAxrLzeW', 'yMf0DgXLCge', 'yxnZAwDU', 'uKXcmW', 'q2fWDgfPBIa', 'vhjHzMzPyYa', 'BMfTzq', 'y2TZlM1Lz2e', 'quLmwv9ts0K', 'vg95B3rVBwK', 't3zLCNjPzgu', 'uM9JAW', 'A2vY', 'lJi0oq', 'CgH5ifjVywq', 'tu9ervmTC2S', 'lJiZma', 'B251CW', 'AwDwmq', 'yMfZAwm', 'qMvHDhjPEa', 'D2fYBG', 'uhvUAYbqyxi', 'mxyXx0nSyxm', 'lJeZoa', 'B2XPy3K', 'u3rVCMvtzxq', 'BwfSzM9YBwu', 'vgfJDgLJywW', 'lJu1', 'lJeZnq', 'lJeYoa', 'lJmW', 'rgfPBhLtCgK', 'lJmZ', 'rgfUyq', 'lJeYnG', 'lJmZma', 'qMXHA2u', 'B3rPy2u', 'revbieP1BgK', 'oJaWlJaWmfO', 'lJiZoq', 'lJeXnW', 'uMfUA1Hqr2e', 's2LJA2LUzW', 'rviGDgHLifi', 'lJiXnG', 'Dg9Rzw5ZlMi', 'CMfUA3jVywq', 'r2fZie1HC2S', 'BgvUz3rO', 'Cc4Xma', 'tg9VDejVEgu', 'Cc41nq', 'lJK1', 'Aw5Z', 'C0rHDgfwmG', 'tgf2ysbnyw4', 'rxrOyw4', 'twLRzq', 'DJq0mv9TB2m', 'l0TFANbSy1e', 'lJeYnq', 'lJe2oa', 'lJeWmq', 'v2fSBa', 'twLSzxK', 'q2fSzwi', 'ChjLBwL1Bv8', 'C2TPBNnFzge', 'zvDHCNnFq3u', 'twfYz2fYAxq', 'rMX5Aw5Nifu', 'B2nHBgHVC3q', 'q3v0zsbszxa', 'B2fKzwqGAxm', 'twLKyxm', 'lJi1', 'CMvJB3zLCNK', 'r290AcbhAxi', 'Aw5ZlNbHy2S', 'tgv0DhK', 'sgvUCNK', 'Bg90', 'vSoHC3f1zxO', 'tu9ervmTBwK', 'nsbhzw1Z', 'txL0AgLJ', 'q2HSB2u', 'q3vZDg9T', 'qLaTBM8TDgK', 'yMf0DgXLlxa', 'B3rLCY5Wywm', 'CML2ywn5lwy', 'yxjKC1yY', 'lJeYmG', 'Bg1LDa', 'lJe4mG', 'lJe4mW', 'uMfJzsbdyxi', 'u2vSzwn0zwq', 'u3bLzwrVBwu', 'y29SB3i6iZa', 'vhjVCgH5uM8', 'yxzPBMC', 'lJG1', 'r2fJAgftA2K', 'u21PBgv5iem', 'wc1eCM9Pza', 'lJGZ', 'u29WAgLH', 'twfZB24', 'C2LVBG', 'B3jPz2LU', 'vgfRyxnOAsa', 'swrSzq', 'x2nVBw1VBG', 'zM9YBwvK', 'CgXVC2LVBG', 'tg9Syq', 'qNvYz2vY', 'lJiXmq', 'ugLJA2f4zq', 'r2XVDMu', 'sg9JA2v5ie0', 'zYbdBg91za', 'tw90B3iGsgu', 'q2fYB2XPBMu', 'ihrOzsbHBgW', 'lJi4nq', 'ug90', 'C2vHC29UCW', 'zNvUy3rPB24', 'lJe5ma', 'quXmluvnufq', 'tw9KzxnjBMy', 'u1PIsgS', 'B2r5lG', 'lNqX', 'BJeUDgLLCNm', 'lJe0ma', 'BwvnB2rLC1y', 't2XHzG', 'u3vUiefUz3i', 'q2f5zgu', 'ugfYDhKGsge', 'q3b0lIbcB24', 'sNvUzW', 'y2HTywTLCG', 'y29PBNnFzge', 'u2fUDgeGsge', 'wMfUEsbszwq', 'BNvZq29PBNm', 'uhjVzhvJDhm', 'lJe0na', 'lJe0mW', 'lNqXoa', 'ntuGr2vTCW', 'uhjHy3rPy2u', 'lJiWmG', 'u3vIC2nYAxa', 'lNq2', 'w0jPC2vJDf0', 'y2SUnG', 'uM9Uzw5hrW', 'lJC1', 'C3rPy2TLCG', 'DgLUz3nwoq', 'z2vUzgfYEq', 'rgvHDgHTyxq', 'r29SzgvUifi', 'zgfTyw50', 'yxnZx3bYzw0', 'qxnOzq', 'twvLCMe', 'B25MAwDwna', 'Bw9KzxnFAw4', 'lJiYoa', 'lJe4ma', 'BMzPzW', 'DgvKx2XVy2S', 'v29UzW', 'lJKZ', 'u2fKifjVyM8', 'me8WjNq9ndC', 'lJiWnq', 'lNq5', 'rLrvrunVBMy', 'B2r1y3rZvJC', 'Dg9YiefSzxG', 'y29PBNmUyNa', 'lJK4', 'u3bPBG', 'C2fSzq', 'lJeWnG', 'zs5WAwnRyxG', 'EwXVywrZige', 'lJi0nq', 'u3rVCM0', 'sg9YC2vTyw4', 'lJeXmG', 'lJyW', 'u3rYzwfRqM8', 'mJaYnc0Wms0', 'lJKW', 'CM91BMq', 'rgvMzwf0zwq', 'lJeWmG', 'qwXLC3nPyq', 'qwDLBNqGt2W', 'qMfUzgL0', 'y2SUmW', 'sgfUzcbnDxm', 'lJm5', 'lJeYmW', 'CgXHExrPA2e', 'tLm9', 'zhDHCMq', 'sMvZC2LJyq', 'y2f0y2G', 'qM90C1bYywm', 'qw1Izxi'];
-    _0x5a05 = function() {
-        return _0x25442b;
-    }
-    ;
-    return _0x5a05();
-}
 const gameModesV4 = {
-    'Configs': {
-        'default': {
-            'default_mode': _0xd95be6(0x4b9) + _0xd95be6(0x128) + 'e',
-            'competitive_modes': [['GrandBat' + _0xd95be6(0x128) + 'e', '1v1_Clas' + 'h']],
-            'casual_modes': [[]],
-            'practice_modes': [_0xd95be6(0x40a), _0xd95be6(0x448) + 'ticeMatc' + 'h', _0xd95be6(0x170) + 'er', 'Zombies'],
-            'custom_modes': [[_0xd95be6(0x4b9) + _0xd95be6(0x128) + 'e_Custom', _0xd95be6(0x382) + _0xd95be6(0x4be), _0xd95be6(0x462) + 'om', _0xd95be6(0x560) + _0xd95be6(0x3c5), _0xd95be6(0x162) + _0xd95be6(0x3b2) + 'stom', _0xd95be6(0x124) + 'tom', _0xd95be6(0x455) + '_Big_Cus' + 'tom', _0xd95be6(0x415) + _0xd95be6(0x4c2) + 'm']],
-            'featured_modes': [],
-            'modes_rotation_hour': 0x12,
-            'max_wait_time_for_players': 0x3c,
-            'min_wait_time_for_players': 0x5,
-            'late_join_kick_delay': 0x1e,
-            'modes_info': {
-                '1v1': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                '1v1_Competitive': {
-                    'MatchmakingType': _0xd95be6(0x44b) + _0xd95be6(0x400),
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                '1v1_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                '1v1_Clash': {
-                    'MatchmakingType': _0xd95be6(0x44b) + _0xd95be6(0x400),
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                '1v1_Clash_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'BoxFight_1v1': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'BoxFight_1v1_Competitive': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'BoxFight_Teams': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'BoxFight_Teams_2v2': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'BoxFight_Big': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'BoxFight_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'BoxFight_Big_Custom': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'MiniBoxFight_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Teams_2v2': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Teams_2v2_Competitive': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Teams_3v3': {
-                    'OverridenRangeIncreaseFactor': 0x8ca0
-                },
-                'Vikings_Teams_3v3': {
-                    'OverridenRangeIncreaseFactor': 0x8ca0
-                },
-                'Teams_City_ZoneWars': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'PipeRun': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'PipeRun_Race': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'PipeRun_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'FFA_Normal': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'FFA_Winter': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'FreeForAll': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'GrandBattleRoyale': {
-                    'MatchmakingType': 'PhotonRa' + _0xd95be6(0x167),
-                    'MinPlayers': _BR_MIN_SOLO,
-                    'MaxPlayers': 0x10,
-                    'OverridenRangeIncreaseFactor': 0x186a0,
-                    'OverridenScenePool': {
-                        'WesternUFO_BR': 0x32,
-                        'GrandBattleRoyale': 0x32
-                    },
-                    'OverridenBattlePassPlacementXP': [0x20, 0x1c, 0x1a, 0x18, 0x16, 0x14, 0x14, 0x12, 0x12, 0x10, 0x10, 0xe, 0xe, 0xc, 0xc, 0xa]
-                },
-                'GrandBattleRoyale_Duos': {
-                    'MatchmakingType': 'PhotonRa' + _0xd95be6(0x167),
-                    'MinPlayers': _BR_MIN_DUOS,
-                    'MaxPlayers': 0x10,
-                    'OverridenScenePool': {
-                        'WesternUFO_BR': 0x32,
-                        'GrandBattleRoyale': 0x32
-                    },
-                    'OverridenBattlePassPlacementXP': [0x1e, 0x19, 0x15, 0x13, 0x11, 0xf, 0xd, 0xb]
-                },
-                'GrandBattleRoyale_Custom': {
-                    'OverridenScenePool': {
-                        'WesternUFO_BR': 0x32,
-                        'GrandBattleRoyale': 0x32
-                    }
-                },
-                'BattleRoyale_ZoneWars': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'BattleRoyale_Teams_2v2': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'BattleRoyale_Custom': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'Arena': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Gulag': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'Gulag_2v2': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Gulag_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'Farm': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Farm_2v2': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Farm_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Deathmatch': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Deathmatch_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Zone_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'City_ZoneWars_Custom': {
-                    'OverridenRangeIncreaseFactor': 0xea60
-                },
-                'Vikings_Custom': {
-                    'OverridenRangeIncreaseFactor': 0x8ca0
-                },
-                'Pumpkin_Ball': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Snow_Zone': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                },
-                'Practice': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'AimTrainer': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'BotsPracticeMatch': {
-                    'OverridenRangeIncreaseFactor': 0x2ee0
-                },
-                'Zombies': {
-                    'OverridenRangeIncreaseFactor': 0x5dc0
-                }
+    Configs: {
+      'default': {
+        default_mode: 'GrandBattleRoyale',
+        competitive_modes: [['GrandBattleRoyale', '1v1_Clash']],
+        casual_modes: [[]],
+        practice_modes: ['Practice', 'BotsPracticeMatch', 'AimTrainer', 'Zombies'],
+        custom_modes: [['GrandBattleRoyale_Custom', '1v1_Clash_Custom', '1v1_Custom', 'Zombies_Custom', 'City_ZoneWars_Custom', 'Zone_Custom', 'BoxFight_Big_Custom', 'Deathmatch_Custom']],
+        featured_modes: [],
+        modes_rotation_hour: 18,
+        max_wait_time_for_players: 60,
+        min_wait_time_for_players: 5,
+        late_join_kick_delay: 30,
+        modes_info: {
+          '1v1': {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          '1v1_Competitive': {
+            MatchmakingType: 'UnityMatchmaker',
+            OverridenRangeIncreaseFactor: 12000
+          },
+          '1v1_Custom': {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          '1v1_Clash': {
+            MatchmakingType: 'UnityMatchmaker',
+            OverridenRangeIncreaseFactor: 12000
+          },
+          '1v1_Clash_Custom': {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          BoxFight_1v1: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          BoxFight_1v1_Competitive: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          BoxFight_Teams: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          BoxFight_Teams_2v2: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          BoxFight_Big: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          BoxFight_Custom: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          BoxFight_Big_Custom: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          MiniBoxFight_Custom: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Teams_2v2: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Teams_2v2_Competitive: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Teams_3v3: {
+            OverridenRangeIncreaseFactor: 36000
+          },
+          Vikings_Teams_3v3: {
+            OverridenRangeIncreaseFactor: 36000
+          },
+          Teams_City_ZoneWars: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          PipeRun: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          PipeRun_Race: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          PipeRun_Custom: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          FFA_Normal: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          FFA_Winter: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          FreeForAll: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          GrandBattleRoyale: {
+            MatchmakingType: 'PhotonRanked',
+            MinPlayers: _BR_MIN_SOLO,
+            MaxPlayers: 16,
+            OverridenRangeIncreaseFactor: 100000,
+            OverridenScenePool: {
+              WesternUFO_BR: 50,
+              GrandBattleRoyale: 50
+            },
+            OverridenBattlePassPlacementXP: [32, 28, 26, 24, 22, 20, 20, 18, 18, 16, 16, 14, 14, 12, 12, 10]
+          },
+          GrandBattleRoyale_Duos: {
+            MatchmakingType: 'PhotonRanked',
+            MinPlayers: _BR_MIN_DUOS,
+            MaxPlayers: 16,
+            OverridenScenePool: {
+              WesternUFO_BR: 50,
+              GrandBattleRoyale: 50
+            },
+            OverridenBattlePassPlacementXP: [30, 25, 21, 19, 17, 15, 13, 11]
+          },
+          GrandBattleRoyale_Custom: {
+            OverridenScenePool: {
+              WesternUFO_BR: 50,
+              GrandBattleRoyale: 50
             }
+          },
+          BattleRoyale_ZoneWars: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          BattleRoyale_Teams_2v2: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          BattleRoyale_Custom: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          Arena: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Gulag: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          Gulag_2v2: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Gulag_Custom: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          Farm: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Farm_2v2: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Farm_Custom: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Deathmatch: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Deathmatch_Custom: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Zone_Custom: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          City_ZoneWars_Custom: {
+            OverridenRangeIncreaseFactor: 60000
+          },
+          Vikings_Custom: {
+            OverridenRangeIncreaseFactor: 36000
+          },
+          Pumpkin_Ball: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Snow_Zone: {
+            OverridenRangeIncreaseFactor: 24000
+          },
+          Practice: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          AimTrainer: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          BotsPracticeMatch: {
+            OverridenRangeIncreaseFactor: 12000
+          },
+          Zombies: {
+            OverridenRangeIncreaseFactor: 24000
+          }
         }
+      }
     }
-}
-  , _SKU_DEFAULT_PRODUCT = _0xc400a1 => ({
-    'Name': _0xc400a1['replace'](/^lol\.1v1\./, '')[_0xd95be6(0x1b7)](/\./g, '\x20'),
-    'NameLocalizationKey': '',
-    'product_image': {
-        'image_data_type': 0x0,
-        'image_data': null
+  },
+  _SKU_DEFAULT_PRODUCT = _0xc400a1 => ({
+    Name: _0xc400a1.replace(/^lol\.1v1\./, '').replace(/\./g, ' '),
+    NameLocalizationKey: '',
+    product_image: {
+      image_data_type: 0,
+      image_data: null
     },
-    'product_background_image': {
-        'image_data_type': 0x0,
-        'image_data': null
+    product_background_image: {
+      image_data_type: 0,
+      image_data: null
     },
-    'DisplaySize': 0x0,
-    'Currency': 0x0,
-    'sale_start_date': _0xd95be6(0x437) + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-    'Rarity': 0x0,
-    'sale_end_date': _0xd95be6(0x281) + '01T00:00' + _0xd95be6(0x394),
-    'DiscountPercentage': 0x0,
-    'IsLimitedEdition': ![]
-})
-  , _REAL_SKIN_DATA_ON = !(typeof localStorage !== _0xd95be6(0x288) + 'd' && localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x142) + _0xd95be6(0x144)) === '0')
-  , _SKIN_DATA = {
-    '1': [_0xd95be6(0x43d) + _0xd95be6(0x286), 0x1],
-    '2': [_0xd95be6(0x255), 0x2],
-    '3': [_0xd95be6(0x31c), 0x4],
-    '4': [_0xd95be6(0x51d) + 'oy', 0x2],
-    '5': [_0xd95be6(0x3e3), 0x2],
-    '6': ['Ninja\x20On' + 'i', 0x3],
-    '7': [_0xd95be6(0x13a), 0x1],
-    '8': [_0xd95be6(0x117) + 'rl', 0x1],
-    '9': [_0xd95be6(0x12e), 0x3],
-    '10': [_0xd95be6(0x31e), 0x0],
-    '11': ['Justin', 0x2],
-    '12': [_0xd95be6(0x254), 0x4],
-    '13': [_0xd95be6(0x4c9) + _0xd95be6(0x4b6), 0x3],
-    '14': [_0xd95be6(0x4e8) + _0xd95be6(0x49e), 0x3],
-    '15': [_0xd95be6(0x4c9) + 'uy', 0x3],
-    '16': [_0xd95be6(0x26b) + 'an', 0x3],
-    '17': ['John', 0x0],
-    '18': [_0xd95be6(0x115), 0x0],
-    '19': [_0xd95be6(0x54c), 0x3],
-    '20': [_0xd95be6(0x348) + 'ner', 0x3],
-    '21': ['Astrid', 0x1],
-    '22': [_0xd95be6(0x3fa), 0x2],
-    '23': [_0xd95be6(0x312), 0x1],
-    '24': [_0xd95be6(0x54e), 0x1],
-    '25': [_0xd95be6(0x446), 0x1],
-    '26': ['Scarecro' + 'w', 0x4],
-    '27': [_0xd95be6(0x2f2), 0x1],
-    '28': [_0xd95be6(0x1eb), 0x4],
-    '29': [_0xd95be6(0x3bd), 0x1],
-    '30': ['Gisele', 0x1],
-    '31': ['Nitro', 0x1],
-    '32': [_0xd95be6(0x376), 0x2],
-    '33': [_0xd95be6(0x21c), 0x2],
-    '34': ['Clay', 0x1],
-    '35': [_0xd95be6(0x3ea) + _0xd95be6(0x3cc), 0x1],
-    '36': [_0xd95be6(0x370) + _0xd95be6(0x1c9), 0x1],
-    '37': ['Welder\x27s' + _0xd95be6(0x30b), 0x1],
-    '38': [_0xd95be6(0x501) + _0xd95be6(0x21a), 0x4],
-    '39': [_0xd95be6(0x23b) + 'sa', 0x3],
-    '40': [_0xd95be6(0x30e), 0x3],
-    '42': ['Klaus', 0x3],
-    '43': [_0xd95be6(0x368), 0x1],
-    '44': [_0xd95be6(0x369), 0x2],
-    '45': [_0xd95be6(0x402) + 't', 0x1],
-    '46': [_0xd95be6(0x433), 0x4],
-    '47': [_0xd95be6(0x1b9), 0x4],
-    '48': ['Isaac', 0x4],
-    '49': [_0xd95be6(0x300), 0x2],
-    '50': ['Red', 0x2],
-    '51': ['Reptile', 0x3],
-    '52': [_0xd95be6(0x2b2), 0x2],
-    '53': ['Bumblebe' + 'e', 0x4],
-    '54': [_0xd95be6(0x112), 0x1],
-    '55': [_0xd95be6(0x3fc), 0x3],
-    '56': ['VR', 0x1],
-    '57': [_0xd95be6(0x2fc) + _0xd95be6(0x3dc), 0x1],
-    '58': [_0xd95be6(0x566), 0x1],
-    '59': [_0xd95be6(0x3d8), 0x3],
-    '60': ['Octavia', 0x2],
-    '61': [_0xd95be6(0x2b0), 0x0],
-    '62': [_0xd95be6(0x297), 0x0],
-    '63': [_0xd95be6(0x306), 0x0],
-    '64': [_0xd95be6(0x556), 0x0],
-    '65': [_0xd95be6(0x3b8), 0x5],
-    '66': ['Electro', 0x5],
-    '67': [_0xd95be6(0x178), 0x5],
-    '68': [_0xd95be6(0x4e1), 0x5],
-    '69': [_0xd95be6(0x335), 0x5],
-    '70': ['Tourist\x20' + _0xd95be6(0x1c2), 0x0],
-    '71': ['Tourist\x20' + _0xd95be6(0x3be), 0x0],
-    '72': [_0xd95be6(0x491) + _0xd95be6(0x2ff), 0x0],
-    '73': [_0xd95be6(0x491) + _0xd95be6(0x168), 0x0],
-    '74': [_0xd95be6(0x1e8), 0x0],
-    '75': [_0xd95be6(0x24d), 0x0],
-    '76': ['Emily', 0x0],
-    '77': ['Jenna', 0x0],
-    '78': [_0xd95be6(0x207), 0x0],
-    '79': [_0xd95be6(0x3db), 0x0],
-    '80': [_0xd95be6(0x1ee), 0x0],
-    '81': [_0xd95be6(0x279), 0x0],
-    '82': [_0xd95be6(0x3c4), 0x0],
-    '83': [_0xd95be6(0x311), 0x0],
-    '84': [_0xd95be6(0x203) + 'e', 0x0],
-    '85': [_0xd95be6(0x282), 0x0],
-    '86': [_0xd95be6(0x1b8), 0x0],
-    '87': [_0xd95be6(0x391), 0x0],
-    '88': ['Cooper', 0x0],
-    '89': [_0xd95be6(0x53e) + _0xd95be6(0x1f0), 0x0],
-    '90': [_0xd95be6(0x53e) + _0xd95be6(0x276), 0x0],
-    '91': [_0xd95be6(0x53e) + _0xd95be6(0x3a7), 0x0],
-    '92': ['Officer\x20' + 'Reese', 0x0],
-    '93': [_0xd95be6(0x53e) + 'Sarah', 0x0],
-    '94': [_0xd95be6(0x53e) + _0xd95be6(0x4b5), 0x0],
-    '95': ['Construc' + _0xd95be6(0x35b) + 'son', 0x0],
-    '96': [_0xd95be6(0x273) + 'tor\x20Jaso' + 'n', 0x0],
-    '97': [_0xd95be6(0x273) + _0xd95be6(0x429) + 'is', 0x0],
-    '98': [_0xd95be6(0x273) + _0xd95be6(0x367) + 'y', 0x0],
-    '99': [_0xd95be6(0x30c), 0x0],
-    '100': ['Trainer\x20' + _0xd95be6(0x212), 0x0],
-    '101': [_0xd95be6(0x520) + _0xd95be6(0x212), 0x0],
-    '102': [_0xd95be6(0x520) + 'Taylor', 0x0],
-    '103': [_0xd95be6(0x520) + _0xd95be6(0x3a6), 0x0],
-    '104': [_0xd95be6(0x520) + _0xd95be6(0x3af), 0x0],
-    '105': [_0xd95be6(0x330), 0x0],
-    '106': [_0xd95be6(0x449), 0x0],
-    '107': [_0xd95be6(0x459) + _0xd95be6(0x19d), 0x0],
-    '108': [_0xd95be6(0x459) + _0xd95be6(0x260), 0x0],
-    '109': [_0xd95be6(0x211), 0x0],
-    '110': [_0xd95be6(0x2f9), 0x0],
-    '111': [_0xd95be6(0x521), 0x0],
-    '112': [_0xd95be6(0x35d), 0x0],
-    '113': [_0xd95be6(0x19b), 0x0],
-    '114': [_0xd95be6(0x11b), 0x1],
-    '115': ['Li', 0x1],
-    '116': [_0xd95be6(0x421), 0x0],
-    '117': ['Agent\x20Ma' + 'ggie', 0x0],
-    '118': [_0xd95be6(0x49c) + _0xd95be6(0x2ae), 0x0],
-    '119': ['Agent\x20Se' + 'an', 0x1],
-    '120': [_0xd95be6(0x469) + 'e', 0x1],
-    '121': [_0xd95be6(0x3eb), 0x1],
-    '122': ['Amy', 0x1],
-    '123': ['Fiona', 0x1],
-    '124': [_0xd95be6(0x466), 0x1],
-    '125': [_0xd95be6(0x50e) + 'Boy', 0x1],
-    '126': [_0xd95be6(0x45c) + _0xd95be6(0x28d), 0x1],
-    '127': [_0xd95be6(0x33e), 0x0],
-    '128': ['Aubrey', 0x1],
-    '129': ['Michelle', 0x1],
-    '130': [_0xd95be6(0x140), 0x1],
-    '131': [_0xd95be6(0x127), 0x1],
-    '132': [_0xd95be6(0x47c), 0x1],
-    '133': [_0xd95be6(0x2ea), 0x1],
-    '134': [_0xd95be6(0x381) + _0xd95be6(0x377), 0x1],
-    '135': ['Punk\x20Con' + 'nor', 0x0],
-    '136': [_0xd95be6(0x479), 0x0],
-    '137': [_0xd95be6(0x14c), 0x1],
-    '138': ['Michael', 0x0],
-    '139': [_0xd95be6(0x196), 0x1],
-    '140': ['Luca', 0x1],
-    '141': [_0xd95be6(0x205) + _0xd95be6(0x4b6), 0x1],
-    '142': [_0xd95be6(0x294), 0x1],
-    '143': [_0xd95be6(0x4e4), 0x1],
-    '144': ['Bill\x20Bon' + 'e', 0x1],
-    '145': ['Pete\x20Bla' + 'ckbeard', 0x1],
-    '146': ['Max', 0x1],
-    '147': [_0xd95be6(0x2fa), 0x1],
-    '148': [_0xd95be6(0x4b2), 0x1],
-    '149': [_0xd95be6(0x3ae), 0x1],
-    '150': [_0xd95be6(0x4da), 0x1],
-    '151': [_0xd95be6(0x353), 0x1],
-    '152': [_0xd95be6(0x491) + _0xd95be6(0x224), 0x1],
-    '153': [_0xd95be6(0x491) + 'Julie', 0x1],
-    '154': ['Angela', 0x1],
-    '155': [_0xd95be6(0x4d4), 0x1],
-    '156': ['Mary', 0x1],
-    '157': [_0xd95be6(0x520) + _0xd95be6(0x181), 0x0],
-    '158': [_0xd95be6(0x520) + _0xd95be6(0x47f), 0x0],
-    '159': [_0xd95be6(0x459) + _0xd95be6(0x251), 0x1],
-    '160': [_0xd95be6(0x351), 0x1],
-    '161': [_0xd95be6(0x24c) + _0xd95be6(0x114), 0x2],
-    '162': [_0xd95be6(0x1c5), 0x2],
-    '163': [_0xd95be6(0x259) + _0xd95be6(0x18e), 0x2],
-    '164': [_0xd95be6(0x3ff), 0x2],
-    '165': ['Tao', 0x2],
-    '166': [_0xd95be6(0x4a5), 0x2],
-    '167': ['Ola', 0x2],
-    '168': [_0xd95be6(0x4d5), 0x1],
-    '169': ['Naor', 0x2],
-    '170': [_0xd95be6(0x495), 0x2],
-    '171': ['Crog', 0x2],
-    '172': ['Alana', 0x2],
-    '173': ['Mr\x20Arthu' + 'r', 0x2],
-    '174': [_0xd95be6(0x2d6), 0x2],
-    '175': ['Viper', 0x2],
-    '176': [_0xd95be6(0x12b), 0x2],
-    '177': [_0xd95be6(0x41a), 0x2],
-    '178': [_0xd95be6(0x419), 0x2],
-    '179': [_0xd95be6(0x1a1), 0x2],
-    '180': [_0xd95be6(0x2a4), 0x2],
-    '181': ['Lucy', 0x2],
-    '182': [_0xd95be6(0x250) + 'a', 0x2],
-    '183': [_0xd95be6(0x363) + 'a', 0x2],
-    '184': ['Cpt.\x20Mar' + 's', 0x2],
-    '185': [_0xd95be6(0x2ce) + _0xd95be6(0x145), 0x1],
-    '186': [_0xd95be6(0x54f), 0x2],
-    '187': ['DEA\x20Sien' + 'na', 0x2],
-    '188': [_0xd95be6(0x393) + 'a', 0x2],
-    '189': [_0xd95be6(0x35a) + 'b', 0x2],
-    '190': [_0xd95be6(0x138) + 'o', 0x2],
-    '191': ['Agent\x20Vi' + _0xd95be6(0x55a), 0x2],
-    '192': [_0xd95be6(0x43d) + 'iver', 0x2],
-    '193': [_0xd95be6(0x352), 0x2],
-    '194': [_0xd95be6(0x25c), 0x2],
-    '195': [_0xd95be6(0x1cf), 0x2],
-    '196': [_0xd95be6(0x20a), 0x2],
-    '197': [_0xd95be6(0x3da), 0x2],
-    '198': ['Nash', 0x2],
-    '199': [_0xd95be6(0x2f1), 0x2],
-    '200': [_0xd95be6(0x3a5), 0x3],
-    '201': [_0xd95be6(0x225), 0x2],
-    '202': [_0xd95be6(0x2e8), 0x2],
-    '203': [_0xd95be6(0x284), 0x3],
-    '204': [_0xd95be6(0x2b4) + 'o', 0x3],
-    '205': [_0xd95be6(0x24a) + 'rt', 0x3],
-    '206': [_0xd95be6(0x199) + _0xd95be6(0x143), 0x3],
-    '207': [_0xd95be6(0x199) + _0xd95be6(0x290), 0x3],
-    '208': [_0xd95be6(0x387) + _0xd95be6(0x1ba), 0x3],
-    '209': [_0xd95be6(0x215), 0x3],
-    '210': [_0xd95be6(0x29d) + _0xd95be6(0x417), 0x3],
-    '211': [_0xd95be6(0x451) + _0xd95be6(0x292), 0x3],
-    '212': [_0xd95be6(0x319) + _0xd95be6(0x1b1), 0x3],
-    '213': [_0xd95be6(0x319) + _0xd95be6(0x2e3), 0x3],
-    '214': [_0xd95be6(0x19c) + _0xd95be6(0x325), 0x3],
-    '215': [_0xd95be6(0x1dd) + _0xd95be6(0x445), 0x3],
-    '216': [_0xd95be6(0x287), 0x3],
-    '217': [_0xd95be6(0x118), 0x2],
-    '218': [_0xd95be6(0x44f), 0x3],
-    '219': [_0xd95be6(0x4d7), 0x3],
-    '220': [_0xd95be6(0x44c), 0x3],
-    '221': ['Callon', 0x3],
-    '222': [_0xd95be6(0x245) + _0xd95be6(0x50d), 0x3],
-    '223': [_0xd95be6(0x200), 0x3],
-    '224': [_0xd95be6(0x1af), 0x3],
-    '225': [_0xd95be6(0x37f), 0x3],
-    '226': [_0xd95be6(0x43c), 0x3],
-    '227': [_0xd95be6(0x38e), 0x3],
-    '228': [_0xd95be6(0x4fa), 0x3],
-    '229': ['Master\x20F' + 'u', 0x3],
-    '230': [_0xd95be6(0x36a) + 's', 0x3],
-    '231': ['Madeline', 0x3],
-    '232': ['Lulu', 0x3],
-    '233': [_0xd95be6(0x11e) + _0xd95be6(0x374), 0x3],
-    '234': [_0xd95be6(0x11e) + 'Miyamoto', 0x3],
-    '235': ['Hujuk', 0x3],
-    '236': [_0xd95be6(0x1e5), 0x3],
-    '237': [_0xd95be6(0x2e5), 0x3],
-    '238': [_0xd95be6(0x2ec) + _0xd95be6(0x31f), 0x3],
-    '239': [_0xd95be6(0x146), 0x3],
-    '240': [_0xd95be6(0x21b) + 'e', 0x3],
-    '241': [_0xd95be6(0x11e) + 'Tokugawa', 0x4],
-    '242': ['Ninja\x20Re' + 'o', 0x4],
-    '243': [_0xd95be6(0x51f) + 't', 0x4],
-    '244': ['Wizard\x20V' + _0xd95be6(0x194), 0x4],
-    '245': [_0xd95be6(0x3fe) + _0xd95be6(0x2bb), 0x4],
-    '246': [_0xd95be6(0x4f4), 0x4],
-    '247': ['LOL\x20Quee' + 'n', 0x4],
-    '248': ['Skyler', 0x4],
-    '249': [_0xd95be6(0x25f), 0x4],
-    '250': [_0xd95be6(0x534) + _0xd95be6(0x275), 0x4],
-    '251': [_0xd95be6(0x1d8), 0x4],
-    '252': [_0xd95be6(0x4db), 0x4],
-    '253': [_0xd95be6(0x2b6), 0x3],
-    '254': ['Rainbow', 0x4],
-    '255': [_0xd95be6(0x432), 0x4],
-    '256': [_0xd95be6(0x44d) + 'or', 0x3],
-    '257': [_0xd95be6(0x4ae), 0x4],
-    '258': [_0xd95be6(0x49f), 0x3],
-    '259': [_0xd95be6(0x23f) + _0xd95be6(0x516), 0x4],
-    '260': [_0xd95be6(0x232) + 'y', 0x4],
-    '261': ['Rocker', 0x4],
-    '262': ['Lady\x20Pop', 0x3],
-    '263': [_0xd95be6(0x557), 0x4],
-    '264': ['Hel', 0x3],
-    '265': [_0xd95be6(0x527), 0x4],
-    '266': ['BEN\x20KEYS' + 'AR', 0x3],
-    '267': ['Inde\x20Gam' + 'e', 0x3],
-    '268': ['MasterOh' + 'ad', 0x3],
-    '269': ['Rainbow\x20' + _0xd95be6(0x4fb), 0x3],
-    '270': [_0xd95be6(0x24e), 0x3],
-    '271': ['RonenGG', 0x3],
-    '272': [_0xd95be6(0x20b) + 'EN\x20KEYSA' + 'R', 0x4],
-    '273': [_0xd95be6(0x46b) + _0xd95be6(0x1e6), 0x4],
-    '274': [_0xd95be6(0x186) + 'asterOha' + 'd', 0x4],
-    '275': [_0xd95be6(0x416) + 'ainbow\x20Q' + _0xd95be6(0x361), 0x4],
-    '276': ['Golden\x20C' + _0xd95be6(0x474), 0x4],
-    '277': [_0xd95be6(0x416) + _0xd95be6(0x4d3), 0x4],
-    '278': [_0xd95be6(0x4a0), 0x4],
-    '279': [_0xd95be6(0x563), 0x3],
-    '280': [_0xd95be6(0x3b3) + 'a', 0x3],
-    '281': [_0xd95be6(0x36f) + _0xd95be6(0x548), 0x4],
-    '282': [_0xd95be6(0x43e), 0x3],
-    '283': [_0xd95be6(0x3c0), 0x3],
-    '284': [_0xd95be6(0x316), 0x3],
-    '285': [_0xd95be6(0x461), 0x3],
-    '286': [_0xd95be6(0x192), 0x4]
-}
-  , _SKUS_SKINS = []
-  , _TEST_EMPTY_PRODUCTS = ![]
-  , productsV6 = _TEST_EMPTY_PRODUCTS ? {
-    'Configs': {
-        'default': {}
+    DisplaySize: 0,
+    Currency: 0,
+    sale_start_date: '2024-01-01T00:00:00.000Z',
+    Rarity: 0,
+    sale_end_date: '2030-01-01T00:00:00.000Z',
+    DiscountPercentage: 0,
+    IsLimitedEdition: false
+  }),
+  _REAL_SKIN_DATA_ON = !(typeof localStorage !== 'undefined' && localStorage.getItem('REAL_SKIN_DATA') === '0'),
+  _SKIN_DATA = {
+    '1': ['Agent Olivia', 1],
+    '2': ['SWAT', 2],
+    '3': ['X-bot', 4],
+    '4': ['Skater Boy', 2],
+    '5': ['Lola', 2],
+    '6': ['Ninja Oni', 3],
+    '7': ['Caty', 1],
+    '8': ['Beach Girl', 1],
+    '9': ['LOL Pump', 3],
+    '10': ['Rey', 0],
+    '11': ['Justin', 2],
+    '12': ['Hot Dog', 4],
+    '13': ['Zombie Girl', 3],
+    '14': ['Zombie Woman', 3],
+    '15': ['Zombie Guy', 3],
+    '16': ['Zombie Man', 3],
+    '17': ['John', 0],
+    '18': ['Hilda', 0],
+    '19': ['Jester', 3],
+    '20': ['Executioner', 3],
+    '21': ['Astrid', 1],
+    '22': ['Olaf', 2],
+    '23': ['Dre', 1],
+    '24': ['Sonya', 1],
+    '25': ['Jessica', 1],
+    '26': ['Scarecrow', 4],
+    '27': ['Brandy', 1],
+    '28': ['Takashi', 4],
+    '29': ['Letty', 1],
+    '30': ['Gisele', 1],
+    '31': ['Nitro', 1],
+    '32': ['Rock', 2],
+    '33': ['Mia', 2],
+    '34': ['Clay', 1],
+    '35': ['Motor Helmet', 1],
+    '36': ['Traffic Cone', 1],
+    '37': ['Welder\'s Mask', 1],
+    '38': ['Witch Doctor', 4],
+    '39': ['Barbarossa', 3],
+    '40': ['Minerva', 3],
+    '42': ['Klaus', 3],
+    '43': ['Cosmo', 1],
+    '44': ['Wanda', 2],
+    '45': ['Santa Hat', 1],
+    '46': ['Horseman', 4],
+    '47': ['Rooster', 4],
+    '48': ['Isaac', 4],
+    '49': ['Mal', 2],
+    '50': ['Red', 2],
+    '51': ['Reptile', 3],
+    '52': ['Nebula', 2],
+    '53': ['Bumblebee', 4],
+    '54': ['Rebecca', 1],
+    '55': ['Cayde', 3],
+    '56': ['VR', 1],
+    '57': ['Transmission', 1],
+    '58': ['Stereo', 1],
+    '59': ['X-Droid', 3],
+    '60': ['Octavia', 2],
+    '61': ['Annie', 0],
+    '62': ['Jane', 0],
+    '63': ['James', 0],
+    '64': ['Liam', 0],
+    '65': ['Midas', 5],
+    '66': ['Electro', 5],
+    '67': ['Pyro', 5],
+    '68': ['Ryujin', 5],
+    '69': ['Shadow', 5],
+    '70': ['Tourist Tanner', 0],
+    '71': ['Tourist Henry', 0],
+    '72': ['Tourist Ellie', 0],
+    '73': ['Tourist Lily', 0],
+    '74': ['Ava', 0],
+    '75': ['Harper', 0],
+    '76': ['Emily', 0],
+    '77': ['Jenna', 0],
+    '78': ['Erin', 0],
+    '79': ['Mason', 0],
+    '80': ['William', 0],
+    '81': ['Daniel', 0],
+    '82': ['Chloe', 0],
+    '83': ['Ana', 0],
+    '84': ['Charlotte', 0],
+    '85': ['Maya', 0],
+    '86': ['Todd', 0],
+    '87': ['Blake', 0],
+    '88': ['Cooper', 0],
+    '89': ['Officer Bob', 0],
+    '90': ['Officer Hopper', 0],
+    '91': ['Officer Mike', 0],
+    '92': ['Officer Reese', 0],
+    '93': ['Officer Sarah', 0],
+    '94': ['Officer Forbes', 0],
+    '95': ['Constructor Jackson', 0],
+    '96': ['Constructor Jason', 0],
+    '97': ['Constructor Alexis', 0],
+    '98': ['Constructor Molly', 0],
+    '99': ['Grace', 0],
+    '100': ['Trainer Samantha', 0],
+    '101': ['Trainer Samantha', 0],
+    '102': ['Trainer Taylor', 0],
+    '103': ['Trainer Ethan', 0],
+    '104': ['Trainer Caleb', 0],
+    '105': ['Maria', 0],
+    '106': ['Amber', 0],
+    '107': ['Fireman Cayden', 0],
+    '108': ['Fireman Jack', 0],
+    '109': ['Tyler', 0],
+    '110': ['Eric', 0],
+    '111': ['Cole', 0],
+    '112': ['Carlos', 0],
+    '113': ['Yue', 0],
+    '114': ['Kayla', 1],
+    '115': ['Li', 1],
+    '116': ['Wong', 0],
+    '117': ['Agent Maggie', 0],
+    '118': ['Agent Louis', 0],
+    '119': ['Agent Sean', 1],
+    '120': ['Stephanie', 1],
+    '121': ['Caroline', 1],
+    '122': ['Amy', 1],
+    '123': ['Fiona', 1],
+    '124': ['Nova', 1],
+    '125': ['Skating Boy', 1],
+    '126': ['Parkour Boy', 1],
+    '127': ['Jenny', 0],
+    '128': ['Aubrey', 1],
+    '129': ['Michelle', 1],
+    '130': ['Robin', 1],
+    '131': ['Sofia', 1],
+    '132': ['Gianna', 1],
+    '133': ['Avery', 1],
+    '134': ['Punk Parker', 1],
+    '135': ['Punk Connor', 0],
+    '136': ['Adam', 0],
+    '137': ['Jose', 1],
+    '138': ['Michael', 0],
+    '139': ['Owen', 1],
+    '140': ['Luca', 1],
+    '141': ['Skater Girl', 1],
+    '142': ['Amelia', 1],
+    '143': ['Raelynn', 1],
+    '144': ['Bill Bone', 1],
+    '145': ['Pete Blackbeard', 1],
+    '146': ['Max', 1],
+    '147': ['Victor', 1],
+    '148': ['Carrie', 1],
+    '149': ['Miley', 1],
+    '150': ['Bernard', 1],
+    '151': ['Teddy', 1],
+    '152': ['Tourist Lucas', 1],
+    '153': ['Tourist Julie', 1],
+    '154': ['Angela', 1],
+    '155': ['Sakura', 1],
+    '156': ['Mary', 1],
+    '157': ['Trainer Madison', 0],
+    '158': ['Trainer Thomas', 0],
+    '159': ['Fireman Johnson', 1],
+    '160': ['Elijah', 1],
+    '161': ['Master Jeong', 2],
+    '162': ['Ayaka', 2],
+    '163': ['Desert Soldier', 2],
+    '164': ['Jung', 2],
+    '165': ['Tao', 2],
+    '166': ['Alice', 2],
+    '167': ['Ola', 2],
+    '168': ['Nathan', 1],
+    '169': ['Naor', 2],
+    '170': ['Gnul', 2],
+    '171': ['Crog', 2],
+    '172': ['Alana', 2],
+    '173': ['Mr Arthur', 2],
+    '174': ['Jill', 2],
+    '175': ['Viper', 2],
+    '176': ['Emilia', 2],
+    '177': ['Meera', 2],
+    '178': ['Ashe', 2],
+    '179': ['Iris', 2],
+    '180': ['Athena', 2],
+    '181': ['Lucy', 2],
+    '182': ['Cpt. Luna', 2],
+    '183': ['Cpt. Aria', 2],
+    '184': ['Cpt. Mars', 2],
+    '185': ['Cpt. Saturn', 1],
+    '186': ['Zoe', 2],
+    '187': ['DEA Sienna', 2],
+    '188': ['DEA Julia', 2],
+    '189': ['DEA Jacob', 2],
+    '190': ['DEA Diego', 2],
+    '191': ['Agent Violet', 2],
+    '192': ['Agent Oliver', 2],
+    '193': ['Shay', 2],
+    '194': ['Camilla', 2],
+    '195': ['Ella', 2],
+    '196': ['Drift', 2],
+    '197': ['Sophia', 2],
+    '198': ['Nash', 2],
+    '199': ['Sparkles', 2],
+    '200': ['Lava Man', 3],
+    '201': ['Rock Man', 2],
+    '202': ['Laz', 2],
+    '203': ['Vasse', 3],
+    '204': ['Sir Romeo', 3],
+    '205': ['Sir Robert', 3],
+    '206': ['Chemical Sonny', 3],
+    '207': ['Chemical Colton', 3],
+    '208': ['Tactical Soldier', 3],
+    '209': ['Bard', 3],
+    '210': ['Wizard Adamant', 3],
+    '211': ['Wizard Silas', 3],
+    '212': ['Princess Ariela', 3],
+    '213': ['Princess Eliana', 3],
+    '214': ['Prince Henry', 3],
+    '215': ['Prince Edward', 3],
+    '216': ['Blair', 3],
+    '217': ['Da Bomb', 2],
+    '218': ['Shani', 3],
+    '219': ['Akodia', 3],
+    '220': ['Aegnor', 3],
+    '221': ['Callon', 3],
+    '222': ['Ninja Hanzo', 3],
+    '223': ['Ben', 3],
+    '224': ['Achilles', 3],
+    '225': ['Beatrix', 3],
+    '226': ['Alessia', 3],
+    '227': ['Dana', 3],
+    '228': ['Sage', 3],
+    '229': ['Master Fu', 3],
+    '230': ['Mr. Jones', 3],
+    '231': ['Madeline', 3],
+    '232': ['Lulu', 3],
+    '233': ['Samurai Toyotomi', 3],
+    '234': ['Samurai Miyamoto', 3],
+    '235': ['Hujuk', 3],
+    '236': ['Haru', 3],
+    '237': ['Kaito', 3],
+    '238': ['Hazmat Blue', 3],
+    '239': ['Oswald', 3],
+    '240': ['Salvatore', 3],
+    '241': ['Samurai Tokugawa', 4],
+    '242': ['Ninja Reo', 4],
+    '243': ['Nitro Bot', 4],
+    '244': ['Wizard Vasilis', 4],
+    '245': ['Cpt. Bonnet', 4],
+    '246': ['LOL King', 4],
+    '247': ['LOL Queen', 4],
+    '248': ['Skyler', 4],
+    '249': ['Lior', 4],
+    '250': ['Hazmat Gold', 4],
+    '251': ['Cicero', 4],
+    '252': ['Astro', 4],
+    '253': ['Gemini', 3],
+    '254': ['Rainbow', 4],
+    '255': ['Storm', 4],
+    '256': ['Eliminator', 3],
+    '257': ['Thumper', 4],
+    '258': ['Bun Bun', 3],
+    '259': ['Cyber Bunny', 4],
+    '260': ['Disco Boy', 4],
+    '261': ['Rocker', 4],
+    '262': ['Lady Pop', 3],
+    '263': ['Zeus', 4],
+    '264': ['Hel', 3],
+    '265': ['Anubis', 4],
+    '266': ['BEN KEYSAR', 3],
+    '267': ['Inde Game', 3],
+    '268': ['MasterOhad', 3],
+    '269': ['Rainbow Queen', 3],
+    '270': ['Cycnic', 3],
+    '271': ['RonenGG', 3],
+    '272': ['Golden BEN KEYSAR', 4],
+    '273': ['Golden Inde Game', 4],
+    '274': ['Golden MasterOhad', 4],
+    '275': ['Golden Rainbow Queen', 4],
+    '276': ['Golden Cycnic', 4],
+    '277': ['Golden RonenGG', 4],
+    '278': ['Scooba', 4],
+    '279': ['Sunny', 3],
+    '280': ['Margarita', 3],
+    '281': ['Captain LOL', 4],
+    '282': ['Bandit', 3],
+    '283': ['Vásquez', 3],
+    '284': ['Clyde', 3],
+    '285': ['Jolene', 3],
+    '286': ['Ravager', 4]
+  },
+  _SKUS_SKINS = [],
+  _TEST_EMPTY_PRODUCTS = false,
+  productsV6 = _TEST_EMPTY_PRODUCTS ? {
+    Configs: {
+      'default': {}
     }
-} : (function() {
-    const _0x58a165 = _0xd95be6
-      , _0x24df46 = {
-        0x29: 0x1
+  } : function () {
+    const _0x24df46 = {
+        41: 1
+      },
+      _0x2104f6 = {};
+    for (let _0x3c34f5 = 1; _0x3c34f5 <= 286; _0x3c34f5++) {
+      if (_0x24df46[_0x3c34f5]) continue;
+      var _0x1412bf = _REAL_SKIN_DATA_ON && _SKIN_DATA[_0x3c34f5] || null,
+        _0xcd89c6 = _0x1412bf ? _0x1412bf[0] : 'skin' + _0x3c34f5;
+      _0x2104f6['lol.1v1.playerskins.pack.' + _0x3c34f5] = Object.assign(_SKU_DEFAULT_PRODUCT('skin' + _0x3c34f5), {
+        IsLegacy: false,
+        Name: _0xcd89c6,
+        Rarity: _0x1412bf ? _0x1412bf[1] : 0,
+        BattlePassData: {
+          CustomDescription: _0xcd89c6
+        }
+      });
     }
-      , _0x2104f6 = {};
-    for (let _0x3c34f5 = 0x1; _0x3c34f5 <= 0x11e; _0x3c34f5++) {
-        if (_0x24df46[_0x3c34f5])
-            continue;
-        var _0x1412bf = _REAL_SKIN_DATA_ON && _SKIN_DATA[_0x3c34f5] || null
-          , _0xcd89c6 = _0x1412bf ? _0x1412bf[0x0] : 'skin' + _0x3c34f5;
-        _0x2104f6[_0x58a165(0x4e2) + _0x58a165(0x465) + _0x58a165(0x3bc) + '.' + _0x3c34f5] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x508) + _0x3c34f5), {
-            'IsLegacy': ![],
-            'Name': _0xcd89c6,
-            'Rarity': _0x1412bf ? _0x1412bf[0x1] : 0x0,
-            'BattlePassData': {
-                'CustomDescription': _0xcd89c6
-            }
-        });
-    }
-    const _0x242c7c = ['Paper\x20Ba' + _0x58a165(0x237), _0x58a165(0x3e8) + 'ask', _0x58a165(0x11f), _0x58a165(0x30a) + 'e', _0x58a165(0x4a1) + 'm', _0x58a165(0x535), _0x58a165(0x13c), _0x58a165(0x349), _0x58a165(0x3fd) + 't', _0x58a165(0x3ee), _0x58a165(0x1f2) + 'sk', _0x58a165(0x293), _0x58a165(0x20e) + 'm', _0x58a165(0x18a), _0x58a165(0x343) + 't', _0x58a165(0x195), _0x58a165(0x4cb) + 'irst!', _0x58a165(0x464) + 'd', _0x58a165(0x505), _0x58a165(0x39d), _0x58a165(0x1d5) + 'ar', _0x58a165(0x3bb) + 'l', _0x58a165(0x2bf) + _0x58a165(0x3bf), _0x58a165(0x4b1) + _0x58a165(0x191)];
-    for (let _0x1dd526 = 0x0; _0x1dd526 < _0x242c7c[_0x58a165(0x39e)]; _0x1dd526++) {
-        const _0x132029 = _0x242c7c[_0x1dd526];
-        _0x2104f6[_0x58a165(0x4e2) + 'playersk' + _0x58a165(0x3bc) + _0x58a165(0x4ce) + _0x1dd526] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT('tier.RV' + _0x1dd526), {
-            'IsLegacy': ![],
-            'Name': _0x132029,
-            'Rarity': 0x1,
-            'BattlePassData': {
-                'CustomDescription': _0x132029
-            }
-        });
+    const _0x242c7c = ['Paper Bag Mask', 'Hockey Mask', 'Mysterio', 'Cube Face', 'Uncle Sam', 'Alien', 'Stranger', 'Football', 'Party Hat', 'Pot', 'Skull Mask', 'Karate', 'Ice Cream', '#1 Hat', 'Fish Bait', 'Spartan', 'Safety First!', 'Squid Kid', 'Cupcake', 'Gas Mask', 'Disco Star', 'Goth Girl', 'Ser 1v1alot', 'Fiesta Time'];
+    for (let _0x1dd526 = 0; _0x1dd526 < _0x242c7c.length; _0x1dd526++) {
+      const _0x132029 = _0x242c7c[_0x1dd526];
+      _0x2104f6['lol.1v1.playerskins.pack.tier.RV' + _0x1dd526] = Object.assign(_SKU_DEFAULT_PRODUCT('tier.RV' + _0x1dd526), {
+        IsLegacy: false,
+        Name: _0x132029,
+        Rarity: 1,
+        BattlePassData: {
+          CustomDescription: _0x132029
+        }
+      });
     }
     try {
-        window[_0x58a165(0x15b) + _0x58a165(0x27e)] = 0x2;
+      window.__SKINS_RC_VER = 2;
     } catch (_0x471887) {}
     const _0x45261d = {
-        0x1: [_0x58a165(0x503) + 'ce', 0x4],
-        0x2: [_0x58a165(0x17b) + _0x58a165(0x1d3), 0x0],
-        0x3: [_0x58a165(0x336) + 'ncing', 0x1],
-        0x4: [_0x58a165(0x110) + _0x58a165(0x4ec) + 've', 0x1],
-        0x5: ['Creepy\x20W' + _0x58a165(0x3d4), 0x0],
-        0x6: [_0x58a165(0x272) + _0x58a165(0x15e), 0x0],
-        0x7: [_0x58a165(0x452), 0x0],
-        0x8: ['Salute', 0x0],
-        0x9: ['Victory', 0x2],
-        0xa: [_0x58a165(0x43a), 0x2],
-        0xb: ['Robot\x20Hi' + _0x58a165(0x223) + _0x58a165(0x52c), 0x2],
-        0xc: ['Victory', 0x2],
-        0xd: [_0x58a165(0x110) + 'Dancing', 0x2],
-        0xe: [_0x58a165(0x137) + _0x58a165(0x3df), 0x2],
-        0xf: [_0x58a165(0x398), 0x2],
-        0x10: ['Win\x20Vict' + 'ory', 0x3],
-        0x12: [_0x58a165(0x4c3) + _0x58a165(0x52c), 0x2],
-        0x13: [_0x58a165(0x1e2) + _0x58a165(0x558), 0x3],
-        0x14: [_0x58a165(0x296) + _0x58a165(0x1d3), 0x3],
-        0xac: [_0x58a165(0x503) + _0x58a165(0x2c8) + 'e', 0x3]
-    }
-      , _0x26aaa7 = {};
-    for (const _0x31b40b of [0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf, 0x10, 0x11, 0x12, 0x13, 0x14, 0xac]) {
-        const _0x52a80e = _0x45261d[_0x31b40b];
-        _0x26aaa7[_0x58a165(0x4e2) + _0x58a165(0x561) + _0x58a165(0x3c8) + 'k.' + _0x31b40b] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT('emote' + _0x31b40b), {
-            'IsLegacy': ![],
-            'Name': _0x52a80e ? _0x52a80e[0x0] : _0x58a165(0x487) + _0x31b40b,
-            'Rarity': _0x52a80e ? _0x52a80e[0x1] : 0x0
-        });
+        1: ['Breakdance', 4],
+        2: ['Angry Chick', 0],
+        3: ['Silly Dancing', 1],
+        4: ['Hip Hop Dance Wave', 1],
+        5: ['Creepy Waving', 0],
+        6: ['Pointing Forward', 0],
+        7: ['Clapping', 0],
+        8: ['Salute', 0],
+        9: ['Victory', 2],
+        10: ['Defeated', 2],
+        11: ['Robot Hip Hop Dance', 2],
+        12: ['Victory', 2],
+        13: ['Hip Hop Dancing', 2],
+        14: ['Victory Idle', 2],
+        15: ['Kicking', 2],
+        16: ['Win Victory', 3],
+        18: ['Twist Dance', 2],
+        19: ['Shooting Arrow', 3],
+        20: ['Flying Kick', 3],
+        172: ['Breakdance Freeze', 3]
+      },
+      _0x26aaa7 = {};
+    for (const _0x31b40b of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 172]) {
+      const _0x52a80e = _0x45261d[_0x31b40b];
+      _0x26aaa7['lol.1v1.playeremotes.pack.' + _0x31b40b] = Object.assign(_SKU_DEFAULT_PRODUCT('emote' + _0x31b40b), {
+        IsLegacy: false,
+        Name: _0x52a80e ? _0x52a80e[0] : 'emote' + _0x31b40b,
+        Rarity: _0x52a80e ? _0x52a80e[1] : 0
+      });
     }
     const _0x1c0f58 = {
-        0x1: [_0x58a165(0x344) + 'el', 0x0],
-        0x2: [_0x58a165(0x3d1) + 'ter', 0x0],
-        0x3: [_0x58a165(0x3cf), 0x0],
-        0x4: [_0x58a165(0x147) + 'g', 0x0],
-        0x5: [_0x58a165(0x3e7), 0x0],
-        0x6: [_0x58a165(0x545), 0x0],
-        0x7: [_0x58a165(0x14a), 0x0],
-        0x8: [_0x58a165(0x2a2), 0x0],
-        0x9: [_0x58a165(0x3de) + '02', 0x0],
-        0xa: [_0x58a165(0x3de) + '06', 0x0],
-        0xb: ['Skater\x200' + '4', 0x0],
-        0xc: [_0x58a165(0x1f5) + '5', 0x0],
-        0xd: ['Skater\x200' + '6', 0x0],
-        0xe: [_0x58a165(0x32a) + _0x58a165(0x356), 0x0],
-        0xf: [_0x58a165(0x3b6) + _0x58a165(0x266), 0x0],
-        0x10: ['GG', 0x0],
-        0x11: [_0x58a165(0x519), 0x0],
-        0x12: [_0x58a165(0x548), 0x0],
-        0x13: [_0x58a165(0x4ef), 0x0],
-        0x14: [_0x58a165(0x1ae) + 'ag', 0x0],
-        0x15: ['Surprise' + _0x58a165(0x16b), 0x0],
-        0x16: [_0x58a165(0x460), 0x0],
-        0x17: [_0x58a165(0x403), 0x0],
-        0x18: ['200\x20IQ\x20B' + _0x58a165(0x4bd), 0x0],
-        0x19: [_0x58a165(0x22f), 0x0],
-        0x1a: [_0x58a165(0x3e4), 0x0],
-        0x1b: ['GG', 0x0],
-        0x1c: [_0x58a165(0x440) + _0x58a165(0x236), 0x0],
-        0x1d: [_0x58a165(0x11d) + 's', 0x0],
-        0x1e: [_0x58a165(0x27b) + 'd\x20Gestur' + 'e', 0x0],
-        0x1f: [_0x58a165(0x126) + 'ad', 0x0],
-        0x20: [_0x58a165(0x3b4) + 'FO', 0x0],
-        0x21: [_0x58a165(0x357) + _0x58a165(0x2b7), 0x0],
-        0x22: ['Planet', 0x0],
-        0x23: ['Rocket', 0x0],
-        0x24: [_0x58a165(0x458), 0x0],
-        0x25: [_0x58a165(0x184) + _0x58a165(0x3e2), 0x0],
-        0x26: [_0x58a165(0x121) + _0x58a165(0x12a), 0x0],
-        0x27: ['Mad\x20Robo' + 't', 0x0],
-        0x28: [_0x58a165(0x423) + 't', 0x0],
-        0x29: [_0x58a165(0x27f) + 'Rainbow', 0x0],
-        0x2a: ['Vomiting' + _0x58a165(0x12a), 0x0],
-        0x2b: ['Bunny\x20Gi' + 'rl', 0x0],
-        0x2c: [_0x58a165(0x1b0) + _0x58a165(0x164), 0x0],
-        0x2d: [_0x58a165(0x551) + _0x58a165(0x516), 0x0],
-        0x2e: [_0x58a165(0x326), 0x0],
-        0x2f: [_0x58a165(0x231) + 'gg', 0x0],
-        0x30: [_0x58a165(0x47a) + 'll', 0x0],
-        0x31: [_0x58a165(0x4cd) + 'll', 0x0],
-        0x32: [_0x58a165(0x1e7) + 'nd', 0x0],
-        0x33: ['POP', 0x0],
-        0x34: [_0x58a165(0x27a) + '\x20Violin', 0x0],
-        0x35: [_0x58a165(0x4f1), 0x0],
-        0x36: [_0x58a165(0x527), 0x0],
-        0x37: ['Hel', 0x0],
-        0x38: [_0x58a165(0x1d9) + _0x58a165(0x3e9), 0x0],
-        0x39: [_0x58a165(0x2f6) + 'u\x20Hand', 0x0],
-        0x3a: [_0x58a165(0x557), 0x0],
-        0x3b: ['Keysar', 0x0],
-        0x3c: [_0x58a165(0x262), 0x0],
-        0x3d: [_0x58a165(0x4f6) + 'ad', 0x0],
-        0x3e: [_0x58a165(0x320) + _0x58a165(0x4fb), 0x0],
-        0x3f: ['Cycnic', 0x0],
-        0x40: [_0x58a165(0x410), 0x0],
-        0x41: ['Diver\x20Cr' + 'y', 0x0],
-        0x42: [_0x58a165(0x3fb) + 'y', 0x0],
-        0x43: [_0x58a165(0x22c) + 't', 0x0],
-        0x44: [_0x58a165(0x150) + 'ue', 0x0],
-        0x45: [_0x58a165(0x18b) + _0x58a165(0x209), 0x0],
-        0x46: [_0x58a165(0x2a5) + _0x58a165(0x2c6), 0x2],
-        0x47: [_0x58a165(0x3d7) + 'actus', 0x0],
-        0x48: [_0x58a165(0x552) + _0x58a165(0x1df), 0x0],
-        0x49: [_0x58a165(0x54b) + _0x58a165(0x1ff), 0x1],
-        0x4a: [_0x58a165(0x4aa) + _0x58a165(0x54d), 0x0],
-        0x4b: [_0x58a165(0x47e), 0x3]
+      1: ['Race Wheel', 0],
+      2: ['Speedometer', 0],
+      3: ['Race Car', 0],
+      4: ['Race Flag', 0],
+      5: ['Glove', 0],
+      6: ['Heart', 0],
+      7: ['Race Cup', 0],
+      8: ['Nitro 05', 0],
+      9: ['Takashi 02', 0],
+      10: ['Takashi 06', 0],
+      11: ['Skater 04', 0],
+      12: ['Skater 05', 0],
+      13: ['Skater 06', 0],
+      14: ['Broken Heart', 0],
+      15: ['Cute Reptile', 0],
+      16: ['GG', 0],
+      17: ['Like', 0],
+      18: ['LOL', 0],
+      19: ['Oops', 0],
+      20: ['Space Flag', 0],
+      21: ['Surprised Mal', 0],
+      22: ['Unlike', 0],
+      23: ['Zany Red', 0],
+      24: ['200 IQ Brain', 0],
+      25: ['Arrow', 0],
+      26: ['Burger', 0],
+      27: ['GG', 0],
+      28: ['Hand Muscles', 0],
+      29: ['Handcuffs', 0],
+      30: ['Love Hand Gesture', 0],
+      31: ['Alien Head', 0],
+      32: ['Flying UFO', 0],
+      33: ['Helmet Astronaut', 0],
+      34: ['Planet', 0],
+      35: ['Rocket', 0],
+      36: ['Stars', 0],
+      37: ['Gears Explosion', 0],
+      38: ['Laughing Unicorn', 0],
+      39: ['Mad Robot', 0],
+      40: ['Sad Robot', 0],
+      41: ['Unicorn Rainbow', 0],
+      42: ['Vomiting Unicorn', 0],
+      43: ['Bunny Girl', 0],
+      44: ['Bunny Onesie', 0],
+      45: ['Space Bunny', 0],
+      46: ['Carrot', 0],
+      47: ['Easter Egg', 0],
+      48: ['Disco Ball', 0],
+      49: ['Fire Skull', 0],
+      50: ['Loser Hand', 0],
+      51: ['POP', 0],
+      52: ['Smallest Violin', 0],
+      53: ['U Rock', 0],
+      54: ['Anubis', 0],
+      55: ['Hel', 0],
+      56: ['Lightning Cloud', 0],
+      57: ['Thank You Hand', 0],
+      58: ['Zeus', 0],
+      59: ['Keysar', 0],
+      60: ['Inde', 0],
+      61: ['MasterOhad', 0],
+      62: ['Rainbow Queen', 0],
+      63: ['Cycnic', 0],
+      64: ['RonenGG', 0],
+      65: ['Diver Cry', 0],
+      66: ['Sun Angry', 0],
+      67: ['Sun Sweat', 0],
+      68: ['Sun Tongue', 0],
+      69: ['Surfer Hand', 0],
+      70: ['Prickly Cactus', 2],
+      71: ['Smiley Cactus', 0],
+      72: ['Happy Cowboy', 0],
+      73: ['Sad Vásquez', 1],
+      74: ['Howdy Partner', 0],
+      75: ['Yee-Haw!', 3]
     };
-    for (let _0x3f62a4 = 0x1; _0x3f62a4 <= 0x4b; _0x3f62a4++) {
-        const _0x189813 = _0x1c0f58[_0x3f62a4];
-        _0x26aaa7['lol.1v1.' + 'playerst' + _0x58a165(0x345) + _0x58a165(0x116) + _0x3f62a4] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x412) + _0x3f62a4), {
-            'IsLegacy': ![],
-            'Name': _0x189813 ? _0x189813[0x0] : 'sticker' + _0x3f62a4,
-            'Rarity': _0x189813 ? _0x189813[0x1] : 0x0
-        });
+    for (let _0x3f62a4 = 1; _0x3f62a4 <= 75; _0x3f62a4++) {
+      const _0x189813 = _0x1c0f58[_0x3f62a4];
+      _0x26aaa7['lol.1v1.playerstickers.pack.' + _0x3f62a4] = Object.assign(_SKU_DEFAULT_PRODUCT('sticker' + _0x3f62a4), {
+        IsLegacy: false,
+        Name: _0x189813 ? _0x189813[0] : 'sticker' + _0x3f62a4,
+        Rarity: _0x189813 ? _0x189813[1] : 0
+      });
     }
-    const _0x51982e = {}
-      , _0x193513 = {
+    const _0x51982e = {},
+      _0x193513 = {
         'lol.1v1.weaponskins.melee.pickaxe.default': {
-            'Name': _0x58a165(0x3e6),
-            'Rarity': 0x0
+          Name: 'Pickaxe',
+          Rarity: 0
         },
         'lol.1v1.weaponskins.melee.pickaxe.scifihammer': {
-            'Name': _0x58a165(0x2de) + '\x20Smasher',
-            'Rarity': 0x4,
-            'BattlePassData': {
-                'CustomDescription': _0x58a165(0x2de) + _0x58a165(0x47b)
-            }
+          Name: 'Galactic Smasher',
+          Rarity: 4,
+          BattlePassData: {
+            CustomDescription: 'Galactic Smasher'
+          }
         }
-    };
-    for (const _0x5c068d of Object['keys'](_0x193513)) {
-        _0x51982e[_0x5c068d] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x5c068d[_0x58a165(0x4ea)]('.')[_0x58a165(0x23a)]()), _0x193513[_0x5c068d], {
-            'IsLegacy': ![],
-            'WeaponType': 0x1,
-            'WeaponTypeName': ''
-        });
+      };
+    for (const _0x5c068d of Object.keys(_0x193513)) {
+      _0x51982e[_0x5c068d] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x5c068d.split('.').pop()), _0x193513[_0x5c068d], {
+        IsLegacy: false,
+        WeaponType: 1,
+        WeaponTypeName: ''
+      });
     }
-    const _0x37cf09 = (typeof location !== 'undefine' + 'd' ? location['origin'] : _0x58a165(0x48f) + 'ocalhost' + _0x58a165(0x153)) + (_0x58a165(0x285) + _0x58a165(0x1b2) + _0x58a165(0x219))
-      , _0x3cf4d6 = [{
-        'id': _0x58a165(0x4e2) + _0x58a165(0x470) + 'ck.1',
-        'amount': 0x3e8,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x470) + 'ck.2',
-        'amount': 0x1388,
-        'tier': 0x2
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x470) + _0x58a165(0x43f),
-        'amount': 0x2ee0,
-        'tier': 0x3
-    }, {
-        'id': 'lol.1v1.' + 'coins.pa' + 'ck.4',
-        'amount': 0x7530,
-        'tier': 0x4,
-        'best': !![]
-    }, {
-        'id': 'lol.1v1.' + _0x58a165(0x470) + 'ck.5',
-        'amount': 0x124f8,
-        'tier': 0x5
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x470) + _0x58a165(0x40f),
-        'amount': 0x30d40,
-        'tier': 0x6
-    }, {
-        'id': 'lol.1v1.' + 'coins.pa' + 'ck.newco' + 'mer',
-        'amount': 0x1388,
-        'tier': 0x1
-    }, {
-        'id': 'lol.1v1.' + _0x58a165(0x42a) + '.5',
-        'amount': 0x5,
-        'tier': 0x1
-    }, {
-        'id': 'lol.1v1.' + _0x58a165(0x42a) + _0x58a165(0x2e6),
-        'amount': 0xa,
-        'tier': 0x1
-    }, {
-        'id': 'lol.1v1.' + _0x58a165(0x42a) + '.15',
-        'amount': 0xf,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x42a) + _0x58a165(0x38b),
-        'amount': 0x1e,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x42a) + '.50',
-        'amount': 0x32,
-        'tier': 0x1
-    }, {
-        'id': 'lol.1v1.' + _0x58a165(0x42a) + _0x58a165(0x3b9),
-        'amount': 0x19,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + 'coins.bp' + '.90',
-        'amount': 0x5a,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + 'coins.bp' + '.150',
-        'amount': 0x96,
-        'tier': 0x2
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x42a) + _0x58a165(0x388),
-        'amount': 0x37,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x42a) + _0x58a165(0x435),
-        'amount': 0x3c,
-        'tier': 0x1
-    }, {
-        'id': _0x58a165(0x4e2) + _0x58a165(0x42a) + _0x58a165(0x390),
-        'amount': 0x14a,
-        'tier': 0x2
-    }]
-      , _0x2d203d = {};
+    const _0x37cf09 = (typeof location !== 'undefined' ? location.origin : 'http://localhost:3000') + '/assets/weaponskins/en',
+      _0x3cf4d6 = [{
+        id: 'lol.1v1.coins.pack.1',
+        amount: 1000,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.pack.2',
+        amount: 5000,
+        tier: 2
+      }, {
+        id: 'lol.1v1.coins.pack.3',
+        amount: 12000,
+        tier: 3
+      }, {
+        id: 'lol.1v1.coins.pack.4',
+        amount: 30000,
+        tier: 4,
+        best: true
+      }, {
+        id: 'lol.1v1.coins.pack.5',
+        amount: 75000,
+        tier: 5
+      }, {
+        id: 'lol.1v1.coins.pack.6',
+        amount: 200000,
+        tier: 6
+      }, {
+        id: 'lol.1v1.coins.pack.newcomer',
+        amount: 5000,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.5',
+        amount: 5,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.10',
+        amount: 10,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.15',
+        amount: 15,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.30',
+        amount: 30,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.50',
+        amount: 50,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.25',
+        amount: 25,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.90',
+        amount: 90,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.150',
+        amount: 150,
+        tier: 2
+      }, {
+        id: 'lol.1v1.coins.bp.55',
+        amount: 55,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.60',
+        amount: 60,
+        tier: 1
+      }, {
+        id: 'lol.1v1.coins.bp.330',
+        amount: 330,
+        tier: 2
+      }],
+      _0x2d203d = {};
     for (const _0x949d26 of _0x3cf4d6) {
-        _0x2d203d[_0x949d26['id']] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x949d26['id']), {
-            'Tier': _0x949d26['tier'],
-            'Amount': _0x949d26[_0x58a165(0x165)],
-            'IsBestOffer': !!_0x949d26[_0x58a165(0x46e)],
-            'IsNonconsumable': ![]
-        });
+      _0x2d203d[_0x949d26.id] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x949d26.id), {
+        Tier: _0x949d26.tier,
+        Amount: _0x949d26.amount,
+        IsBestOffer: !!_0x949d26.best,
+        IsNonconsumable: false
+      });
     }
-    const _0x55ea3e = ['lol.1v1.' + 'bundlepa' + 'cks.1', _0x58a165(0x4e2) + _0x58a165(0x274) + _0x58a165(0x4fc) + _0x58a165(0x543), _0x58a165(0x4e2) + 'bundlepa' + _0x58a165(0x372) + 'offer', 'lol.1v1.' + _0x58a165(0x274) + _0x58a165(0x372) + 'offer.sa' + 'le', _0x58a165(0x4e2) + _0x58a165(0x274) + _0x58a165(0x480) + 'offer', _0x58a165(0x4e2) + _0x58a165(0x274) + _0x58a165(0x454) + 'terpack', _0x58a165(0x4e2) + _0x58a165(0x274) + _0x58a165(0x454) + 'terpack.' + _0x58a165(0x42d), _0x58a165(0x4e2) + 'bundlepa' + 'cks.valu' + _0x58a165(0x2cb), 'lol.1v1.' + _0x58a165(0x274) + _0x58a165(0x189) + _0x58a165(0x2b1) + 'le']
-      , _0x4f8889 = {};
+    const _0x55ea3e = ['lol.1v1.bundlepacks.1', 'lol.1v1.bundlepacks.epicoffer', 'lol.1v1.bundlepacks.megaoffer', 'lol.1v1.bundlepacks.megaoffer.sale', 'lol.1v1.bundlepacks.rareoffer', 'lol.1v1.bundlepacks.starterpack', 'lol.1v1.bundlepacks.starterpack.sale', 'lol.1v1.bundlepacks.valuepack', 'lol.1v1.bundlepacks.valuepack.sale'],
+      _0x4f8889 = {};
     for (const _0x2f9627 of _0x55ea3e) {
-        _0x4f8889[_0x2f9627] = Object['assign'](_SKU_DEFAULT_PRODUCT(_0x2f9627), {
-            'IsNonconsumable': ![]
-        });
+      _0x4f8889[_0x2f9627] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x2f9627), {
+        IsNonconsumable: false
+      });
     }
     const _0x15a77a = (_0x1893d1, _0x3ea2f6, _0xb4e17b, _0x538e61, _0x264806) => {
-        const _0x39dc77 = _0x58a165;
-        _0x4f8889[_0x1893d1] = Object[_0x39dc77(0x36d)](_SKU_DEFAULT_PRODUCT(_0x1893d1), {
-            'Name': _0x3ea2f6,
-            'IsNonconsumable': ![],
-            'Currency': _0x538e61,
-            'Prices': {
-                [_0x538e61]: _0x264806
-            },
-            'BundlePackRewards': [{
-                'RewardType': _0x39dc77(0x42c),
-                'ProductID': _0xb4e17b,
-                'Amount': 0x1
-            }],
-            'sale_end_date': _0x39dc77(0x437) + '02T00:00' + ':00.000Z'
-        });
-    }
-    ;
-    _0x15a77a(_0x58a165(0x4e2) + 'bundlepa' + 'cks.GS1_' + 'Spin', 'Common\x20S' + _0x58a165(0x2c3), _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x2cf), 'LC', 0x37),
-    _0x15a77a(_0x58a165(0x4e2) + _0x58a165(0x274) + _0x58a165(0x33c) + _0x58a165(0x42c), 'Rare\x20Ski' + 'n', _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x486), 'LC', 0x5a),
-    _0x15a77a('lol.1v1.' + _0x58a165(0x274) + _0x58a165(0x28b) + _0x58a165(0x42c), _0x58a165(0x339) + 'n', _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x334), 'LT', 0x23);
-    const _0x25373c = (typeof location !== _0x58a165(0x288) + 'd' ? location['origin'] : _0x58a165(0x48f) + _0x58a165(0x3b5) + ':3000') + (_0x58a165(0x285) + _0x58a165(0x471))
-      , _0x366335 = (_0x152063, _0xa9a400, _0x3a69ea, _0x1624f9, _0x205f9d, _0x315f3b, _0xc9d003, _0xa69ac4, _0x1bff0a) => {
-        const _0x27cb5c = _0x58a165;
-        _0x4f8889[_0x152063] = Object[_0x27cb5c(0x36d)](_SKU_DEFAULT_PRODUCT(_0x152063), {
-            'Name': _0xa9a400,
-            'IsNonconsumable': ![],
-            'Currency': _0x205f9d,
-            'Rarity': _0x1bff0a,
-            'Prices': {
-                [_0x205f9d]: _0x315f3b
-            },
-            'SalePrices': {
-                [_0x205f9d]: _0xc9d003
-            },
-            'DiscountPercentage': Math[_0x27cb5c(0x439)]((0x1 - _0xc9d003 / _0x315f3b) * 0x64),
-            'BundlePackRewards': [{
-                'RewardType': 'Spin',
-                'ProductID': _0x3a69ea,
-                'Amount': _0x1624f9
-            }],
-            'product_image': _urlImg(_0x25373c + '/' + _0xa69ac4),
-            'product_background_image': _urlImg(_0x25373c + '/' + _0xa69ac4),
-            'sale_start_date': _0x27cb5c(0x437) + '01T00:00' + _0x27cb5c(0x394),
-            'sale_end_date': _0x27cb5c(0x4bb) + _0x27cb5c(0x2cc) + _0x27cb5c(0x394)
-        });
-    }
-    ;
-    OFFER_DEFS[_0x58a165(0x2c9)](function(_0x3ded5b) {
-        const _0x34cca5 = _0x58a165;
-        _0x366335(OFFER_BUNDLE_ID(_0x3ded5b[_0x34cca5(0x523)]), _0x3ded5b[_0x34cca5(0x371)], _0x3ded5b['box'], _0x3ded5b['amount'], _0x3ded5b['currency'], _0x3ded5b['regular'], _0x3ded5b['sale'], _0x3ded5b['banner'], _0x3ded5b[_0x34cca5(0x182)]);
-    });
-    const _0x470f12 = [_0x58a165(0x4e2) + _0x58a165(0x4f5) + 'DS', 'lol.1v1.' + _0x58a165(0x4f5) + _0x58a165(0x2cf), _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x486), _0x58a165(0x4e2) + 'lootbox.' + _0x58a165(0x334), _0x58a165(0x4e2) + _0x58a165(0x4f5) + 'GS5', 'lol.1v1.' + _0x58a165(0x4f5) + _0x58a165(0x29a), 'lol.1v1.' + _0x58a165(0x4f5) + _0x58a165(0x2ab), _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x36e), _0x58a165(0x4e2) + 'lootbox.' + _0x58a165(0x2b8), _0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x436) + _0x58a165(0x404), 'lol.1v1.' + 'lootbox.' + _0x58a165(0x17c)]
-      , _0x23f355 = {
-        'lol.1v1.lootbox.RLB4': 0x0,
-        'lol.1v1.lootbox.RLB2': 0x2,
-        'lol.1v1.lootbox.RLB3': 0x2,
-        'lol.1v1.lootbox.RLB1': 0x5,
-        'lol.1v1.lootbox.GS1': 0x0,
-        'lol.1v1.lootbox.GS2': 0x2,
-        'lol.1v1.lootbox.GS3': 0x3,
-        'lol.1v1.lootbox.GS5': 0x4,
-        'lol.1v1.lootbox.DS': 0x5,
-        'lol.1v1.lootbox.StreakBonusCoins': 0x4,
-        'lol.1v1.lootbox.GSL': 0x4
-    }
-      , _0x404be1 = {};
-    for (const _0x2887e5 of _0x470f12) {
-        _0x404be1[_0x2887e5] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x2887e5), {
-            'LootBoxType': 0x0,
-            'LootBoxTier': 0x0,
-            'Rarity': _0x23f355[_0x2887e5] != null ? _0x23f355[_0x2887e5] : 0x0
-        });
-    }
-    const _0x2b922d = (_0x3a5a31, _0x2673db, _0x71062e, _0x15021a, _0x33898a, _0x9658d) => Object[_0x58a165(0x36d)](_0x404be1[_0x3a5a31], {
-        'Name': _0x2673db,
-        'NameLocalizationKey': _0x71062e,
-        'LootBoxType': _0x58a165(0x3d6) + 'n',
-        'LootBoxTier': _0x58a165(0x241),
-        'ItemsRarity': _0x15021a,
-        'Currency': _0x33898a,
-        'Prices': {
-            [_0x33898a]: _0x9658d
+      _0x4f8889[_0x1893d1] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x1893d1), {
+        Name: _0x3ea2f6,
+        IsNonconsumable: false,
+        Currency: _0x538e61,
+        Prices: {
+          [_0x538e61]: _0x264806
         },
-        'DiscountPercentage': 0x0,
-        'sale_start_date': '2024-01-' + _0x58a165(0x2cc) + _0x58a165(0x394),
-        'sale_end_date': '2024-01-' + _0x58a165(0x549) + _0x58a165(0x394)
-    });
-    _0x2b922d(_0x58a165(0x4e2) + 'lootbox.' + 'GS1', _0x58a165(0x4cf) + 'kin', _0x58a165(0x1bd) + _0x58a165(0x4f7) + 'n', 0x0, 'LC', 0x37),
-    _0x2b922d(_0x58a165(0x4e2) + _0x58a165(0x4f5) + 'GS2', _0x58a165(0x34b) + 'n', 'spin_tit' + _0x58a165(0x159), 0x2, 'LC', 0x5a),
-    _0x2b922d(_0x58a165(0x4e2) + 'lootbox.' + 'GS3', 'Epic\x20Ski' + 'n', _0x58a165(0x1bd) + _0x58a165(0x533), 0x3, 'LT', 0x23),
-    _0x404be1[_0x58a165(0x3a8) + _0x58a165(0x22b) + _0x58a165(0x565)] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x48e) + _0x58a165(0x1bb)), {
-        'LootBoxType': 0x0,
-        'LootBoxTier': 0x0,
-        'Rarity': 0x0,
-        'Name': _0x58a165(0x48e) + 'zes'
-    }),
-    _0x404be1[_0x58a165(0x4e2) + _0x58a165(0x4f5) + _0x58a165(0x436) + _0x58a165(0x404)][_0x58a165(0x34f)] = 'Streak\x20B' + _0x58a165(0x37c),
-    _0x404be1['lol.1v1.' + _0x58a165(0x4f5) + _0x58a165(0x17c)][_0x58a165(0x34f)] = 'Legendar' + _0x58a165(0x299);
-    const _0x417e00 = (typeof location !== _0x58a165(0x288) + 'd' ? location[_0x58a165(0x3dd)] : _0x58a165(0x48f) + _0x58a165(0x3b5) + _0x58a165(0x153)) + (_0x58a165(0x285) + _0x58a165(0x152) + 's/en')
-      , _0x1462f5 = {
-        'lol.1v1.bp.xp': {
-            'Duration': 0xe10
-        }
-    }
-      , _0x1fad3a = [_0x58a165(0x37e), _0x58a165(0x16e), _0x58a165(0x1f9) + 'tion', 'duelist', _0x58a165(0x472), _0x58a165(0x15c), _0x58a165(0x4df), _0x58a165(0x26c) + 'y', _0x58a165(0x173), _0x58a165(0x3ba)]
-      , _0x50015e = {};
-    for (const _0x24f53e of _0x1fad3a) {
-        _0x50015e[_0x58a165(0x4e2) + 'armors.b' + _0x58a165(0x3f5) + _0x24f53e] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT('armor.' + _0x24f53e), {
-            'BaseLevel': 0x1
+        BundlePackRewards: [{
+          RewardType: 'Spin',
+          ProductID: _0xb4e17b,
+          Amount: 1
+        }],
+        sale_end_date: '2024-01-02T00:00:00.000Z'
+      });
+    };
+    _0x15a77a('lol.1v1.bundlepacks.GS1_Spin', 'Common Skin', 'lol.1v1.lootbox.GS1', 'LC', 55), _0x15a77a('lol.1v1.bundlepacks.GS2_Spin', 'Rare Skin', 'lol.1v1.lootbox.GS2', 'LC', 90), _0x15a77a('lol.1v1.bundlepacks.GS3_Spin', 'Epic Skin', 'lol.1v1.lootbox.GS3', 'LT', 35);
+    const _0x25373c = (typeof location !== 'undefined' ? location.origin : 'http://localhost:3000') + '/assets/archive',
+      _0x366335 = (_0x152063, _0xa9a400, _0x3a69ea, _0x1624f9, _0x205f9d, _0x315f3b, _0xc9d003, _0xa69ac4, _0x1bff0a) => {
+        _0x4f8889[_0x152063] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x152063), {
+          Name: _0xa9a400,
+          IsNonconsumable: false,
+          Currency: _0x205f9d,
+          Rarity: _0x1bff0a,
+          Prices: {
+            [_0x205f9d]: _0x315f3b
+          },
+          SalePrices: {
+            [_0x205f9d]: _0xc9d003
+          },
+          DiscountPercentage: Math.round((1 - _0xc9d003 / _0x315f3b) * 100),
+          BundlePackRewards: [{
+            RewardType: 'Spin',
+            ProductID: _0x3a69ea,
+            Amount: _0x1624f9
+          }],
+          product_image: _urlImg(_0x25373c + '/' + _0xa69ac4),
+          product_background_image: _urlImg(_0x25373c + '/' + _0xa69ac4),
+          sale_start_date: '2024-01-01T00:00:00.000Z',
+          sale_end_date: '2027-01-01T00:00:00.000Z'
         });
+      };
+    OFFER_DEFS.forEach(function (_0x3ded5b) {
+      _0x366335(OFFER_BUNDLE_ID(_0x3ded5b.key), _0x3ded5b.name, _0x3ded5b.box, _0x3ded5b.amount, _0x3ded5b.currency, _0x3ded5b.regular, _0x3ded5b.sale, _0x3ded5b.banner, _0x3ded5b.rarity);
+    });
+    const _0x470f12 = ['lol.1v1.lootbox.DS', 'lol.1v1.lootbox.GS1', 'lol.1v1.lootbox.GS2', 'lol.1v1.lootbox.GS3', 'lol.1v1.lootbox.GS5', 'lol.1v1.lootbox.RLB1', 'lol.1v1.lootbox.RLB2', 'lol.1v1.lootbox.RLB3', 'lol.1v1.lootbox.RLB4', 'lol.1v1.lootbox.StreakBonusCoins', 'lol.1v1.lootbox.GSL'],
+      _0x23f355 = {
+        'lol.1v1.lootbox.RLB4': 0,
+        'lol.1v1.lootbox.RLB2': 2,
+        'lol.1v1.lootbox.RLB3': 2,
+        'lol.1v1.lootbox.RLB1': 5,
+        'lol.1v1.lootbox.GS1': 0,
+        'lol.1v1.lootbox.GS2': 2,
+        'lol.1v1.lootbox.GS3': 3,
+        'lol.1v1.lootbox.GS5': 4,
+        'lol.1v1.lootbox.DS': 5,
+        'lol.1v1.lootbox.StreakBonusCoins': 4,
+        'lol.1v1.lootbox.GSL': 4
+      },
+      _0x404be1 = {};
+    for (const _0x2887e5 of _0x470f12) {
+      _0x404be1[_0x2887e5] = Object.assign(_SKU_DEFAULT_PRODUCT(_0x2887e5), {
+        LootBoxType: 0,
+        LootBoxTier: 0,
+        Rarity: _0x23f355[_0x2887e5] != null ? _0x23f355[_0x2887e5] : 0
+      });
+    }
+    const _0x2b922d = (_0x3a5a31, _0x2673db, _0x71062e, _0x15021a, _0x33898a, _0x9658d) => Object.assign(_0x404be1[_0x3a5a31], {
+      Name: _0x2673db,
+      NameLocalizationKey: _0x71062e,
+      LootBoxType: 'GachaSkin',
+      LootBoxTier: 'Gold',
+      ItemsRarity: _0x15021a,
+      Currency: _0x33898a,
+      Prices: {
+        [_0x33898a]: _0x9658d
+      },
+      DiscountPercentage: 0,
+      sale_start_date: '2024-01-01T00:00:00.000Z',
+      sale_end_date: '2024-01-02T00:00:00.000Z'
+    });
+    _0x2b922d('lol.1v1.lootbox.GS1', 'Common Skin', 'spin_title_common', 0, 'LC', 55), _0x2b922d('lol.1v1.lootbox.GS2', 'Rare Skin', 'spin_title_rare', 2, 'LC', 90), _0x2b922d('lol.1v1.lootbox.GS3', 'Epic Skin', 'spin_title_epic', 3, 'LT', 35), _0x404be1.v441_mock_empty_lootbox = Object.assign(_SKU_DEFAULT_PRODUCT('Free Prizes'), {
+      LootBoxType: 0,
+      LootBoxTier: 0,
+      Rarity: 0,
+      Name: 'Free Prizes'
+    }), _0x404be1['lol.1v1.lootbox.StreakBonusCoins'].Name = 'Streak Bonus', _0x404be1['lol.1v1.lootbox.GSL'].Name = 'Legendary Skin';
+    const _0x417e00 = (typeof location !== 'undefined' ? location.origin : 'http://localhost:3000') + '/assets/lootboxes/en',
+      _0x1462f5 = {
+        'lol.1v1.bp.xp': {
+          Duration: 3600
+        }
+      },
+      _0x1fad3a = ['basic', 'buckshot', 'construction', 'duelist', 'energy', 'marksman', 'medic', 'mercenary', 'raider', 'recovery'],
+      _0x50015e = {};
+    for (const _0x24f53e of _0x1fad3a) {
+      _0x50015e['lol.1v1.armors.body.' + _0x24f53e] = Object.assign(_SKU_DEFAULT_PRODUCT('armor.' + _0x24f53e), {
+        BaseLevel: 1
+      });
     }
     const _0x1df687 = {
-        'lol.1v1.equipment.slot.default': _SKU_DEFAULT_PRODUCT(_0x58a165(0x1ef) + _0x58a165(0x564))
+        'lol.1v1.equipment.slot.default': _SKU_DEFAULT_PRODUCT('slot.default')
+      },
+      _0x372057 = {};
+    for (let _0x22dd63 = 1; _0x22dd63 <= 4; _0x22dd63++) {
+      _0x372057['lol.1v1.tokens.pack.' + _0x22dd63] = Object.assign(_SKU_DEFAULT_PRODUCT('token' + _0x22dd63), {
+        Tier: _0x22dd63,
+        DisplayText: _0x22dd63 * 100 + ' Tokens',
+        Amount: _0x22dd63 * 100,
+        IsBestOffer: _0x22dd63 === 3
+      });
     }
-      , _0x372057 = {};
-    for (let _0x22dd63 = 0x1; _0x22dd63 <= 0x4; _0x22dd63++) {
-        _0x372057[_0x58a165(0x4e2) + _0x58a165(0x264) + _0x58a165(0x116) + _0x22dd63] = Object['assign'](_SKU_DEFAULT_PRODUCT(_0x58a165(0x51a) + _0x22dd63), {
-            'Tier': _0x22dd63,
-            'DisplayText': _0x22dd63 * 0x64 + '\x20Tokens',
-            'Amount': _0x22dd63 * 0x64,
-            'IsBestOffer': _0x22dd63 === 0x3
-        });
-    }
-    _0x372057[_0x58a165(0x4e2) + 'tokens.b' + _0x58a165(0x53f)] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x39b) + _0x58a165(0x53f)), {
-        'Tier': 0x1,
-        'DisplayText': _0x58a165(0x21d),
-        'Amount': 0x1,
-        'IsBestOffer': ![]
-    }),
-    _0x372057[_0x58a165(0x4e2) + _0x58a165(0x39b) + 'p.3'] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x39b) + _0x58a165(0x208)), {
-        'Tier': 0x1,
-        'DisplayText': _0x58a165(0x17e),
-        'Amount': 0x3,
-        'IsBestOffer': ![]
-    }),
-    _0x372057['lol.1v1.' + _0x58a165(0x39b) + _0x58a165(0x1ad)] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT('tokens.b' + 'p.5'), {
-        'Tier': 0x1,
-        'DisplayText': _0x58a165(0x3c2),
-        'Amount': 0x5,
-        'IsBestOffer': ![]
-    }),
-    _0x372057[_0x58a165(0x4e2) + 'tokens.b' + _0x58a165(0x39f)] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT('tokens.b' + _0x58a165(0x39f)), {
-        'Tier': 0x1,
-        'DisplayText': '10\x20Gems',
-        'Amount': 0xa,
-        'IsBestOffer': ![]
-    }),
-    _0x372057['lol.1v1.' + 'tokens.b' + _0x58a165(0x2a3)] = Object[_0x58a165(0x36d)](_SKU_DEFAULT_PRODUCT(_0x58a165(0x39b) + 'p.25'), {
-        'Tier': 0x1,
-        'DisplayText': _0x58a165(0x4ff),
-        'Amount': 0x19,
-        'IsBestOffer': ![]
-    }),
-    _0x372057[_0x58a165(0x4e2) + _0x58a165(0x39b) + _0x58a165(0x3a1)] = Object['assign'](_SKU_DEFAULT_PRODUCT('tokens.b' + _0x58a165(0x3a1)), {
-        'Tier': 0x1,
-        'DisplayText': _0x58a165(0x409),
-        'Amount': 0x37,
-        'IsBestOffer': ![]
+    _0x372057['lol.1v1.tokens.bp.1'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.1'), {
+      Tier: 1,
+      DisplayText: '1 Gem',
+      Amount: 1,
+      IsBestOffer: false
+    }), _0x372057['lol.1v1.tokens.bp.3'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.3'), {
+      Tier: 1,
+      DisplayText: '3 Gems',
+      Amount: 3,
+      IsBestOffer: false
+    }), _0x372057['lol.1v1.tokens.bp.5'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.5'), {
+      Tier: 1,
+      DisplayText: '5 Gems',
+      Amount: 5,
+      IsBestOffer: false
+    }), _0x372057['lol.1v1.tokens.bp.10'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.10'), {
+      Tier: 1,
+      DisplayText: '10 Gems',
+      Amount: 10,
+      IsBestOffer: false
+    }), _0x372057['lol.1v1.tokens.bp.25'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.25'), {
+      Tier: 1,
+      DisplayText: '25 Gems',
+      Amount: 25,
+      IsBestOffer: false
+    }), _0x372057['lol.1v1.tokens.bp.55'] = Object.assign(_SKU_DEFAULT_PRODUCT('tokens.bp.55'), {
+      Tier: 1,
+      DisplayText: '55 Gems',
+      Amount: 55,
+      IsBestOffer: false
     });
     const _0x369f06 = {
-        'lol.1v1.battle.pass.premium': Object['assign'](_SKU_DEFAULT_PRODUCT(_0x58a165(0x248) + 'um'), {
-            'Name': _0x58a165(0x4c6) + _0x58a165(0x1b6),
-            'Currency': 'LT',
-            'Prices': {
-                'LT': 0x82
-            }
+        'lol.1v1.battle.pass.premium': Object.assign(_SKU_DEFAULT_PRODUCT('bp.premium'), {
+          Name: 'LOL Pass Premium',
+          Currency: 'LT',
+          Prices: {
+            LT: 130
+          }
         })
-    }
-      , _0x2f298d = {
-        'lol.1v1.battle.pass.tier.1': Object['assign'](_SKU_DEFAULT_PRODUCT(_0x58a165(0x489) + _0x58a165(0x169) + '.1'), {
-            'Amount': 0x1,
-            'Currency': 'LT',
-            'Prices': {
-                'LT': 0xa
-            }
+      },
+      _0x2f298d = {
+        'lol.1v1.battle.pass.tier.1': Object.assign(_SKU_DEFAULT_PRODUCT('battle.pass.tier.1'), {
+          Amount: 1,
+          Currency: 'LT',
+          Prices: {
+            LT: 10
+          }
         })
-    }
-      , _0x5777f1 = {
-        'lol.1v1.subscription.dummy': _SKU_DEFAULT_PRODUCT(_0x58a165(0x4d9) + 'y')
-    };
+      },
+      _0x5777f1 = {
+        'lol.1v1.subscription.dummy': _SKU_DEFAULT_PRODUCT('sub.dummy')
+      };
     return {
-        'Configs': {
-            'default': {
-                'skins_data': _0x2104f6,
-                'emotes_data': _0x26aaa7,
-                'weaponskins_data': _0x51982e,
-                'coins_data': _0x2d203d,
-                'bundle_packs_data': _0x4f8889,
-                'lootbox_data': _0x404be1,
-                'bp_boost_data': _0x1462f5,
-                'equipment_data': _0x50015e,
-                'equipment_slot_data': _0x1df687,
-                'lol_tokens_data': _0x372057,
-                'battle_pass_premium_data': _0x369f06,
-                'battle_pass_tier_data': _0x2f298d,
-                'subscriptions_data': _0x5777f1,
-                'default_products': []
-            }
-        }
-    };
-}())
-  , generalConfigV4 = {
-    'Configs': {
+      Configs: {
         'default': {
-            'links_data': {
-                'Discord': {
-                    'link': 'https://' + 'discord.' + 'gg/EyhwT' + _0xd95be6(0x3f4),
-                    'android_link': '',
-                    'ios_link': '',
-                    'web_link': '',
-                    'steam_link': ''
-                },
-                'Instagram': {
-                    'link': _0xd95be6(0x322) + _0xd95be6(0x555) + 'agram.co' + _0xd95be6(0x1f6) + 'l',
-                    'android_link': '',
-                    'ios_link': '',
-                    'web_link': '',
-                    'steam_link': ''
-                },
-                'TikTok': {
-                    'link': _0xd95be6(0x322) + 'www.tikt' + 'ok.com/@' + _0xd95be6(0x2f4),
-                    'android_link': '',
-                    'ios_link': '',
-                    'web_link': '',
-                    'steam_link': ''
-                },
-                'TermsOfService': {
-                    'link': _0xd95be6(0x322) + _0xd95be6(0x529) + _0xd95be6(0x2d1) + _0xd95be6(0x21e) + _0xd95be6(0x1cb) + _0xd95be6(0x4cc)
-                },
-                'PrivacyPolicy': {
-                    'link': _0xd95be6(0x322) + 'justplay' + _0xd95be6(0x2d1) + _0xd95be6(0x2e0) + _0xd95be6(0x1c1) + _0xd95be6(0x384)
-                },
-                'PrivacyNotice': {
-                    'link': _0xd95be6(0x322) + 'justplay' + 'lol.webf' + _0xd95be6(0x2e0) + _0xd95be6(0x246) + _0xd95be6(0x392)
-                },
-                'PrivacyForKids': {
-                    'link': 'https://' + 'justplay' + 'lol.webf' + _0xd95be6(0x2e0) + _0xd95be6(0x3c9) + _0xd95be6(0x29e)
-                },
-                'Feedback': {
-                    'link': _0xd95be6(0x322) + _0xd95be6(0x443) + _0xd95be6(0x249) + _0xd95be6(0x4d0) + '.com/1v1' + _0xd95be6(0x2c1)
-                },
-                'Support': {
-                    'link': _0xd95be6(0x322) + _0xd95be6(0x443) + 'prod.ser' + _0xd95be6(0x4d0) + '.com/1v1' + 'lol'
-                },
-                'XboxControllerConnect': {
-                    'link': _0xd95be6(0x322) + 'youtu.be' + _0xd95be6(0x3a9) + _0xd95be6(0x354),
-                    'android_link': _0xd95be6(0x322) + _0xd95be6(0x16d) + _0xd95be6(0x26e) + 'watch?v=' + _0xd95be6(0x53d) + _0xd95be6(0x424) + 's',
-                    'ios_link': _0xd95be6(0x322) + _0xd95be6(0x16d) + _0xd95be6(0x26e) + 'watch?v=' + _0xd95be6(0x53d) + _0xd95be6(0x313) + 's'
-                }
-            },
-            'rv_settings': {
-                'PriceLC': 0x14,
-                'IsRandom': ![],
-                'ZombiesMaxRvRevives': 0x1
-            },
-            'main_menu_settings': {
-                'ShowBanner': ![],
-                'ModeButtonLayout': _0xd95be6(0x3d0) + _0xd95be6(0x16f),
-                'Banners': [],
-                'ShowVibrate': !![],
-                'AnnouncementBannerSettings': {
-                    'IsVisible': ![],
-                    'Link': '',
-                    'SmallImage': {
-                        'image_data_type': 0x0,
-                        'image_data': {}
-                    },
-                    'LargeImage': {
-                        'image_data_type': 0x0,
-                        'image_data': {}
-                    }
-                },
-                'ConnectControllerButtonSettings': {
-                    'IsVisible': !![],
-                    'AnimationDelay': 0x5
-                }
-            },
-            'mobile_settings': {
-                'ShowPushNotifications': ![],
-                'InputSmoothness': 0x0,
-                'LookAcceleration': {
-                    'LookAccelerationType': 0x0,
-                    'DeltaFactor': 0x1,
-                    'AccelerationFactor': 0x1
-                },
-                'YSensitivityFactor': 0x1,
-                'PushNotificationTitleLocalizationKey': '',
-                'PushNotificationLocalizationDescriptionKey': '',
-                'DefaultFPS': 0x3c
-            },
-            'ads_settings': {
-                'ShowAdChance': 0x1,
-                'MinAdIntervalInSeconds': 0x3c,
-                'RvAdIntervalInMinutes': 0x5a0,
-                'RvAdsNeededToUnlock': 0x4,
-                'ShowAdsInParty': ![],
-                'ShowTailoredAds': ![],
-                'SkipGames': 0x2,
-                'SkipSessions': 0x2
-            },
-            'news_settings': {
-                'News': [{
-                    'Title': _0xd95be6(0x1c4) + _0xd95be6(0x187) + _0xd95be6(0x123),
-                    'Date': _0xd95be6(0x510) + '27T12:00' + ':00',
-                    'Content': _0xd95be6(0x51c) + _0xd95be6(0x536) + _0xd95be6(0x46c) + _0xd95be6(0x3b7) + '\x20here!\x20D' + _0xd95be6(0x1d1) + _0xd95be6(0x3ec) + _0xd95be6(0x309) + _0xd95be6(0x49d) + _0xd95be6(0x4a4) + '\x20your\x20sk' + _0xd95be6(0x488) + _0xd95be6(0x45b) + _0xd95be6(0x517) + _0xd95be6(0x50c) + '\x20new\x20Tro' + _0xd95be6(0x379) + _0xd95be6(0x525) + 'lusive\x20r' + _0xd95be6(0x1a2) + _0xd95be6(0x48b) + 'esh\x20skin' + _0xd95be6(0x12c) + _0xd95be6(0x32d) + _0xd95be6(0x193) + 'y.\x20Good\x20' + _0xd95be6(0x2e7) + _0xd95be6(0x257)
-                }],
-                'DaysTillOutdated': 0x1e
-            },
-            'version_settings': {
-                'AndroidLink': '',
-                'IOSLink': '',
-                'ForceUpdateVersion': 0x0,
-                'LatestServerVersion': 0x0,
-                'PhotonVersion': '',
-                'PCVersionExpirationDate': _0xd95be6(0x281) + '01T00:00' + _0xd95be6(0x175) + _0xd95be6(0x355)
-            },
-            'rate_us_settings': {
-                'ShowRateUs': !![],
-                'WinsToRate': 0x2,
-                'MaxTimesToShowRateUs': 0x2
-            },
-            'tutorial_settings': {
-                'TutorialType': 0x0,
-                'ShowPracticeMatch': ![],
-                'WeakDeviceThreshold': 0x0,
-                'WeakDeviceDefaultMode': '1v1',
-                'WeakDeviceTutorialType': 0x0,
-                'ShowSetNameScreen': ![]
-            },
-            'friends_settings': {
-                'InviteTokenLifetime': 0x15180,
-                'MaxFriends': 0x64
-            },
-            'locker_settings': {
-                'EmotesNumber': 0x8
-            },
-            'network_settings': {
-                'PhotonBackgroundKeepAliveTime': 0x3c
-            },
-            'language_settings': {
-                'is_localization_enabled': _LOC_TEST,
-                'use_localized_legal_links': ![]
-            },
-            'log_level': 0x0,
-            'override_crossplay': ![],
-            'limited_locker_settings': {
-                'IsLimitedLockerEnabled': _DAILY_SKINS,
-                'IsSpinRouletteEnabled': !![]
-            },
-            'age_gate_settings': {
-                'logins_to_start_showing_deletion_popups': 0x7
-            },
-            'matchmaker_settings': {
-                'unity_matchmaker_enabled': ![],
-                'is_region_limited': ![],
-                'matchmaking_regions': []
-            },
-            'monetization_settings': {
-                'monetization_blocked_countries': []
-            },
-            'lobby_banner_settings': {
-                'is_enabled': ![],
-                'banner_items': []
-            }
+          skins_data: _0x2104f6,
+          emotes_data: _0x26aaa7,
+          weaponskins_data: _0x51982e,
+          coins_data: _0x2d203d,
+          bundle_packs_data: _0x4f8889,
+          lootbox_data: _0x404be1,
+          bp_boost_data: _0x1462f5,
+          equipment_data: _0x50015e,
+          equipment_slot_data: _0x1df687,
+          lol_tokens_data: _0x372057,
+          battle_pass_premium_data: _0x369f06,
+          battle_pass_tier_data: _0x2f298d,
+          subscriptions_data: _0x5777f1,
+          default_products: []
         }
+      }
+    };
+  }(),
+  generalConfigV4 = {
+    Configs: {
+      'default': {
+        links_data: {
+          Discord: {
+            link: 'https://discord.gg/EyhwTSZbHk',
+            android_link: '',
+            ios_link: '',
+            web_link: '',
+            steam_link: ''
+          },
+          Instagram: {
+            link: 'https://www.instagram.com/1v1.lol',
+            android_link: '',
+            ios_link: '',
+            web_link: '',
+            steam_link: ''
+          },
+          TikTok: {
+            link: 'https://www.tiktok.com/@1v1.lol',
+            android_link: '',
+            ios_link: '',
+            web_link: '',
+            steam_link: ''
+          },
+          TermsOfService: {
+            link: 'https://justplaylol.webflow.io/terms-of-service'
+          },
+          PrivacyPolicy: {
+            link: 'https://justplaylol.webflow.io/privacy-policy'
+          },
+          PrivacyNotice: {
+            link: 'https://justplaylol.webflow.io/privacy-notice'
+          },
+          PrivacyForKids: {
+            link: 'https://justplaylol.webflow.io/privacy-for-kids'
+          },
+          Feedback: {
+            link: 'https://playtikaprod.service-now.com/1v1lol'
+          },
+          Support: {
+            link: 'https://playtikaprod.service-now.com/1v1lol'
+          },
+          XboxControllerConnect: {
+            link: 'https://youtu.be/K_jplcQx0O0',
+            android_link: 'https://www.youtube.com/watch?v=K_jplcQx0O0&t=47s',
+            ios_link: 'https://www.youtube.com/watch?v=K_jplcQx0O0&t=80s'
+          }
+        },
+        rv_settings: {
+          PriceLC: 20,
+          IsRandom: false,
+          ZombiesMaxRvRevives: 1
+        },
+        main_menu_settings: {
+          ShowBanner: false,
+          ModeButtonLayout: 'SelectedMode',
+          Banners: [],
+          ShowVibrate: true,
+          AnnouncementBannerSettings: {
+            IsVisible: false,
+            Link: '',
+            SmallImage: {
+              image_data_type: 0,
+              image_data: {}
+            },
+            LargeImage: {
+              image_data_type: 0,
+              image_data: {}
+            }
+          },
+          ConnectControllerButtonSettings: {
+            IsVisible: true,
+            AnimationDelay: 5
+          }
+        },
+        mobile_settings: {
+          ShowPushNotifications: false,
+          InputSmoothness: 0,
+          LookAcceleration: {
+            LookAccelerationType: 0,
+            DeltaFactor: 1,
+            AccelerationFactor: 1
+          },
+          YSensitivityFactor: 1,
+          PushNotificationTitleLocalizationKey: '',
+          PushNotificationLocalizationDescriptionKey: '',
+          DefaultFPS: 60
+        },
+        ads_settings: {
+          ShowAdChance: 1,
+          MinAdIntervalInSeconds: 60,
+          RvAdIntervalInMinutes: 1440,
+          RvAdsNeededToUnlock: 4,
+          ShowAdsInParty: false,
+          ShowTailoredAds: false,
+          SkipGames: 2,
+          SkipSessions: 2
+        },
+        news_settings: {
+          News: [{
+            Title: 'Welcome to Chapter 2!',
+            Date: '2026-06-27T12:00:00',
+            Content: 'Chapter 2 of 1v1.LOL Reloaded is here! Drop into the all-new Battle Royale, test your skills in 1v1 Clash, and climb the new Trophy Road for exclusive rewards — with fresh skins to unlock along the way. Good luck out there!'
+          }],
+          DaysTillOutdated: 30
+        },
+        version_settings: {
+          AndroidLink: '',
+          IOSLink: '',
+          ForceUpdateVersion: 0,
+          LatestServerVersion: 0,
+          PhotonVersion: '',
+          PCVersionExpirationDate: '2030-01-01T00:00:00.000+00:00'
+        },
+        rate_us_settings: {
+          ShowRateUs: true,
+          WinsToRate: 2,
+          MaxTimesToShowRateUs: 2
+        },
+        tutorial_settings: {
+          TutorialType: 0,
+          ShowPracticeMatch: false,
+          WeakDeviceThreshold: 0,
+          WeakDeviceDefaultMode: '1v1',
+          WeakDeviceTutorialType: 0,
+          ShowSetNameScreen: false
+        },
+        friends_settings: {
+          InviteTokenLifetime: 86400,
+          MaxFriends: 100
+        },
+        locker_settings: {
+          EmotesNumber: 8
+        },
+        network_settings: {
+          PhotonBackgroundKeepAliveTime: 60
+        },
+        language_settings: {
+          is_localization_enabled: _LOC_TEST,
+          use_localized_legal_links: false
+        },
+        log_level: 0,
+        override_crossplay: false,
+        limited_locker_settings: {
+          IsLimitedLockerEnabled: _DAILY_SKINS,
+          IsSpinRouletteEnabled: true
+        },
+        age_gate_settings: {
+          logins_to_start_showing_deletion_popups: 7
+        },
+        matchmaker_settings: {
+          unity_matchmaker_enabled: false,
+          is_region_limited: false,
+          matchmaking_regions: []
+        },
+        monetization_settings: {
+          monetization_blocked_countries: []
+        },
+        lobby_banner_settings: {
+          is_enabled: false,
+          banner_items: []
+        }
+      }
     }
-}
-  , OFFERS_LIVE = !![]
-  , _liveOffers = {}
-  , _liveOfferKeys = [];
-OFFERS_LIVE && OFFER_DEFS[_0xd95be6(0x2c9)](function(_0x2da692) {
-    const _0x56688 = _0xd95be6;
-    _liveOffers[_0x2da692[_0x56688(0x523)]] = [{
-        'tiers_products_infos': [{
-            'product': OFFER_BUNDLE_ID(_0x2da692[_0x56688(0x523)]),
-            'duration': 0x18,
-            'advance_tier': ![]
-        }]
-    }],
-    _liveOfferKeys[_0x56688(0x132)](_0x2da692[_0x56688(0x523)]);
+  },
+  OFFERS_LIVE = true,
+  _liveOffers = {},
+  _liveOfferKeys = [];
+OFFERS_LIVE && OFFER_DEFS.forEach(function (_0x2da692) {
+  _liveOffers[_0x2da692.key] = [{
+    tiers_products_infos: [{
+      product: OFFER_BUNDLE_ID(_0x2da692.key),
+      duration: 24,
+      advance_tier: false
+    }]
+  }], _liveOfferKeys.push(_0x2da692.key);
 });
 const storeSettingsV8 = {
-    'Configs': {
-        'default': {
-            'is_disabled': ![],
-            'store_settings': {
-                'TabToFocusOnOpen': '',
-                'NewItemsShine': ![],
-                'SkinsRotationHour': 0xe,
-                'ShowNewPreviewItem': ![],
-                'ShowTrySkinButton': ![],
-                'ShowFreePrizeInMainMenu': !![],
-                'ButtonLayout': '',
-                'SupportGachaSkins': !![]
-            },
-            'use_padding': ![],
-            'offers': _liveOffers,
-            'store_products': [{
-                'LayoutGroupType': _0xd95be6(0x12f) + 'al',
-                'GroupType': 0x2,
-                'GroupNameLocalizationKey': 'tab_skin' + 's',
-                'DailyProducts': [[{
-                    'product_id': 'lol.1v1.' + _0xd95be6(0x4f5) + 'GS1',
-                    'prefab_type': 0x1,
-                    'item_type': 0x0
-                }, {
-                    'product_id': 'lol.1v1.' + 'lootbox.' + _0xd95be6(0x486),
-                    'prefab_type': 0x1,
-                    'item_type': 0x0
-                }, {
-                    'product_id': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS3',
-                    'prefab_type': 0x1,
-                    'item_type': 0x0
-                }]]
-            }, ..._liveOfferKeys[_0xd95be6(0x39e)] ? [{
-                'LayoutGroupType': _0xd95be6(0x12f) + 'alLarge',
-                'GroupType': 0x3,
-                'GroupNameLocalizationKey': _0xd95be6(0x4ad) + 'rs',
-                'DailyProducts': [[]]
-            }] : []],
-            'equipment_slot_store': {
-                'active_loadout_slot_product': '',
-                'active_weapon_slot_product': '',
-                'active_armor_slot_product': ''
-            }
+    Configs: {
+      'default': {
+        is_disabled: false,
+        store_settings: {
+          TabToFocusOnOpen: '',
+          NewItemsShine: false,
+          SkinsRotationHour: 14,
+          ShowNewPreviewItem: false,
+          ShowTrySkinButton: false,
+          ShowFreePrizeInMainMenu: true,
+          ButtonLayout: '',
+          SupportGachaSkins: true
+        },
+        use_padding: false,
+        offers: _liveOffers,
+        store_products: [{
+          LayoutGroupType: 'Horizontal',
+          GroupType: 2,
+          GroupNameLocalizationKey: 'tab_skins',
+          DailyProducts: [[{
+            product_id: 'lol.1v1.lootbox.GS1',
+            prefab_type: 1,
+            item_type: 0
+          }, {
+            product_id: 'lol.1v1.lootbox.GS2',
+            prefab_type: 1,
+            item_type: 0
+          }, {
+            product_id: 'lol.1v1.lootbox.GS3',
+            prefab_type: 1,
+            item_type: 0
+          }]]
+        }, ...(_liveOfferKeys.length ? [{
+          LayoutGroupType: 'HorizontalLarge',
+          GroupType: 3,
+          GroupNameLocalizationKey: 'tab_offers',
+          DailyProducts: [[]]
+        }] : [])],
+        equipment_slot_store: {
+          active_loadout_slot_product: '',
+          active_weapon_slot_product: '',
+          active_armor_slot_product: ''
         }
+      }
     }
-}
-  , gameEventsV4 = {
-    'Configs': {
-        'default': {
-            'game_events': {}
-        }
+  },
+  gameEventsV4 = {
+    Configs: {
+      'default': {
+        game_events: {}
+      }
     }
-}
-  , dailyRewardsV2 = {
-    'Configs': {
-        'default': {
-            'daily_rewards': {
-                'Version': '1',
-                'Rewards': []
-            }
+  },
+  dailyRewardsV2 = {
+    Configs: {
+      'default': {
+        daily_rewards: {
+          Version: '1',
+          Rewards: []
         }
+      }
     }
-}
-  , xpBank = {
-    'Configs': {
-        'default': {
-            'is_active': !![],
-            'max_xp': 0xc8,
-            'low_threshold': 0x14,
-            'refresh_interval_hours': 2.5,
-            'bonus_xp_per_refresh': 0x14,
-            'refill_bank_price': 0x0,
-            'refill_bank_currency': 0x0,
-            'refill_product_id': _0xd95be6(0x4e2) + _0xd95be6(0x36c) + _0xd95be6(0x179) + _0xd95be6(0x1ce) + 'l',
-            'notifications_enabled': ![],
-            'notification_cooldown_hours': 0x30,
-            'schedule_notification_threshold_xp': 0xaa,
-            'push_notification_title': '',
-            'push_notification_text': ''
-        }
+  },
+  xpBank = {
+    Configs: {
+      'default': {
+        is_active: true,
+        max_xp: 200,
+        low_threshold: 20,
+        refresh_interval_hours: 2.5,
+        bonus_xp_per_refresh: 20,
+        refill_bank_price: 0,
+        refill_bank_currency: 0,
+        refill_product_id: 'lol.1v1.battlepass_xp_bank_refill',
+        notifications_enabled: false,
+        notification_cooldown_hours: 48,
+        schedule_notification_threshold_xp: 170,
+        push_notification_title: '',
+        push_notification_text: ''
+      }
     }
-}
-  , challengesV2 = {
-    'Configs': {
-        'default': {
-            'are_challenges_enabled': !![],
-            'daily_rotation_hour': 0x10,
-            'daily_reroll_data': {
-                'cost': 0x5,
-                'currency_type': 'LT'
-            },
-            'seasonal_reroll_data': {
-                'cost': 0x5,
-                'currency_type': 'LT'
-            },
-            'daily_bonus_rewards': [{
-                'RewardType': _0xd95be6(0x2da),
-                'Amount': 0x96
-            }],
-            'streak_bonus_days_count': 0x3,
-            'is_streak_bonus_enabled': !![],
-            'streak_bonus_rewards': [{
-                'RewardType': _0xd95be6(0x42c),
-                'ProductID': 'lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x436) + 'nusCoins'
-            }],
-            'challenges_notification_data': {
-                'are_notifications_enabled': ![],
-                'daily_challenges_reset_title_key': '',
-                'daily_challenges_reset_description_key': '',
-                'seasonal_challenges_reset_title_key': '',
-                'seasonal_challenges_reset_description_key': ''
-            }
-        }
-    }
-}
-  , _FREE_SPIN_ON = typeof localStorage === _0xd95be6(0x288) + 'd' ? !![] : localStorage['getItem'](_0xd95be6(0x1f8) + 'N') !== '0'
-  , dailySpinsConfig = {
-    'Configs': {
-        'default': {
-            'is_enabled': _FREE_SPIN_ON,
-            'product': _0xd95be6(0x3a8) + 'k_empty_' + _0xd95be6(0x565),
-            'hours_to_refresh': 0x18
-        }
-    }
-}
-  , ftueConfigV1 = {
-    'Configs': {
-        'default': {
-            'FirstTimeNotifications': []
-        }
-    }
-}
-  , gameplaySettings = {
-    'Configs': {
-        'default': {
-            'fps_settings': {
-                'android_fps_monitor_settings': {},
-                'ios_fps_monitor_settings': {},
-                'web_fps_monitor_settings': {}
-            },
-            'hud_settings': {
-                'default_hud_mode': _0xd95be6(0x55b)
-            },
-            'player_settings': {
-                'HitBoxSizeMultiplier': 0x3,
-                'StartingPlayerState': 'Combat',
-                'DefaultSelectedWeapon': 0x1
-            },
-            'building_settings': {
-                'DefaultSelectedBuilding': _0xd95be6(0x3ad)
-            },
-            'touch_aim_assist': {
-                'IsEnabled': ![]
-            },
-            'controller_aim_assist': {
-                'UseLegacyAimAssist': ![],
-                'FollowerAimAssist': {
-                    'FollowForceX': 0x16,
-                    'FollowForceY': 0x16,
-                    'MaxFollow': 0x1,
-                    'DragForceX': 0.1,
-                    'DragForceY': 0.1,
-                    'MagnetForce': 1.7,
-                    'MaxEnemyDistance': 0x64,
-                    'MaxAimAssistRadius': 0x1
-                }
-            },
-            'matchmaking_settings': {
-                'trophy_count_weight': 0x1,
-                'power_score_weight': 0x0
-            }
-        }
-    }
-}
-  , leaderboards = {
-    'Configs': {
-        'default': {
-            'are_events_enabled': !![],
-            'events': {},
-            'leaderboards': {}
-        }
-    }
-}
-  , limitedLockerSpinsConfig = {
-    'Configs': {
-        'default': {
-            'is_enabled': _DAILY_SKINS,
-            'product': _DAILY_SKINS ? _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2cf) : '',
-            'hours_to_refresh': 0x18
-        }
-    }
-}
-  , _spinPool = [_0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.1', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.2', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.3', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.4', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.5', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.6', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.7', _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + '.8']
-  , _CommonSkins = [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2e6), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.17', _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + _0xd95be6(0x204), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x2a8), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + '.71', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x183), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x327), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.74', _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + _0xd95be6(0x411), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x29f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x234), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x4dc), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x188), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x532), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2aa), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.82', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3d9), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1ec), _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + _0xd95be6(0x3d5), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x538), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x148), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.88', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1ab), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x438), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.91', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.92', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x422), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.94', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x3a2), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.96', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.97', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x42b), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x242), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.100', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x3ac), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x43b), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.103', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x1ca), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.105', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x42e), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x180), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x301), 'lol.1v1.' + 'playersk' + 'ins.pack' + _0xd95be6(0x1fa), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x156), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x15d), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x434), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x171), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.116', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x396), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x476), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.127', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.134', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x346), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x383), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4af), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2e1), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x542), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2dc), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x4c8), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.64']
-  , _UncommonSkins = [_0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.1', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.7', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.8', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x305), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x201), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x547), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.25', 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x2f5), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.29', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x38b), 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x1cd), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x47d), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x130), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.54', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1d2), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.115', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x307), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.120', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x238), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3cb), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x442), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x135), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3aa), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x38f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x38a), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x49a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x139), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x498), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x468), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.133', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x389), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4bc), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x45d), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3f8), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x18f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.142', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x407), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x406), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x31d), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x269), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4d2), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x553), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.149', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x1fd), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.151', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x10d), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x1be), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x528), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x317), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x522), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x155), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x546), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x3ab), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x1bf)]
-  , _RareSkins = ['lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.2', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.4', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.5', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x252), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x512), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.32', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x38d), _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + _0xd95be6(0x2dd), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.49', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2ba), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x347), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.60', _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + '.161', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x50b), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.163', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.164', 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x52b), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x291), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x298), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x133), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x197), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x310), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x4f0), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x45f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2f8), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2d3), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.176', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x131), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1e0), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.179', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x41e), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2d2), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3cd), 'lol.1v1.' + 'playersk' + 'ins.pack' + _0xd95be6(0x3ce), 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + '.184', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x324), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.187', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x25e), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x46f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3f1), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + '.191', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x26a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x141), 'lol.1v1.' + 'playersk' + 'ins.pack' + _0xd95be6(0x244), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4ed), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x15a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.197', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2bc), _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + '.199', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x48a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x40b), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.217']
-  , _EpicSkins = [_0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.6', _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + '.9', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x22e), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.20', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x441), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4f2), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x2af), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x120), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x388), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x256), _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + '.200', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4a3), 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x2db), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x425), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x18d), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x492), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x338), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4fd), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2b9), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x3e5), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x490), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x28f), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.214', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1de), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x39a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.218', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2b5), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x1fe), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.221', 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x289), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x502), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.224', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x4ca), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + '.226', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.227', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x41d), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.229', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x37b), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x506), _0xd95be6(0x4e2) + 'playersk' + 'ins.pack' + _0xd95be6(0x4f3), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x4a2), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.234', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.235', _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x1d7), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x202), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1f7), _0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x395), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2ac)]
-  , _LegendarySkins = [_0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + '.3', _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x1ea), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2eb), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x11a), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x359), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + '.46', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x2ca), 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x4de), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x20c), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x32f), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2c0), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x10e), 'lol.1v1.' + _0xd95be6(0x465) + 'ins.pack' + '.244', _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x431), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x453), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x2a6), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x378), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x13e), _0xd95be6(0x4e2) + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x34e)]
-  , _MythicSkins = [_0xd95be6(0x4e2) + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x4f9), 'lol.1v1.' + _0xd95be6(0x465) + _0xd95be6(0x3bc) + _0xd95be6(0x185), 'lol.1v1.' + 'playersk' + _0xd95be6(0x3bc) + _0xd95be6(0x226), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + _0xd95be6(0x48c), _0xd95be6(0x4e2) + _0xd95be6(0x465) + 'ins.pack' + '.69']
-  , _bpBoxPools = {};
-_bpBoxPools['lol.1v1.' + 'lootbox.' + 'GS1'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x3d,
-        'Pool': _0xd95be6(0x1bc) + 'ins',
-        'PoolName': _0xd95be6(0x33d),
-        'RarityType': 0x0
-    }, {
-        'Weight': 0x1d,
-        'Pool': 'Uncommon' + _0xd95be6(0x46a),
-        'PoolName': _0xd95be6(0x4e9),
-        'RarityType': 0x1
-    }, {
-        'Weight': 0xa,
-        'Pool': _0xd95be6(0x13f) + 's',
-        'PoolName': _0xd95be6(0x55c),
-        'RarityType': 0x2
-    }]
-},
-_bpBoxPools[_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GS2'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x51,
-        'Pool': _0xd95be6(0x13f) + 's',
-        'PoolName': _0xd95be6(0x55c),
-        'RarityType': 0x2
-    }, {
-        'Weight': 0xf,
-        'Pool': 'EpicSkin' + 's',
-        'PoolName': _0xd95be6(0x271),
-        'RarityType': 0x3
-    }, {
-        'Weight': 0x4,
-        'Pool': 'Legendar' + _0xd95be6(0x52e),
-        'PoolName': _0xd95be6(0x333) + 'y',
-        'RarityType': 0x4
-    }]
-},
-_bpBoxPools['lol.1v1.' + 'lootbox.' + _0xd95be6(0x334)] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x58,
-        'Pool': _0xd95be6(0x2f3) + 's',
-        'PoolName': _0xd95be6(0x271),
-        'RarityType': 0x3
-    }, {
-        'Weight': 0xb,
-        'Pool': _0xd95be6(0x333) + 'ySkins',
-        'PoolName': 'Legendar' + 'y',
-        'RarityType': 0x4
-    }, {
-        'Weight': 0x1,
-        'Pool': _0xd95be6(0x4d8) + _0xd95be6(0x3a3),
-        'PoolName': _0xd95be6(0x3c3),
-        'RarityType': 0x5
-    }]
-},
-_bpBoxPools['lol.1v1.' + _0xd95be6(0x4f5) + 'GS5'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x46,
-        'Pool': 'Legendar' + _0xd95be6(0x52e),
-        'PoolName': _0xd95be6(0x333) + 'y',
-        'RarityType': 0x4
-    }, {
-        'Weight': 0x1e,
-        'Pool': _0xd95be6(0x4d8) + _0xd95be6(0x3a3),
-        'PoolName': _0xd95be6(0x3c3),
-        'RarityType': 0x5
-    }]
-},
-_bpBoxPools[_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'DS'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x1,
-        'Pool': 'MythicSk' + _0xd95be6(0x3a3),
-        'PoolName': _0xd95be6(0x3c3),
-        'RarityType': 0x5
-    }]
-},
-_bpBoxPools[_0xd95be6(0x4e2) + 'lootbox.' + 'RLB1'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x1,
-        'Pool': 'MythicSk' + _0xd95be6(0x3a3),
-        'PoolName': _0xd95be6(0x3c3),
-        'RarityType': 0x5
-    }]
-},
-[_0xd95be6(0x2ab), _0xd95be6(0x36e)][_0xd95be6(0x2c9)](function(_0x22a683) {
-    const _0x30fdd4 = _0xd95be6;
-    _bpBoxPools[_0x30fdd4(0x4e2) + _0x30fdd4(0x4f5) + _0x22a683] = {
-        'LootBoxProductsPools': [{
-            'Weight': 0x46,
-            'Pool': _0x30fdd4(0x13f) + 's',
-            'PoolName': _0x30fdd4(0x55c),
-            'RarityType': 0x2
-        }, {
-            'Weight': 0x1e,
-            'Pool': _0x30fdd4(0x2f3) + 's',
-            'PoolName': _0x30fdd4(0x271),
-            'RarityType': 0x3
-        }]
-    };
-}),
-_bpBoxPools[_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'RLB4'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x3c,
-        'Pool': 'CommonSk' + 'ins',
-        'PoolName': _0xd95be6(0x33d),
-        'RarityType': 0x0
-    }, {
-        'Weight': 0x1e,
-        'Pool': _0xd95be6(0x4e9) + _0xd95be6(0x46a),
-        'PoolName': 'Uncommon',
-        'RarityType': 0x1
-    }, {
-        'Weight': 0xa,
-        'Pool': 'RareSkin' + 's',
-        'PoolName': _0xd95be6(0x55c),
-        'RarityType': 0x2
-    }]
-};
-const _StreakCoinsWheel = [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + '.25', _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + 'coins.bp' + _0xd95be6(0x438), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + 'coins.bp' + _0xd95be6(0x1fd), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), 'lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x2ba), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + '.90', 'lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + '.25', _0xd95be6(0x4e2) + _0xd95be6(0x42a) + '.90', _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9), _0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2ba), 'lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x3b9), 'lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x2ba)];
-_bpBoxPools[_0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x436) + _0xd95be6(0x404)] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x64,
-        'Pool': _0xd95be6(0x314) + 'insWheel',
-        'PoolName': _0xd95be6(0x55c),
-        'RarityType': 0x2
-    }]
-},
-_bpBoxPools[_0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'GSL'] = {
-    'LootBoxProductsPools': [{
-        'Weight': 0x64,
-        'Pool': 'Legendar' + 'ySkins',
-        'PoolName': _0xd95be6(0x333) + 'y',
-        'RarityType': 0x4
-    }]
-};
-const _FpCoin5 = ['lol.1v1.' + _0xd95be6(0x42a) + '.5']
-  , _FpCoin10 = [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x2e6)]
-  , _FpCoin15 = ['lol.1v1.' + _0xd95be6(0x42a) + _0xd95be6(0x1a8)]
-  , _FpCoin25 = [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x3b9)]
-  , _FpCoin150 = [_0xd95be6(0x4e2) + _0xd95be6(0x42a) + _0xd95be6(0x1fd)]
-  , _FpGem1 = [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + _0xd95be6(0x53f)]
-  , _FpGem3 = [_0xd95be6(0x4e2) + 'tokens.b' + _0xd95be6(0x208)]
-  , _FpGem5 = [_0xd95be6(0x4e2) + _0xd95be6(0x39b) + _0xd95be6(0x1ad)]
-  , _freePrizeBands = [{
-    'Weight': 0x708,
-    'Pool': _0xd95be6(0x1c7),
-    'PoolName': _0xd95be6(0x2e9),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x546,
-    'Pool': 'FpCoin10',
-    'PoolName': _0xd95be6(0x2e9),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x384,
-    'Pool': 'FpCoin15',
-    'PoolName': _0xd95be6(0x2e9),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x195,
-    'Pool': _0xd95be6(0x2fd),
-    'PoolName': 'Coins',
-    'RarityType': 0x2
-}, {
-    'Weight': 0x2d,
-    'Pool': _0xd95be6(0x2d8) + '0',
-    'PoolName': _0xd95be6(0x2e9),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x744,
-    'Pool': 'FpGem1',
-    'PoolName': _0xd95be6(0x1da),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x3a2,
-    'Pool': _0xd95be6(0x29b),
-    'PoolName': _0xd95be6(0x1da),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x136,
-    'Pool': _0xd95be6(0x2d9),
-    'PoolName': _0xd95be6(0x1da),
-    'RarityType': 0x2
-}, {
-    'Weight': 0x510,
-    'Pool': _0xd95be6(0x1bc) + _0xd95be6(0x3a3),
-    'PoolName': _0xd95be6(0x33d),
-    'RarityType': 0x0
-}, {
-    'Weight': 0x360,
-    'Pool': _0xd95be6(0x4e9) + _0xd95be6(0x46a),
-    'PoolName': _0xd95be6(0x4e9),
-    'RarityType': 0x1
-}, {
-    'Weight': 0xd8,
-    'Pool': _0xd95be6(0x13f) + 's',
-    'PoolName': 'Rare',
-    'RarityType': 0x2
-}, {
-    'Weight': 0x18,
-    'Pool': 'EpicSkin' + 's',
-    'PoolName': _0xd95be6(0x271),
-    'RarityType': 0x3
-}]
-  , lootBoxesDataV2 = {
-    'Configs': {
-        'default': {
-            'LootBoxes': Object[_0xd95be6(0x36d)]({
-                'v441_mock_empty_lootbox': {
-                    'LootBoxProductsPools': _freePrizeBands
-                }
-            }, _bpBoxPools),
-            'Pools': {
-                'spin_common': _spinPool,
-                'CommonSkins': _CommonSkins,
-                'UncommonSkins': _UncommonSkins,
-                'RareSkins': _RareSkins,
-                'EpicSkins': _EpicSkins,
-                'LegendarySkins': _LegendarySkins,
-                'MythicSkins': _MythicSkins,
-                'StreakCoinsWheel': _StreakCoinsWheel,
-                'FpCoin5': _FpCoin5,
-                'FpCoin10': _FpCoin10,
-                'FpCoin15': _FpCoin15,
-                'FpCoin25': _FpCoin25,
-                'FpCoin150': _FpCoin150,
-                'FpGem1': _FpGem1,
-                'FpGem3': _FpGem3,
-                'FpGem5': _FpGem5
-            }
-        }
-    }
-}
-  , _FREE_PRIZES_ON = typeof localStorage !== _0xd95be6(0x288) + 'd' && localStorage['getItem']('FREE_PRI' + 'ZES') === '1'
-  , lootBoxesGacha = _FREE_PRIZES_ON ? {
-    'Configs': {
-        'default': {
-            'LobbyLootBoxesEnabled': !![],
-            'NumberOfLootboxSlots': 0x3,
-            'LootBoxes': {
-                'lol.1v1.lootbox.RLB1': {
-                    'Name': 'RLB1',
-                    'UnlockTimeHours': 0x4,
-                    'GemsToOpen': 0x32,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.RLB2': {
-                    'Name': _0xd95be6(0x2ab),
-                    'UnlockTimeHours': 0x4,
-                    'GemsToOpen': 0x32,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.RLB3': {
-                    'Name': _0xd95be6(0x36e),
-                    'UnlockTimeHours': 0x4,
-                    'GemsToOpen': 0x32,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.RLB4': {
-                    'Name': _0xd95be6(0x2b8),
-                    'UnlockTimeHours': 0x4,
-                    'GemsToOpen': 0x32,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.GS1': {
-                    'Name': _0xd95be6(0x2cf),
-                    'UnlockTimeHours': 0x8,
-                    'GemsToOpen': 0x64,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.GS2': {
-                    'Name': _0xd95be6(0x486),
-                    'UnlockTimeHours': 0x8,
-                    'GemsToOpen': 0x64,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.GS3': {
-                    'Name': _0xd95be6(0x334),
-                    'UnlockTimeHours': 0x8,
-                    'GemsToOpen': 0x64,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.GS5': {
-                    'Name': _0xd95be6(0x25b),
-                    'UnlockTimeHours': 0x8,
-                    'GemsToOpen': 0x64,
-                    'Contents': []
-                },
-                'lol.1v1.lootbox.DS': {
-                    'Name': 'DS',
-                    'UnlockTimeHours': 0x18,
-                    'GemsToOpen': 0x96,
-                    'Contents': []
-                }
-            },
-            'ConfigurationsByRank': {},
-            'Pools': {}
-        }
-    }
-} : {
-    'Configs': {
-        'default': {
-            'LobbyLootBoxesEnabled': ![],
-            'NumberOfLootboxSlots': 0x0,
-            'LootBoxes': {},
-            'ConfigurationsByRank': {},
-            'Pools': {}
-        }
-    }
-}
-  , _RANK_ROAD_ON = !(typeof localStorage !== _0xd95be6(0x288) + 'd' && localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x2d7) + 'D') === '0')
-  , rankRoad = _RANK_ROAD_ON ? {
-    'Configs': {
-        'default': {
-            'is_account_road_active': !![],
-            'is_timer_visible': ![],
-            'seasons': {},
-            'account_road_data': {
-                'season_number': 0x1,
-                'start_date': '2020-01-' + _0xd95be6(0x2cc) + ':00.000+' + _0xd95be6(0x355),
-                'end_date': _0xd95be6(0x34d) + '01T00:00' + _0xd95be6(0x175) + _0xd95be6(0x355),
-                'tiers': [{
-                    'xp': 0x0,
-                    'rank_id': _0xd95be6(0x2f7) + _0xd95be6(0x55f),
-                    'rank_name': _0xd95be6(0x2be),
-                    'rank_division': _0xd95be6(0x4a8),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x14,
-                        'ProductID': 'rankroad' + '.t0',
-                        'TransactionID': '0'
-                    }]
-                }, {
-                    'xp': 0x3c,
-                    'rank_id': 'rank_bro' + _0xd95be6(0x278),
-                    'rank_name': _0xd95be6(0x2be),
-                    'rank_division': 'BRONZE',
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x23,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x3f6),
-                        'TransactionID': '1'
-                    }]
-                }, {
-                    'xp': 0x8c,
-                    'rank_id': 'rank_bro' + _0xd95be6(0x51e),
-                    'rank_name': _0xd95be6(0x2be),
-                    'rank_division': _0xd95be6(0x4a8),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x8,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x541),
-                        'TransactionID': '2'
-                    }]
-                }, {
-                    'xp': 0xf0,
-                    'rank_id': 'rank_bro' + 'nze_3',
-                    'rank_name': _0xd95be6(0x2be),
-                    'rank_division': _0xd95be6(0x4a8),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x32,
-                        'ProductID': _0xd95be6(0x39c) + '.t3',
-                        'TransactionID': '3'
-                    }]
-                }, {
-                    'xp': 0x168,
-                    'rank_id': _0xd95be6(0x174) + 'ver_1',
-                    'rank_name': _0xd95be6(0x4b0),
-                    'rank_division': _0xd95be6(0x1a6),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x37,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x44e),
-                        'TransactionID': '4'
-                    }]
-                }, {
-                    'xp': 0x1f4,
-                    'rank_id': _0xd95be6(0x174) + _0xd95be6(0x2ee),
-                    'rank_name': _0xd95be6(0x4b0),
-                    'rank_division': _0xd95be6(0x1a6),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x3c,
-                        'ProductID': 'rankroad' + _0xd95be6(0x2d5),
-                        'TransactionID': '5'
-                    }]
-                }, {
-                    'xp': 0x294,
-                    'rank_id': 'rank_sil' + _0xd95be6(0x515),
-                    'rank_name': _0xd95be6(0x4b0),
-                    'rank_division': _0xd95be6(0x1a6),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x10,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x40d),
-                        'TransactionID': '6'
-                    }]
-                }, {
-                    'xp': 0x348,
-                    'rank_id': _0xd95be6(0x315) + 'd_1',
-                    'rank_name': 'Gold',
-                    'rank_division': _0xd95be6(0x32e),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x41,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x160),
-                        'TransactionID': '7'
-                    }]
-                }, {
-                    'xp': 0x410,
-                    'rank_id': _0xd95be6(0x315) + _0xd95be6(0x21f),
-                    'rank_name': _0xd95be6(0x241),
-                    'rank_division': _0xd95be6(0x32e),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x16,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x513),
-                        'TransactionID': '8'
-                    }]
-                }, {
-                    'xp': 0x4ec,
-                    'rank_id': _0xd95be6(0x315) + _0xd95be6(0x559),
-                    'rank_name': _0xd95be6(0x241),
-                    'rank_division': _0xd95be6(0x32e),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x46,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x426),
-                        'TransactionID': '9'
-                    }]
-                }, {
-                    'xp': 0x5dc,
-                    'rank_id': _0xd95be6(0x221) + _0xd95be6(0x50a),
-                    'rank_name': 'Platinum',
-                    'rank_division': 'PLATINUM',
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x1c,
-                        'ProductID': 'rankroad' + '.t10',
-                        'TransactionID': '10'
-                    }]
-                }, {
-                    'xp': 0x6e0,
-                    'rank_id': _0xd95be6(0x221) + _0xd95be6(0x227),
-                    'rank_name': _0xd95be6(0x213),
-                    'rank_division': _0xd95be6(0x33a),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x3c,
-                        'ProductID': _0xd95be6(0x39c) + '.t11',
-                        'TransactionID': '11'
-                    }]
-                }, {
-                    'xp': 0x7f8,
-                    'rank_id': _0xd95be6(0x221) + 'tinum_3',
-                    'rank_name': 'Platinum',
-                    'rank_division': _0xd95be6(0x33a),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x32,
-                        'ProductID': 'rankroad' + _0xd95be6(0x1ac),
-                        'TransactionID': '12'
-                    }]
-                }, {
-                    'xp': 0x924,
-                    'rank_id': _0xd95be6(0x17f) + _0xd95be6(0x17a),
-                    'rank_name': 'Champion',
-                    'rank_division': _0xd95be6(0x34c),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x4,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x210),
-                        'TransactionID': '13'
-                    }]
-                }, {
-                    'xp': 0xa64,
-                    'rank_id': _0xd95be6(0x17f) + _0xd95be6(0x22d),
-                    'rank_name': _0xd95be6(0x554),
-                    'rank_division': 'CHAMPION',
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x37,
-                        'ProductID': _0xd95be6(0x39c) + _0xd95be6(0x30d),
-                        'TransactionID': '14'
-                    }]
-                }, {
-                    'xp': 0xbb8,
-                    'rank_id': _0xd95be6(0x17f) + _0xd95be6(0x504),
-                    'rank_name': _0xd95be6(0x554),
-                    'rank_division': _0xd95be6(0x34c),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x4,
-                        'ProductID': 'rankroad' + _0xd95be6(0x14e),
-                        'TransactionID': '15'
-                    }]
-                }, {
-                    'xp': 0xcbc,
-                    'rank_id': _0xd95be6(0x4c0) + 'te_1',
-                    'rank_name': _0xd95be6(0x540),
-                    'rank_division': _0xd95be6(0x2ef),
-                    'rewards': [{
-                        'RewardType': 0x1,
-                        'Amount': 0x3c,
-                        'ProductID': _0xd95be6(0x39c) + '.t16',
-                        'TransactionID': '16'
-                    }]
-                }, {
-                    'xp': 0xdc0,
-                    'rank_id': _0xd95be6(0x4c0) + 'te_2',
-                    'rank_name': 'Elite',
-                    'rank_division': _0xd95be6(0x2ef),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x5,
-                        'ProductID': _0xd95be6(0x39c) + '.t17',
-                        'TransactionID': '17'
-                    }]
-                }, {
-                    'xp': 0xed8,
-                    'rank_id': _0xd95be6(0x4c0) + _0xd95be6(0x1d4),
-                    'rank_name': _0xd95be6(0x540),
-                    'rank_division': _0xd95be6(0x2ef),
-                    'rewards': [{
-                        'RewardType': 0x3,
-                        'Amount': 0x12,
-                        'ProductID': 'rankroad' + _0xd95be6(0x408),
-                        'TransactionID': '18'
-                    }]
-                }]
-            }
-        }
-    }
-} : {
-    'Configs': {
-        'default': {
-            'is_account_road_active': ![],
-            'account_road_data': {
-                'tiers': []
-            },
-            'is_timer_visible': ![],
-            'seasons': {}
-        }
-    }
-};
-if (typeof window !== 'undefine' + 'd')
-    try {
-        window[_0xd95be6(0x4a9) + 'AD_TIERS'] = rankRoad[_0xd95be6(0x2c4)] && rankRoad[_0xd95be6(0x2c4)]['default'] && rankRoad[_0xd95be6(0x2c4)][_0xd95be6(0x1a7)][_0xd95be6(0x122) + _0xd95be6(0x1e1) + 'a'] && rankRoad['Configs']['default'][_0xd95be6(0x122) + _0xd95be6(0x1e1) + 'a'][_0xd95be6(0x1e4)] || [];
-    } catch (_0x8e0259) {}
-const rankXPGainPerGameMode = {
-    'Configs': {
-        'default': {
-            'default_xp_per_rank': {
-                'rank_unranked': [0x14, 0x0],
-                'rank_bronze_1': [0x14, -0x2],
-                'rank_bronze_2': [0xa, -0x2],
-                'rank_bronze_3': [0x14, -0x4],
-                'rank_silver_1': [0x12, -0x4],
-                'rank_silver_2': [0x12, -0x6],
-                'rank_silver_3': [0x12, -0x8],
-                'rank_gold_1': [0x12, -0xa],
-                'rank_gold_2': [0x12, -0xc],
-                'rank_gold_3': [0x10, -0x10],
-                'rank_platinum_1': [0x10, -0x12],
-                'rank_platinum_2': [0xe, -0x12],
-                'rank_platinum_3': [0xe, -0x14],
-                'rank_champion_1': [0xe, -0x14],
-                'rank_champion_2': [0xc, -0x14],
-                'rank_champion_3': [0xc, -0x14],
-                'rank_elite_1': [0xc, -0x16],
-                'rank_elite_2': [0xa, -0x16],
-                'rank_elite_3': [0xa, -0x18]
-            },
-            'gamemode_xp_per_rank_overrides': {
-                'GrandBattleRoyale': {
-                    'rank_unranked': [0x10, 0xe, 0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_1': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x4, 0x3, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_2': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x1, 0x1, 0x0],
-                    'rank_bronze_3': [0xe, 0xc, 0xa, 0x8, 0x8, 0x7, 0x7, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x1, 0x0, -0x1],
-                    'rank_silver_1': [0xe, 0xc, 0x9, 0x8, 0x7, 0x7, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2],
-                    'rank_silver_2': [0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x3, 0x2, 0x1, 0x0, -0x2, -0x2, -0x3],
-                    'rank_silver_3': [0xc, 0xa, 0x8, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x2, 0x2, 0x0, -0x1, -0x2, -0x3, -0x3],
-                    'rank_gold_1': [0xc, 0x9, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4],
-                    'rank_gold_2': [0xc, 0x9, 0x7, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5],
-                    'rank_gold_3': [0xa, 0x8, 0x7, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8],
-                    'rank_platinum_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x4, -0x4, -0x5, -0x6, -0x8, -0xa],
-                    'rank_platinum_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_platinum_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_champion_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xc],
-                    'rank_champion_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_champion_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_elite_1': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x9, -0xe],
-                    'rank_elite_2': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8, -0xa, -0xe],
-                    'rank_elite_3': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x8, -0xa, -0xe]
-                },
-                'BattleRoyaleFirstMatch': {
-                    'rank_unranked': [0x10, 0xe, 0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_1': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x4, 0x3, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_2': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x1, 0x1, 0x0],
-                    'rank_bronze_3': [0xe, 0xc, 0xa, 0x8, 0x8, 0x7, 0x7, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x1, 0x0, -0x1],
-                    'rank_silver_1': [0xe, 0xc, 0x9, 0x8, 0x7, 0x7, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2],
-                    'rank_silver_2': [0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x3, 0x2, 0x1, 0x0, -0x2, -0x2, -0x3],
-                    'rank_silver_3': [0xc, 0xa, 0x8, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x2, 0x2, 0x0, -0x1, -0x2, -0x3, -0x3],
-                    'rank_gold_1': [0xc, 0x9, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4],
-                    'rank_gold_2': [0xc, 0x9, 0x7, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5],
-                    'rank_gold_3': [0xa, 0x8, 0x7, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8],
-                    'rank_platinum_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x4, -0x4, -0x5, -0x6, -0x8, -0xa],
-                    'rank_platinum_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_platinum_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_champion_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xc],
-                    'rank_champion_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_champion_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_elite_1': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x9, -0xe],
-                    'rank_elite_2': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8, -0xa, -0xe],
-                    'rank_elite_3': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x8, -0xa, -0xe]
-                },
-                'GrandBattleRoyaleZeroBuilds': {
-                    'rank_unranked': [0x10, 0xe, 0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_1': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x4, 0x3, 0x3, 0x2, 0x2, 0x0],
-                    'rank_bronze_2': [0xe, 0xc, 0xa, 0x9, 0x8, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x1, 0x1, 0x0],
-                    'rank_bronze_3': [0xe, 0xc, 0xa, 0x8, 0x8, 0x7, 0x7, 0x5, 0x5, 0x4, 0x3, 0x2, 0x2, 0x1, 0x0, -0x1],
-                    'rank_silver_1': [0xe, 0xc, 0x9, 0x8, 0x7, 0x7, 0x6, 0x5, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2],
-                    'rank_silver_2': [0xc, 0xa, 0x9, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x3, 0x2, 0x1, 0x0, -0x2, -0x2, -0x3],
-                    'rank_silver_3': [0xc, 0xa, 0x8, 0x8, 0x7, 0x6, 0x6, 0x5, 0x5, 0x2, 0x2, 0x0, -0x1, -0x2, -0x3, -0x3],
-                    'rank_gold_1': [0xc, 0x9, 0x8, 0x7, 0x6, 0x5, 0x4, 0x3, 0x3, 0x2, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4],
-                    'rank_gold_2': [0xc, 0x9, 0x7, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5],
-                    'rank_gold_3': [0xa, 0x8, 0x7, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8],
-                    'rank_platinum_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x1, -0x2, -0x4, -0x4, -0x5, -0x6, -0x8, -0xa],
-                    'rank_platinum_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_platinum_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xa],
-                    'rank_champion_1': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x8, -0xc],
-                    'rank_champion_2': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_champion_3': [0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x6, -0x9, -0xc],
-                    'rank_elite_1': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x9, -0xe],
-                    'rank_elite_2': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8, -0xa, -0xe],
-                    'rank_elite_3': [0x7, 0x6, 0x5, 0x4, 0x3, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5, -0x6, -0x7, -0x8, -0xa, -0xe]
-                },
-                'MiniBattleRoyale': {
-                    'rank_unranked': [0xf, 0xc, 0xa, 0x8, 0x6, 0x5, 0x4, 0x3, 0x2, 0x1],
-                    'rank_bronze_1': [0xe, 0xc, 0xa, 0x8, 0x6, 0x4, 0x3, 0x2, 0x1, 0x1],
-                    'rank_bronze_2': [0xe, 0xb, 0xa, 0x8, 0x5, 0x4, 0x3, 0x2, 0x1, 0x0],
-                    'rank_bronze_3': [0xe, 0xc, 0x9, 0x7, 0x5, 0x3, 0x2, 0x1, 0x0, -0x1],
-                    'rank_silver_1': [0xd, 0xa, 0x9, 0x7, 0x4, 0x2, 0x2, 0x1, 0x0, -0x1],
-                    'rank_silver_2': [0xd, 0xa, 0x9, 0x7, 0x4, 0x2, 0x0, -0x1, -0x2, -0x3],
-                    'rank_silver_3': [0xc, 0x9, 0x9, 0x7, 0x4, 0x2, 0x0, -0x1, -0x2, -0x3],
-                    'rank_gold_1': [0xb, 0x8, 0x7, 0x6, 0x3, 0x2, 0x0, -0x2, -0x3, -0x4],
-                    'rank_gold_2': [0xa, 0x7, 0x6, 0x3, 0x2, 0x0, -0x1, -0x2, -0x3, -0x4],
-                    'rank_gold_3': [0x8, 0x6, 0x5, 0x3, 0x0, -0x1, -0x2, -0x3, -0x4, -0x5],
-                    'rank_platinum_1': [0x7, 0x5, 0x3, 0x2, -0x1, -0x2, -0x3, -0x4, -0x6, -0x8],
-                    'rank_platinum_2': [0x7, 0x5, 0x3, 0x2, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8],
-                    'rank_platinum_3': [0x7, 0x5, 0x3, 0x2, -0x2, -0x3, -0x4, -0x5, -0x6, -0x8],
-                    'rank_champion_1': [0x7, 0x5, 0x3, 0x0, -0x2, -0x3, -0x4, -0x5, -0x7, -0x8],
-                    'rank_champion_2': [0x7, 0x5, 0x3, 0x0, -0x2, -0x3, -0x4, -0x5, -0x7, -0x9],
-                    'rank_champion_3': [0x7, 0x5, 0x3, -0x1, -0x2, -0x3, -0x4, -0x5, -0x7, -0x9],
-                    'rank_elite_1': [0x6, 0x4, 0x2, -0x1, -0x2, -0x3, -0x4, -0x5, -0x8, -0xa],
-                    'rank_elite_2': [0x6, 0x4, 0x2, -0x1, -0x2, -0x3, -0x4, -0x5, -0x8, -0xc],
-                    'rank_elite_3': [0x6, 0x4, 0x2, -0x1, -0x2, -0x3, -0x4, -0x5, -0xa, -0xc]
-                },
-                'GrandBattleRoyale_Duos': {
-                    'rank_unranked': [0xf, 0xb, 0x9, 0x7, 0x5, 0x4, 0x2, 0x1],
-                    'rank_bronze_1': [0xd, 0xa, 0x8, 0x7, 0x5, 0x3, 0x2, 0x1],
-                    'rank_bronze_2': [0xd, 0xa, 0x8, 0x6, 0x4, 0x3, 0x2, 0x1],
-                    'rank_bronze_3': [0xd, 0x9, 0x7, 0x6, 0x5, 0x3, 0x1, -0x1],
-                    'rank_silver_1': [0xd, 0x9, 0x7, 0x6, 0x4, 0x2, 0x1, -0x2],
-                    'rank_silver_2': [0xb, 0x8, 0x7, 0x6, 0x4, 0x2, -0x1, -0x3],
-                    'rank_silver_3': [0xb, 0x8, 0x7, 0x6, 0x3, 0x1, -0x2, -0x3],
-                    'rank_gold_1': [0xb, 0x8, 0x6, 0x4, 0x2, -0x1, -0x2, -0x4],
-                    'rank_gold_2': [0xa, 0x7, 0x5, 0x3, 0x1, -0x1, -0x3, -0x5],
-                    'rank_gold_3': [0x9, 0x6, 0x4, 0x2, 0x0, -0x3, -0x5, -0x7],
-                    'rank_platinum_1': [0x7, 0x5, 0x3, 0x1, -0x2, -0x4, -0x6, -0x9],
-                    'rank_platinum_2': [0x7, 0x5, 0x3, 0x1, -0x3, -0x5, -0x6, -0x9],
-                    'rank_platinum_3': [0x7, 0x5, 0x3, 0x1, -0x3, -0x5, -0x6, -0x9],
-                    'rank_champion_1': [0x7, 0x5, 0x3, 0x0, -0x3, -0x5, -0x6, -0xa],
-                    'rank_champion_2': [0x7, 0x5, 0x3, 0x0, -0x3, -0x5, -0x6, -0xb],
-                    'rank_champion_3': [0x7, 0x5, 0x3, -0x1, -0x3, -0x5, -0x6, -0xb],
-                    'rank_elite_1': [0x6, 0x4, 0x2, -0x1, -0x3, -0x5, -0x6, -0xc],
-                    'rank_elite_2': [0x6, 0x4, 0x2, -0x2, -0x3, -0x5, -0x7, -0xc],
-                    'rank_elite_3': [0x6, 0x4, 0x2, -0x2, -0x4, -0x6, -0x7, -0xc]
-                },
-                'MiniBattleRoyale_Duos': {
-                    'rank_unranked': [0xd, 0x9, 0x6, 0x4, 0x1],
-                    'rank_bronze_1': [0xd, 0x9, 0x5, 0x3, 0x1],
-                    'rank_bronze_2': [0xc, 0x9, 0x4, 0x2, 0x0],
-                    'rank_bronze_3': [0xc, 0x8, 0x4, 0x2, -0x1],
-                    'rank_silver_1': [0xb, 0x8, 0x3, 0x1, -0x1],
-                    'rank_silver_2': [0xb, 0x8, 0x3, 0x0, -0x2],
-                    'rank_silver_3': [0xa, 0x8, 0x3, 0x0, -0x2],
-                    'rank_gold_1': [0x9, 0x6, 0x3, -0x1, -0x3],
-                    'rank_gold_2': [0x8, 0x4, 0x1, -0x2, -0x4],
-                    'rank_gold_3': [0x7, 0x4, 0x0, -0x3, -0x5],
-                    'rank_platinum_1': [0x6, 0x3, -0x1, -0x4, -0x7],
-                    'rank_platinum_2': [0x6, 0x3, -0x2, -0x4, -0x7],
-                    'rank_platinum_3': [0x6, 0x2, -0x2, -0x5, -0x7],
-                    'rank_champion_1': [0x6, 0x2, -0x2, -0x5, -0x8],
-                    'rank_champion_2': [0x6, 0x2, -0x2, -0x5, -0x8],
-                    'rank_champion_3': [0x6, 0x2, -0x3, -0x5, -0x8],
-                    'rank_elite_1': [0x5, 0x1, -0x3, -0x5, -0x9],
-                    'rank_elite_2': [0x5, 0x1, -0x3, -0x5, -0xa],
-                    'rank_elite_3': [0x5, 0x1, -0x3, -0x5, -0xb]
-                },
-                'Showdown': {
-                    'rank_unranked': [0x14, 0x12, 0x12, 0x10, 0x10, 0xe, 0xc, 0xc, 0xc, 0xa, 0xa, 0x8, 0x6, 0x4, 0x4, 0x0],
-                    'rank_bronze_1': [0x18, 0x14, 0x12, 0x10, 0xe, 0xe, 0xc, 0xc, 0xa, 0x8, 0x8, 0x6, 0x6, 0x4, 0x4, 0x0],
-                    'rank_bronze_2': [0x16, 0x14, 0x12, 0x10, 0xe, 0xe, 0xc, 0xc, 0xa, 0x8, 0x6, 0x6, 0x4, 0x2, 0x2, 0x0],
-                    'rank_bronze_3': [0x16, 0x14, 0x12, 0xe, 0xe, 0xc, 0xc, 0xa, 0xa, 0x8, 0x6, 0x4, 0x4, 0x2, 0x0, -0x2],
-                    'rank_silver_1': [0x16, 0x14, 0x10, 0xe, 0xc, 0xc, 0xa, 0xa, 0xa, 0x8, 0x6, 0x4, 0x2, 0x0, -0x2, -0x4],
-                    'rank_silver_2': [0x12, 0x10, 0x10, 0xe, 0xc, 0xa, 0xa, 0xa, 0xa, 0x6, 0x4, 0x2, 0x0, -0x4, -0x4, -0x6],
-                    'rank_silver_3': [0x12, 0x10, 0xe, 0xe, 0xc, 0xa, 0xa, 0xa, 0x8, 0x4, 0x4, 0x0, -0x2, -0x4, -0x6, -0x6],
-                    'rank_gold_1': [0x12, 0xe, 0xe, 0xc, 0xa, 0x8, 0x6, 0x6, 0x6, 0x4, 0x0, -0x2, -0x2, -0x4, -0x6, -0x8],
-                    'rank_gold_2': [0x12, 0xe, 0xc, 0xa, 0x8, 0x6, 0x4, 0x4, 0x2, 0x0, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa],
-                    'rank_gold_3': [0xe, 0xc, 0xc, 0x8, 0x6, 0x4, 0x2, 0x2, 0x0, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0x10],
-                    'rank_platinum_1': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, 0x0, -0x2, -0x4, -0x8, -0x8, -0xa, -0xc, -0x10, -0x14],
-                    'rank_platinum_2': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, 0x0, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x14],
-                    'rank_platinum_3': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x14],
-                    'rank_champion_1': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x18],
-                    'rank_champion_2': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x12, -0x18],
-                    'rank_champion_3': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x12, -0x18],
-                    'rank_elite_1': [0xa, 0x8, 0x6, 0x4, 0x2, -0x2, -0x4, -0x4, -0x4, -0x6, -0x8, -0xa, -0xc, -0xe, -0x12, -0x1c],
-                    'rank_elite_2': [0xa, 0x8, 0x6, 0x4, 0x2, -0x2, -0x4, -0x4, -0x6, -0x6, -0x8, -0xa, -0xc, -0x10, -0x14, -0x1c],
-                    'rank_elite_3': [0xa, 0x8, 0x6, 0x4, 0x0, -0x2, -0x4, -0x6, -0x6, -0x8, -0xa, -0xc, -0xe, -0x14, -0x18, -0x1c]
-                },
-                'Showdown_Duos': {
-                    'rank_unranked': [0x1a, 0x14, 0x10, 0xc, 0xa, 0x8, 0x4, 0x2],
-                    'rank_bronze_1': [0x16, 0x12, 0xe, 0xc, 0xa, 0x6, 0x4, 0x2],
-                    'rank_bronze_2': [0x16, 0x12, 0xe, 0xa, 0x8, 0x6, 0x4, 0x2],
-                    'rank_bronze_3': [0x16, 0x10, 0xc, 0xa, 0xa, 0x6, 0x2, -0x2],
-                    'rank_silver_1': [0x16, 0x10, 0xc, 0xa, 0x8, 0x4, 0x2, -0x4],
-                    'rank_silver_2': [0x12, 0xe, 0xc, 0xa, 0x8, 0x4, -0x2, -0x6],
-                    'rank_silver_3': [0x12, 0xe, 0xc, 0xa, 0x6, 0x2, -0x4, -0x6],
-                    'rank_gold_1': [0x12, 0xe, 0xa, 0x6, 0x4, -0x2, -0x4, -0x8],
-                    'rank_gold_2': [0x10, 0xc, 0x8, 0x4, 0x2, -0x2, -0x6, -0xa],
-                    'rank_gold_3': [0xe, 0xa, 0x6, 0x2, 0x0, -0x6, -0xa, -0xe],
-                    'rank_platinum_1': [0xa, 0x8, 0x4, 0x0, -0x4, -0x8, -0xc, -0x12],
-                    'rank_platinum_2': [0xa, 0x8, 0x4, 0x0, -0x6, -0xa, -0xc, -0x12],
-                    'rank_platinum_3': [0xa, 0x8, 0x4, 0x0, -0x6, -0xa, -0xc, -0x12],
-                    'rank_champion_1': [0xa, 0x8, 0x4, -0x2, -0x6, -0xa, -0xc, -0x14],
-                    'rank_champion_2': [0xa, 0x8, 0x4, -0x2, -0x6, -0xa, -0xc, -0x16],
-                    'rank_champion_3': [0xa, 0x8, 0x4, -0x4, -0x6, -0xa, -0xc, -0x16],
-                    'rank_elite_1': [0x8, 0x6, 0x2, -0x4, -0x6, -0xa, -0xc, -0x18],
-                    'rank_elite_2': [0x8, 0x6, 0x2, -0x6, -0x6, -0xa, -0xe, -0x18],
-                    'rank_elite_3': [0x8, 0x6, 0x2, -0x6, -0x8, -0xc, -0xe, -0x18]
-                },
-                'ShowdownZeroBuilds': {
-                    'rank_unranked': [0x14, 0x12, 0x12, 0x10, 0x10, 0xe, 0xc, 0xc, 0xc, 0xa, 0xa, 0x8, 0x6, 0x4, 0x4, 0x0],
-                    'rank_bronze_1': [0x18, 0x14, 0x12, 0x10, 0xe, 0xe, 0xc, 0xc, 0xa, 0x8, 0x8, 0x6, 0x6, 0x4, 0x4, 0x0],
-                    'rank_bronze_2': [0x16, 0x14, 0x12, 0x10, 0xe, 0xe, 0xc, 0xc, 0xa, 0x8, 0x6, 0x6, 0x4, 0x2, 0x2, 0x0],
-                    'rank_bronze_3': [0x16, 0x14, 0x12, 0xe, 0xe, 0xc, 0xc, 0xa, 0xa, 0x8, 0x6, 0x4, 0x4, 0x2, 0x0, -0x2],
-                    'rank_silver_1': [0x16, 0x14, 0x10, 0xe, 0xc, 0xc, 0xa, 0xa, 0xa, 0x8, 0x6, 0x4, 0x2, 0x0, -0x2, -0x4],
-                    'rank_silver_2': [0x12, 0x10, 0x10, 0xe, 0xc, 0xa, 0xa, 0xa, 0xa, 0x6, 0x4, 0x2, 0x0, -0x4, -0x4, -0x6],
-                    'rank_silver_3': [0x12, 0x10, 0xe, 0xe, 0xc, 0xa, 0xa, 0xa, 0x8, 0x4, 0x4, 0x0, -0x2, -0x4, -0x6, -0x6],
-                    'rank_gold_1': [0x12, 0xe, 0xe, 0xc, 0xa, 0x8, 0x6, 0x6, 0x6, 0x4, 0x0, -0x2, -0x2, -0x4, -0x6, -0x8],
-                    'rank_gold_2': [0x12, 0xe, 0xc, 0xa, 0x8, 0x6, 0x4, 0x4, 0x2, 0x0, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa],
-                    'rank_gold_3': [0xe, 0xc, 0xc, 0x8, 0x6, 0x4, 0x2, 0x2, 0x0, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0x10],
-                    'rank_platinum_1': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, 0x0, -0x2, -0x4, -0x8, -0x8, -0xa, -0xc, -0x10, -0x14],
-                    'rank_platinum_2': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, 0x0, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x14],
-                    'rank_platinum_3': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, 0x0, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x14],
-                    'rank_champion_1': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x10, -0x18],
-                    'rank_champion_2': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x12, -0x18],
-                    'rank_champion_3': [0xa, 0x8, 0x8, 0x6, 0x4, 0x2, -0x2, -0x2, -0x4, -0x6, -0x8, -0xa, -0xc, -0xc, -0x12, -0x18],
-                    'rank_elite_1': [0xa, 0x8, 0x6, 0x4, 0x2, -0x2, -0x4, -0x4, -0x4, -0x6, -0x8, -0xa, -0xc, -0xe, -0x12, -0x1c],
-                    'rank_elite_2': [0xa, 0x8, 0x6, 0x4, 0x2, -0x2, -0x4, -0x4, -0x6, -0x6, -0x8, -0xa, -0xc, -0x10, -0x14, -0x1c],
-                    'rank_elite_3': [0xa, 0x8, 0x6, 0x4, 0x0, -0x2, -0x4, -0x6, -0x6, -0x8, -0xa, -0xc, -0xe, -0x14, -0x18, -0x1c]
-                },
-                'ShowdownZeroBuilds_Duos': {
-                    'rank_unranked': [0x1a, 0x14, 0x10, 0xc, 0xa, 0x8, 0x4, 0x2],
-                    'rank_bronze_1': [0x16, 0x12, 0xe, 0xc, 0xa, 0x6, 0x4, 0x2],
-                    'rank_bronze_2': [0x16, 0x12, 0xe, 0xa, 0x8, 0x6, 0x4, 0x2],
-                    'rank_bronze_3': [0x16, 0x10, 0xc, 0xa, 0xa, 0x6, 0x2, -0x2],
-                    'rank_silver_1': [0x16, 0x10, 0xc, 0xa, 0x8, 0x4, 0x2, -0x4],
-                    'rank_silver_2': [0x12, 0xe, 0xc, 0xa, 0x8, 0x4, -0x2, -0x6],
-                    'rank_silver_3': [0x12, 0xe, 0xc, 0xa, 0x6, 0x2, -0x4, -0x6],
-                    'rank_gold_1': [0x12, 0xe, 0xa, 0x6, 0x4, -0x2, -0x4, -0x8],
-                    'rank_gold_2': [0x10, 0xc, 0x8, 0x4, 0x2, -0x2, -0x6, -0xa],
-                    'rank_gold_3': [0xe, 0xa, 0x6, 0x2, 0x0, -0x6, -0xa, -0xe],
-                    'rank_platinum_1': [0xa, 0x8, 0x4, 0x0, -0x4, -0x8, -0xc, -0x12],
-                    'rank_platinum_2': [0xa, 0x8, 0x4, 0x0, -0x6, -0xa, -0xc, -0x12],
-                    'rank_platinum_3': [0xa, 0x8, 0x4, 0x0, -0x6, -0xa, -0xc, -0x12],
-                    'rank_champion_1': [0xa, 0x8, 0x4, -0x2, -0x6, -0xa, -0xc, -0x14],
-                    'rank_champion_2': [0xa, 0x8, 0x4, -0x2, -0x6, -0xa, -0xc, -0x16],
-                    'rank_champion_3': [0xa, 0x8, 0x4, -0x4, -0x6, -0xa, -0xc, -0x16],
-                    'rank_elite_1': [0x8, 0x6, 0x2, -0x4, -0x6, -0xa, -0xc, -0x18],
-                    'rank_elite_2': [0x8, 0x6, 0x2, -0x6, -0x6, -0xa, -0xe, -0x18],
-                    'rank_elite_3': [0x8, 0x6, 0x2, -0x6, -0x8, -0xc, -0xe, -0x18]
-                }
-            }
-        }
-    }
-}
-  , _TROPHY_LIVE = !(typeof localStorage !== _0xd95be6(0x288) + 'd' && localStorage['getItem'](_0xd95be6(0x277) + _0xd95be6(0x52a)) === '0')
-  , _TROPHY_DIAG = typeof localStorage !== 'undefine' + 'd' && localStorage[_0xd95be6(0x4dd)](_0xd95be6(0x283) + 'IAG') || ''
-  , _TROPHY_DIAG_SEASON = _TROPHY_DIAG === _0xd95be6(0x1aa) ? {
-    'is_timer_visible': !![],
-    'seasons': {
-        '1': {
-            'start_date': _0xd95be6(0x303) + _0xd95be6(0x2cc) + ':00.000Z',
-            'end_date': _0xd95be6(0x281) + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-            'tiers': []
-        }
-    }
-} : _TROPHY_DIAG === _0xd95be6(0x4fe) ? {
-    'is_timer_visible': !![],
-    'seasons': {
-        '1': {
-            'start_date': _0xd95be6(0x303) + _0xd95be6(0x2cc) + ':00.000Z',
-            'end_date': _0xd95be6(0x281) + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-            'tiers': [{
-                'xp': 0x0
-            }, {
-                'xp': 0x64
-            }, {
-                'xp': 0xc8
-            }, {
-                'xp': 0x12c
-            }, {
-                'xp': 0x190
-            }]
-        }
-    }
-} : {
-    'is_timer_visible': !![],
-    'seasons': {
-        '1': {
-            'start_date': '2020-01-' + _0xd95be6(0x2cc) + ':00.000Z',
-            'end_date': _0xd95be6(0x281) + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-            'tiers': [{
-                'xp': 0x0,
-                'free_rewards': []
-            }, {
-                'xp': 0x64,
-                'free_rewards': []
-            }, {
-                'xp': 0xc8,
-                'free_rewards': []
-            }, {
-                'xp': 0x12c,
-                'free_rewards': []
-            }, {
-                'xp': 0x190,
-                'free_rewards': []
-            }]
-        }
-    }
-}
-  , trophyRoadV2 = _TROPHY_DIAG === 'empty' || _TROPHY_DIAG === 'notiers' || _TROPHY_DIAG === 'xponly' ? {
-    'Configs': {
-        'default': _TROPHY_DIAG_SEASON
-    }
-} : _TROPHY_LIVE ? {
-    'Configs': {
-        'default': {
-            'is_timer_visible': !![],
-            'seasons': {
-                '1': {
-                    'start_date': '2020-01-' + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-                    'end_date': _0xd95be6(0x281) + _0xd95be6(0x2cc) + _0xd95be6(0x394),
-                    'tiers': [{
-                        'xp': 0x0,
-                        'free_rewards': []
-                    }, {
-                        'xp': 0x5,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x14,
-                        'free_rewards': [{
-                            'RewardType': 'Product',
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0x32,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'RLB2'
-                        }]
-                    }, {
-                        'xp': 0x50,
-                        'free_rewards': [{
-                            'RewardType': 'Product',
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0x8c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0xc8,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x190),
-                            'Amount': 0x32
-                        }]
-                    }, {
-                        'xp': 0x122,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': 'lol.1v1.' + _0xd95be6(0x4f5) + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0x17c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2ab)
-                        }]
-                    }, {
-                        'xp': 0x1f4,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x190),
-                            'Amount': 0xa
-                        }]
-                    }, {
-                        'xp': 0x26c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': 'lol.1v1.' + 'lootbox.' + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x35c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': 'lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x44c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x190),
-                            'Amount': 0xa
-                        }]
-                    }, {
-                        'xp': 0x53c,
-                        'free_rewards': [{
-                            'RewardType': 'Product',
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2ab)
-                        }]
-                    }, {
-                        'xp': 0x62c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x6cc,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x80c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x8fc,
-                        'free_rewards': [{
-                            'RewardType': 'LOLCoins',
-                            'Amount': 0x1e
-                        }]
-                    }, {
-                        'xp': 0x9ec,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': 'lol.1v1.' + _0xd95be6(0x4f5) + 'RLB2'
-                        }]
-                    }, {
-                        'xp': 0xadc,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x190),
-                            'Amount': 0x5a
-                        }]
-                    }, {
-                        'xp': 0xbcc,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0xcbc,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0xdac,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x190),
-                            'Amount': 0x64
-                        }]
-                    }, {
-                        'xp': 0xe9c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0xf8c,
-                        'free_rewards': [{
-                            'RewardType': 'LOLCoins',
-                            'Amount': 0x64
-                        }]
-                    }, {
-                        'xp': 0x107c,
-                        'free_rewards': [{
-                            'RewardType': 'Product',
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2ab)
-                        }]
-                    }, {
-                        'xp': 0x116c,
-                        'free_rewards': [{
-                            'RewardType': 'LOLCoins',
-                            'Amount': 0x96
-                        }]
-                    }, {
-                        'xp': 0x125c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x134c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + 'lootbox.' + 'RLB1'
-                        }]
-                    }, {
-                        'xp': 0x143c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': 'lol.1v1.' + _0xd95be6(0x4f5) + _0xd95be6(0x29a)
-                        }]
-                    }, {
-                        'xp': 0x152c,
-                        'free_rewards': [{
-                            'RewardType': _0xd95be6(0x456),
-                            'ProductID': _0xd95be6(0x4e2) + _0xd95be6(0x4f5) + _0xd95be6(0x2ab)
-                        }]
-                    }]
-                }
-            }
-        }
-    }
-} : {
-    'Configs': {
-        'default': {
-            'is_timer_visible': ![],
-            'seasons': {}
-        }
-    }
-};
-try {
-    var _trd = trophyRoadV2 && trophyRoadV2[_0xd95be6(0x2c4)] && trophyRoadV2[_0xd95be6(0x2c4)][_0xd95be6(0x1a7)] || {}
-      , _s1 = _trd['seasons'] && _trd[_0xd95be6(0x3ef)]['1'];
-    console[_0xd95be6(0x52d)](_0xd95be6(0x23d) + 'Y-RC]\x20di' + 'ag=' + (_TROPHY_DIAG || _0xd95be6(0x4c5)) + _0xd95be6(0x26f) + _TROPHY_LIVE + (_0xd95be6(0x463) + _0xd95be6(0x3f7) + _0xd95be6(0x318) + '=\x20') + (_s1 && _s1['tiers'] ? _s1[_0xd95be6(0x1e4)][_0xd95be6(0x39e)] : _0xd95be6(0x31b) + _0xd95be6(0x15f)), _0xd95be6(0x3d2) + _0xd95be6(0x1ed) + 'weight:b' + _0xd95be6(0x154) + _0xd95be6(0x304) + 'px');
-} catch (_0xca7581) {}
-const _BISECT = (function() {
-    const _0x486c94 = _0xd95be6;
-    try {
-        return /[?&]rcbisect=1/['test'](location['search']) && window[_0x486c94(0x1d6) + _0x486c94(0x14d)] && localStorage[_0x486c94(0x4dd)]('RC_BISEC' + 'T') || '';
-    } catch (_0xd6553e) {
-        return '';
-    }
-}());
-if (_BISECT)
-    try {
-        console[_0xd95be6(0x380)]('[RC_BISE' + _0xd95be6(0x217) + _0xd95be6(0x1d0) + _BISECT + ('\x20—\x20RC\x20pa' + _0xd95be6(0x430) + _0xd95be6(0x2ad) + _0xd95be6(0x2df) + '\x20(debug\x20' + _0xd95be6(0x31a)));
-    } catch (_0x130e60) {}
-const equipmentV1 = {
-    'Configs': {
-        'default': {
-            'are_loadouts_enabled': ![]
-        }
-    }
-}
-  , subscriptions = {
-    'Configs': {
-        'default': {
-            'subscriptions': {}
-        }
-    }
-};
-function setDefaultValuesDirect(_0xa1fb4e) {
-    const _0x3112d5 = _0xd95be6
-      , _0x529505 = _0x3112d5(0x1a7);
-    try {
-        const _0x1a592d = gameModesV4[_0x3112d5(0x2c4)][_0x3112d5(0x1a7)]['modes_in' + 'fo'];
-        for (const _0x1e97df in _0x1a592d) {
-            if (_0x1a592d[_0x1e97df][_0x3112d5(0x375) + _0x3112d5(0x161) + 'assPlace' + _0x3112d5(0x12d)] != null)
-                continue;
-            _0x1a592d[_0x1e97df][_0x3112d5(0x375) + 'nBattleP' + _0x3112d5(0x206) + _0x3112d5(0x12d)] = _0x1e97df === _0x3112d5(0x382) + 'h' ? [0xa, 0x3] : [0x0, 0x0];
-        }
-    } catch (_0x1a7ffa) {}
-    const _0x2fe77d = [[_0x3112d5(0x27c) + _0x3112d5(0x4e7), _0x3112d5(0x27c) + 'ssID', battlePassV3], [_0x3112d5(0x45e) + _0x3112d5(0x2ed), _0x3112d5(0x45e) + _0x3112d5(0x177), gameModesV4], [_0x3112d5(0x405) + 'V7', 'Products' + 'ID', productsV6], [_0x3112d5(0x46d) + _0x3112d5(0x41b), _0x3112d5(0x46d) + _0x3112d5(0x149), generalConfigV4], [_0x3112d5(0x385) + 'tingsV9', _0x3112d5(0x385) + 'tingsID', storeSettingsV8], [_0x3112d5(0x32b) + _0x3112d5(0x4bf), _0x3112d5(0x32b) + _0x3112d5(0x4eb), gameEventsV4], ['DailyRew' + _0x3112d5(0x3ca), _0x3112d5(0x2d4) + _0x3112d5(0x13b), dailyRewardsV2], [_0x3112d5(0x53c), _0x3112d5(0x358), xpBank], [_0x3112d5(0x342) + 'esV2', _0x3112d5(0x342) + 'esID', challengesV2], ['DailySpi' + _0x3112d5(0x230), _0x3112d5(0x38c) + _0x3112d5(0x23e), dailySpinsConfig], [_0x3112d5(0x427) + _0x3112d5(0x37d), 'FTUEConf' + _0x3112d5(0x267), ftueConfigV1], [_0x3112d5(0x51b) + _0x3112d5(0x270), 'Gameplay' + _0x3112d5(0x270) + 'ID', gameplaySettings], [_0x3112d5(0x308) + 'ards', _0x3112d5(0x308) + 'ardsID', leaderboards], ['LimitedL' + _0x3112d5(0x544) + _0x3112d5(0x230), _0x3112d5(0x36b) + _0x3112d5(0x544) + _0x3112d5(0x1cc), limitedLockerSpinsConfig], [_0x3112d5(0x3a0) + _0x3112d5(0x3a4), 'LootBoxe' + _0x3112d5(0x483), lootBoxesDataV2], [_0x3112d5(0x3a0) + _0x3112d5(0x28e), _0x3112d5(0x3a0) + _0x3112d5(0x483), lootBoxesGacha], [_0x3112d5(0x2b3), 'RankRoad' + 'ID', rankRoad], [_0x3112d5(0x397) + _0x3112d5(0x55d) + _0x3112d5(0x1db), _0x3112d5(0x397) + _0x3112d5(0x55d) + _0x3112d5(0x13d), rankXPGainPerGameMode], [_0x3112d5(0x3d3) + _0x3112d5(0x366), 'TrophyRo' + _0x3112d5(0x321), trophyRoadV2], ['Equipmen' + 'tV1', 'Equipmen' + _0x3112d5(0x119), equipmentV1], [_0x3112d5(0x40c) + 'tions', _0x3112d5(0x40c) + _0x3112d5(0x365), subscriptions]]
-      , _0xe6d47e = {
-        'Configs': {}
-    };
-    console[_0x3112d5(0x52d)](_0x3112d5(0x40e) + _0x3112d5(0x2cd) + _BISECT),
-    _0x2fe77d[_0x3112d5(0x2c9)]( ([_0x664ac9,_0xcda8d1,_0x4d990d], _0x12543a) => {
-        const _0x48e2f4 = _0x3112d5;
-        let _0x1c26d8 = _0x4d990d;
-        if (_BISECT === _0x48e2f4(0x3f2) + 'Y')
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x220) + _0x48e2f4(0x4a6) + 'ES' && _0x12543a !== 0x1)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x220) + _0x48e2f4(0x4a6) + _0x48e2f4(0x475) && _0x12543a !== 0x0 && _0x12543a !== 0x1)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x220) + 'CEPT-MOD' + _0x48e2f4(0x258) && _0x12543a !== 0x0 && _0x12543a !== 0x1 && _0x12543a !== 0x6)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x220) + _0x48e2f4(0x4a6) + _0x48e2f4(0x258) + '-GE' && _0x12543a !== 0x0 && _0x12543a !== 0x1 && _0x12543a !== 0x5 && _0x12543a !== 0x6)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x220) + _0x48e2f4(0x4a6) + _0x48e2f4(0x258) + '-GE-GC' && _0x12543a !== 0x0 && _0x12543a !== 0x1 && _0x12543a !== 0x3 && _0x12543a !== 0x5 && _0x12543a !== 0x6)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'EMPTY-EX' + _0x48e2f4(0x514) + 'N-PLUS-S' + _0x48e2f4(0x494) && ![0x0, 0x1, 0x3, 0x5, 0x6, 0x7, 0xb, 0x11, 0x14]['includes'](_0x12543a))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x1a4) + _0x48e2f4(0x2d0) + 'CTS' && ![0x0, 0x1, 0x2, 0x3, 0x5, 0x6, 0x7, 0xb, 0x11, 0x14][_0x48e2f4(0x35e)](_0x12543a))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'EMPTY-PL' + _0x48e2f4(0x362) && ![0x0, 0x1, 0x3, 0x4, 0x5, 0x6, 0x7, 0xb, 0x11, 0x14]['includes'](_0x12543a))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'PLUS-PRO' + _0x48e2f4(0x1a0) + 'ORE' && ![0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0xb, 0x11, 0x14][_0x48e2f4(0x35e)](_0x12543a))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'A' && _0x12543a < 0x9)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'B' && _0x12543a >= 0x9)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'A1' && _0x12543a < 0x4)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'A2' && _0x12543a >= 0x4 && _0x12543a < 0x9)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'A1a' && _0x12543a < 0x2)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x35c) && _0x12543a >= 0x2 && _0x12543a < 0x4)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x151) && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'A1a2' && _0x12543a === 0x1)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x27d) + 'ascal' && _0x12543a !== 0x1 && _0x12543a !== 0x2 && _0x12543a !== 0x3 && _0x12543a !== 0x4 && _0x12543a !== 0x5 && _0x12543a !== 0x6)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'C-no-pro' + _0x48e2f4(0x214) && (_0x12543a === 0x2 || _0x12543a === 0x3 || _0x12543a === 0x0))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x4c1) + 'eral' && (_0x12543a === 0x4 || _0x12543a === 0x0))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x34a) + 'es' && (_0x12543a === 0x1 || _0x12543a === 0x0))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x1f3) + 're' && (_0x12543a === 0x5 || _0x12543a === 0x6 || _0x12543a === 0x0))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x53a) + _0x48e2f4(0x2f0) && (_0x12543a === 0x2 || _0x12543a === 0x3))
-            _0x1c26d8 = _0xe6d47e;
-        _BISECT === _0x48e2f4(0x4c4) + _0x48e2f4(0x50f) + _0x48e2f4(0x24b) && (_0x12543a === 0x2 || _0x12543a === 0x3) && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x3b1) + 'ta'] = {});
-        _BISECT === 'OOB-prod' + _0x48e2f4(0x50f) + _0x48e2f4(0x261) + 'm' && (_0x12543a === 0x2 || _0x12543a === 0x3) && (_0x1c26d8 = JSON['parse'](JSON['stringif' + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x418) + _0x48e2f4(0x265)] = {});
-        _BISECT === 'OOB-prod' + _0x48e2f4(0x50f) + 'influenc' + 'er' && (_0x12543a === 0x2 || _0x12543a === 0x3) && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x1b5) + 'er_campa' + _0x48e2f4(0x511)] = null);
-        _BISECT === 'OOB-prod' + 'ucts-no-' + _0x48e2f4(0x29c) && (_0x12543a === 0x2 || _0x12543a === 0x3) && (_0x1c26d8 = JSON['parse'](JSON['stringif' + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)]['coins_da' + 'ta'] = {});
-        if (_BISECT === 'PRODUCTS' + _0x48e2f4(0x235) + 'ed' && (_0x12543a === 0x2 || _0x12543a === 0x3)) {
-            _0xa1fb4e['Products' + 'V6'] = _0x48e2f4(0x1dc) + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x405) + 'V7'] = _0x48e2f4(0x1dc) + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x405) + 'ID'] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x507) + _0x48e2f4(0x386) + 'd' && _0x12543a === 0x4) {
-            _0xa1fb4e[_0x48e2f4(0x46d) + 'onfigV4'] = _0x48e2f4(0x1dc) + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x46d) + _0x48e2f4(0x149)] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x4a7) + _0x48e2f4(0x331) + _0x48e2f4(0x4f8) && _0x12543a === 0x8) {
-            _0xa1fb4e['Challeng' + _0x48e2f4(0x482)] = _0x48e2f4(0x1dc) + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x342) + _0x48e2f4(0x240)] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x33b) + 'formed' && _0x12543a === 0xa) {
-            _0xa1fb4e[_0x48e2f4(0x427) + _0x48e2f4(0x37d)] = _0x48e2f4(0x1dc) + _0x48e2f4(0x4b7),
-            _0xa1fb4e['FTUEConf' + _0x48e2f4(0x267)] = _0x529505;
-            return;
-        }
-        if (_BISECT === 'LEADERBO' + _0x48e2f4(0x4ab) + _0x48e2f4(0x3e1) && _0x12543a === 0xc) {
-            _0xa1fb4e[_0x48e2f4(0x308) + 'ards'] = '{invalid' + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x308) + _0x48e2f4(0x13b)] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x111) + _0x48e2f4(0x243) + _0x48e2f4(0x295) && _0x12543a === 0x13) {
-            _0xa1fb4e['Equipmen' + _0x48e2f4(0x340)] = '{invalid' + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x1fc) + 'tID'] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x509) + _0x48e2f4(0x14b) && _0x12543a === 0xf) {
-            _0xa1fb4e['LootBoxe' + _0x48e2f4(0x28e)] = '{invalid' + _0x48e2f4(0x4b7),
-            _0xa1fb4e[_0x48e2f4(0x3a0) + _0x48e2f4(0x483)] = _0x529505;
-            return;
-        }
-        _BISECT === _0x48e2f4(0x4c4) + _0x48e2f4(0x50f) + _0x48e2f4(0x1c0) && (_0x12543a === 0x2 || _0x12543a === 0x3) && (_0x1c26d8 = JSON['parse'](JSON['stringif' + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)]['default'][_0x48e2f4(0x3b1) + 'ta'] = {},
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x401) + 'ta'] = {},
-        _0x1c26d8['Configs'][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x418) + _0x48e2f4(0x265)] = {},
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x1b5) + 'er_campa' + _0x48e2f4(0x511)] = null);
-        if (_BISECT === _0x48e2f4(0x216) + 'eneral' && _0x12543a === 0x4)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x20f) + _0x48e2f4(0x337) && (_0x12543a === 0x5 || _0x12543a === 0x6))
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'OOB-no-b' + 'p' && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x239) + 'al' && _0x12543a === 0x0)
-            _0x1c26d8 = {
-                'Configs': {
-                    'default': {
-                        'current_season': 0x1
-                    }
-                }
-            };
-        _BISECT === _0x48e2f4(0x3c6) + _0x48e2f4(0x2a1) && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)]['default'][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)] = []);
-        _BISECT === _0x48e2f4(0x2e2) + _0x48e2f4(0x1fb) && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        delete _0x1c26d8['Configs'][_0x48e2f4(0x1a7)][_0x48e2f4(0x35f) + _0x48e2f4(0x518)],
-        delete _0x1c26d8[_0x48e2f4(0x2c4)]['default'][_0x48e2f4(0x3b0) + 'popup_co' + _0x48e2f4(0x41f)]);
-        _BISECT === _0x48e2f4(0x44a) + _0x48e2f4(0x2a0) && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON['stringif' + 'y'](_0x4d990d)),
-        delete _0x1c26d8[_0x48e2f4(0x2c4)]['default']['start_da' + 'te'],
-        delete _0x1c26d8['Configs'][_0x48e2f4(0x1a7)][_0x48e2f4(0x4b4)]);
-        _BISECT === _0x48e2f4(0x157) + _0x48e2f4(0x16a) && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)] = _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)][_0x48e2f4(0x481)](function(_0x54d064) {
-            return {
-                'xp': _0x54d064['xp'],
-                'free_rewards': [],
-                'premium_rewards': []
-            };
-        }));
-        _BISECT === _0x48e2f4(0x537) && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)]['default']['battle_p' + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)] = [{
-            'xp': 0x64,
-            'free_rewards': [],
-            'premium_rewards': []
-        }]);
-        _BISECT === _0x48e2f4(0x537) + _0x48e2f4(0x1a5) + 'nt' && _0x12543a === 0x0 && (_0x1c26d8 = JSON['parse'](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8['Configs'][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)] = [{
-            'xp': 0x64,
-            'free_rewards': [],
-            'premium_rewards': []
+  },
+  challengesV2 = {
+    Configs: {
+      'default': {
+        are_challenges_enabled: true,
+        daily_rotation_hour: 16,
+        daily_reroll_data: {
+          cost: 5,
+          currency_type: 'LT'
+        },
+        seasonal_reroll_data: {
+          cost: 5,
+          currency_type: 'LT'
+        },
+        daily_bonus_rewards: [{
+          RewardType: 'BPExp',
+          Amount: 150
         }],
-        _0x1c26d8[_0x48e2f4(0x2c4)]['default'][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x4d6) + 't_xp'] = [0x32]);
-        _BISECT === _0x48e2f4(0x157) + _0x48e2f4(0x280) + 'j' && _0x12543a === 0x0 && (_0x1c26d8 = JSON['parse'](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8['Configs'][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + _0x48e2f4(0x23c)][_0x48e2f4(0x1e4)] = [{}]);
-        if (_BISECT === _0x48e2f4(0x3c1) + 'n' && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        _BISECT === _0x48e2f4(0x3c1) + 'n' && _0x12543a === 0x1 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x3f3) + 'o'] = {
-            '1v1': {
-                'OverridenRangeIncreaseFactor': 0x2ee0,
-                'OverridenBattlePassPlacementXP': []
-            }
-        });
-        if (_BISECT === _0x48e2f4(0x2a9) + _0x48e2f4(0x329) && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        _BISECT === 'MODES-em' + _0x48e2f4(0x329) && _0x12543a === 0x1 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x3f3) + 'o'] = {});
-        if (_BISECT === _0x48e2f4(0x332) + 'it' && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        _BISECT === _0x48e2f4(0x332) + 'it' && _0x12543a === 0x1 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        delete _0x1c26d8['Configs']['default'][_0x48e2f4(0x3f3) + 'o']);
-        if (_BISECT === 'MODES-om' + _0x48e2f4(0x4b3) && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x332) + 'it-key' && _0x12543a === 0x1)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x4ee) + _0x48e2f4(0x14b) && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === 'MODES-ma' + 'lformed' && _0x12543a === 0x1) {
-            _0xa1fb4e[_0x48e2f4(0x45e) + _0x48e2f4(0x2ed)] = _0x48e2f4(0x1dc) + '_json',
-            _0xa1fb4e[_0x48e2f4(0x45e) + _0x48e2f4(0x177)] = _0x529505;
-            return;
+        streak_bonus_days_count: 3,
+        is_streak_bonus_enabled: true,
+        streak_bonus_rewards: [{
+          RewardType: 'Spin',
+          ProductID: 'lol.1v1.lootbox.StreakBonusCoins'
+        }],
+        challenges_notification_data: {
+          are_notifications_enabled: false,
+          daily_challenges_reset_title_key: '',
+          daily_challenges_reset_description_key: '',
+          seasonal_challenges_reset_title_key: '',
+          seasonal_challenges_reset_description_key: ''
         }
-        if (_BISECT === _0x48e2f4(0x524) + 'll' && _0x12543a === 0x1) {
-            _0xa1fb4e[_0x48e2f4(0x45e) + _0x48e2f4(0x2ed)] = _0x48e2f4(0x19a),
-            _0xa1fb4e['GameMode' + _0x48e2f4(0x177)] = _0x529505;
-            return;
-        }
-        if (_BISECT === _0x48e2f4(0x37a) + 'ip' && _0x12543a === 0x0)
-            _0x1c26d8 = _0xe6d47e;
-        if (_BISECT === _0x48e2f4(0x37a) + 'ip' && _0x12543a === 0x1) {
-            _0xa1fb4e[_0x48e2f4(0x45e) + _0x48e2f4(0x177)] = _0x529505;
-            return;
-        }
-        _BISECT === _0x48e2f4(0x48d) + _0x48e2f4(0x3c7) + _0x48e2f4(0x23c) && _0x12543a === 0x0 && (_0x1c26d8 = {
-            'Configs': {
-                'default': {
-                    'battle_pass': {
-                        'placement_xp': [],
-                        'tiers': [{
-                            'xp': 0x0,
-                            'free_rewards': [],
-                            'premium_rewards': []
-                        }]
-                    }
-                }
-            }
-        }),
-        _BISECT === 'BP-no-ba' + _0x48e2f4(0x25d) + 's-field' && _0x12543a === 0x0 && (_0x1c26d8 = JSON[_0x48e2f4(0x53b)](JSON[_0x48e2f4(0x477) + 'y'](_0x4d990d)),
-        delete _0x1c26d8[_0x48e2f4(0x2c4)][_0x48e2f4(0x1a7)][_0x48e2f4(0x19f) + 'ass']),
-        _0xa1fb4e[_0x664ac9] = JSON['stringif' + 'y'](_0x1c26d8),
-        _0xa1fb4e[_0xcda8d1] = _0x529505;
+      }
     }
-    );
+  },
+  _FREE_SPIN_ON = typeof localStorage === 'undefined' ? true : localStorage.getItem('FREE_SPIN') !== '0',
+  dailySpinsConfig = {
+    Configs: {
+      'default': {
+        is_enabled: _FREE_SPIN_ON,
+        product: 'v441_mock_empty_lootbox',
+        hours_to_refresh: 24
+      }
+    }
+  },
+  ftueConfigV1 = {
+    Configs: {
+      'default': {
+        FirstTimeNotifications: []
+      }
+    }
+  },
+  gameplaySettings = {
+    Configs: {
+      'default': {
+        fps_settings: {
+          android_fps_monitor_settings: {},
+          ios_fps_monitor_settings: {},
+          web_fps_monitor_settings: {}
+        },
+        hud_settings: {
+          default_hud_mode: 'LOLStyle'
+        },
+        player_settings: {
+          HitBoxSizeMultiplier: 3,
+          StartingPlayerState: 'Combat',
+          DefaultSelectedWeapon: 1
+        },
+        building_settings: {
+          DefaultSelectedBuilding: 'Wall'
+        },
+        touch_aim_assist: {
+          IsEnabled: false
+        },
+        controller_aim_assist: {
+          UseLegacyAimAssist: false,
+          FollowerAimAssist: {
+            FollowForceX: 22,
+            FollowForceY: 22,
+            MaxFollow: 1,
+            DragForceX: 0.1,
+            DragForceY: 0.1,
+            MagnetForce: 1.7,
+            MaxEnemyDistance: 100,
+            MaxAimAssistRadius: 1
+          }
+        },
+        matchmaking_settings: {
+          trophy_count_weight: 1,
+          power_score_weight: 0
+        }
+      }
+    }
+  },
+  leaderboards = {
+    Configs: {
+      'default': {
+        are_events_enabled: true,
+        events: {},
+        leaderboards: {}
+      }
+    }
+  },
+  limitedLockerSpinsConfig = {
+    Configs: {
+      'default': {
+        is_enabled: _DAILY_SKINS,
+        product: _DAILY_SKINS ? 'lol.1v1.lootbox.GS1' : '',
+        hours_to_refresh: 24
+      }
+    }
+  },
+  _spinPool = ['lol.1v1.playerskins.pack.1', 'lol.1v1.playerskins.pack.2', 'lol.1v1.playerskins.pack.3', 'lol.1v1.playerskins.pack.4', 'lol.1v1.playerskins.pack.5', 'lol.1v1.playerskins.pack.6', 'lol.1v1.playerskins.pack.7', 'lol.1v1.playerskins.pack.8'],
+  _CommonSkins = ['lol.1v1.playerskins.pack.10', 'lol.1v1.playerskins.pack.17', 'lol.1v1.playerskins.pack.18', 'lol.1v1.playerskins.pack.70', 'lol.1v1.playerskins.pack.71', 'lol.1v1.playerskins.pack.72', 'lol.1v1.playerskins.pack.73', 'lol.1v1.playerskins.pack.74', 'lol.1v1.playerskins.pack.75', 'lol.1v1.playerskins.pack.76', 'lol.1v1.playerskins.pack.77', 'lol.1v1.playerskins.pack.78', 'lol.1v1.playerskins.pack.79', 'lol.1v1.playerskins.pack.80', 'lol.1v1.playerskins.pack.81', 'lol.1v1.playerskins.pack.82', 'lol.1v1.playerskins.pack.83', 'lol.1v1.playerskins.pack.84', 'lol.1v1.playerskins.pack.85', 'lol.1v1.playerskins.pack.86', 'lol.1v1.playerskins.pack.87', 'lol.1v1.playerskins.pack.88', 'lol.1v1.playerskins.pack.89', 'lol.1v1.playerskins.pack.90', 'lol.1v1.playerskins.pack.91', 'lol.1v1.playerskins.pack.92', 'lol.1v1.playerskins.pack.93', 'lol.1v1.playerskins.pack.94', 'lol.1v1.playerskins.pack.95', 'lol.1v1.playerskins.pack.96', 'lol.1v1.playerskins.pack.97', 'lol.1v1.playerskins.pack.98', 'lol.1v1.playerskins.pack.99', 'lol.1v1.playerskins.pack.100', 'lol.1v1.playerskins.pack.101', 'lol.1v1.playerskins.pack.102', 'lol.1v1.playerskins.pack.103', 'lol.1v1.playerskins.pack.104', 'lol.1v1.playerskins.pack.105', 'lol.1v1.playerskins.pack.106', 'lol.1v1.playerskins.pack.107', 'lol.1v1.playerskins.pack.108', 'lol.1v1.playerskins.pack.109', 'lol.1v1.playerskins.pack.110', 'lol.1v1.playerskins.pack.111', 'lol.1v1.playerskins.pack.112', 'lol.1v1.playerskins.pack.113', 'lol.1v1.playerskins.pack.116', 'lol.1v1.playerskins.pack.117', 'lol.1v1.playerskins.pack.118', 'lol.1v1.playerskins.pack.127', 'lol.1v1.playerskins.pack.134', 'lol.1v1.playerskins.pack.136', 'lol.1v1.playerskins.pack.138', 'lol.1v1.playerskins.pack.157', 'lol.1v1.playerskins.pack.158', 'lol.1v1.playerskins.pack.61', 'lol.1v1.playerskins.pack.62', 'lol.1v1.playerskins.pack.63', 'lol.1v1.playerskins.pack.64'],
+  _UncommonSkins = ['lol.1v1.playerskins.pack.1', 'lol.1v1.playerskins.pack.7', 'lol.1v1.playerskins.pack.8', 'lol.1v1.playerskins.pack.21', 'lol.1v1.playerskins.pack.23', 'lol.1v1.playerskins.pack.24', 'lol.1v1.playerskins.pack.25', 'lol.1v1.playerskins.pack.27', 'lol.1v1.playerskins.pack.29', 'lol.1v1.playerskins.pack.30', 'lol.1v1.playerskins.pack.31', 'lol.1v1.playerskins.pack.34', 'lol.1v1.playerskins.pack.43', 'lol.1v1.playerskins.pack.54', 'lol.1v1.playerskins.pack.114', 'lol.1v1.playerskins.pack.115', 'lol.1v1.playerskins.pack.119', 'lol.1v1.playerskins.pack.120', 'lol.1v1.playerskins.pack.121', 'lol.1v1.playerskins.pack.122', 'lol.1v1.playerskins.pack.123', 'lol.1v1.playerskins.pack.124', 'lol.1v1.playerskins.pack.125', 'lol.1v1.playerskins.pack.126', 'lol.1v1.playerskins.pack.128', 'lol.1v1.playerskins.pack.129', 'lol.1v1.playerskins.pack.130', 'lol.1v1.playerskins.pack.131', 'lol.1v1.playerskins.pack.132', 'lol.1v1.playerskins.pack.133', 'lol.1v1.playerskins.pack.135', 'lol.1v1.playerskins.pack.137', 'lol.1v1.playerskins.pack.139', 'lol.1v1.playerskins.pack.140', 'lol.1v1.playerskins.pack.141', 'lol.1v1.playerskins.pack.142', 'lol.1v1.playerskins.pack.143', 'lol.1v1.playerskins.pack.144', 'lol.1v1.playerskins.pack.145', 'lol.1v1.playerskins.pack.146', 'lol.1v1.playerskins.pack.147', 'lol.1v1.playerskins.pack.148', 'lol.1v1.playerskins.pack.149', 'lol.1v1.playerskins.pack.150', 'lol.1v1.playerskins.pack.151', 'lol.1v1.playerskins.pack.152', 'lol.1v1.playerskins.pack.153', 'lol.1v1.playerskins.pack.154', 'lol.1v1.playerskins.pack.155', 'lol.1v1.playerskins.pack.156', 'lol.1v1.playerskins.pack.159', 'lol.1v1.playerskins.pack.160', 'lol.1v1.playerskins.pack.168', 'lol.1v1.playerskins.pack.185'],
+  _RareSkins = ['lol.1v1.playerskins.pack.2', 'lol.1v1.playerskins.pack.4', 'lol.1v1.playerskins.pack.5', 'lol.1v1.playerskins.pack.11', 'lol.1v1.playerskins.pack.22', 'lol.1v1.playerskins.pack.32', 'lol.1v1.playerskins.pack.33', 'lol.1v1.playerskins.pack.44', 'lol.1v1.playerskins.pack.49', 'lol.1v1.playerskins.pack.50', 'lol.1v1.playerskins.pack.52', 'lol.1v1.playerskins.pack.60', 'lol.1v1.playerskins.pack.161', 'lol.1v1.playerskins.pack.162', 'lol.1v1.playerskins.pack.163', 'lol.1v1.playerskins.pack.164', 'lol.1v1.playerskins.pack.165', 'lol.1v1.playerskins.pack.166', 'lol.1v1.playerskins.pack.167', 'lol.1v1.playerskins.pack.169', 'lol.1v1.playerskins.pack.170', 'lol.1v1.playerskins.pack.171', 'lol.1v1.playerskins.pack.172', 'lol.1v1.playerskins.pack.173', 'lol.1v1.playerskins.pack.174', 'lol.1v1.playerskins.pack.175', 'lol.1v1.playerskins.pack.176', 'lol.1v1.playerskins.pack.177', 'lol.1v1.playerskins.pack.178', 'lol.1v1.playerskins.pack.179', 'lol.1v1.playerskins.pack.180', 'lol.1v1.playerskins.pack.181', 'lol.1v1.playerskins.pack.182', 'lol.1v1.playerskins.pack.183', 'lol.1v1.playerskins.pack.184', 'lol.1v1.playerskins.pack.186', 'lol.1v1.playerskins.pack.187', 'lol.1v1.playerskins.pack.188', 'lol.1v1.playerskins.pack.189', 'lol.1v1.playerskins.pack.190', 'lol.1v1.playerskins.pack.191', 'lol.1v1.playerskins.pack.192', 'lol.1v1.playerskins.pack.193', 'lol.1v1.playerskins.pack.194', 'lol.1v1.playerskins.pack.195', 'lol.1v1.playerskins.pack.196', 'lol.1v1.playerskins.pack.197', 'lol.1v1.playerskins.pack.198', 'lol.1v1.playerskins.pack.199', 'lol.1v1.playerskins.pack.201', 'lol.1v1.playerskins.pack.202', 'lol.1v1.playerskins.pack.217'],
+  _EpicSkins = ['lol.1v1.playerskins.pack.6', 'lol.1v1.playerskins.pack.9', 'lol.1v1.playerskins.pack.19', 'lol.1v1.playerskins.pack.20', 'lol.1v1.playerskins.pack.39', 'lol.1v1.playerskins.pack.40', 'lol.1v1.playerskins.pack.42', 'lol.1v1.playerskins.pack.51', 'lol.1v1.playerskins.pack.55', 'lol.1v1.playerskins.pack.59', 'lol.1v1.playerskins.pack.200', 'lol.1v1.playerskins.pack.203', 'lol.1v1.playerskins.pack.204', 'lol.1v1.playerskins.pack.205', 'lol.1v1.playerskins.pack.206', 'lol.1v1.playerskins.pack.207', 'lol.1v1.playerskins.pack.208', 'lol.1v1.playerskins.pack.209', 'lol.1v1.playerskins.pack.210', 'lol.1v1.playerskins.pack.211', 'lol.1v1.playerskins.pack.212', 'lol.1v1.playerskins.pack.213', 'lol.1v1.playerskins.pack.214', 'lol.1v1.playerskins.pack.215', 'lol.1v1.playerskins.pack.216', 'lol.1v1.playerskins.pack.218', 'lol.1v1.playerskins.pack.219', 'lol.1v1.playerskins.pack.220', 'lol.1v1.playerskins.pack.221', 'lol.1v1.playerskins.pack.222', 'lol.1v1.playerskins.pack.223', 'lol.1v1.playerskins.pack.224', 'lol.1v1.playerskins.pack.225', 'lol.1v1.playerskins.pack.226', 'lol.1v1.playerskins.pack.227', 'lol.1v1.playerskins.pack.228', 'lol.1v1.playerskins.pack.229', 'lol.1v1.playerskins.pack.230', 'lol.1v1.playerskins.pack.231', 'lol.1v1.playerskins.pack.232', 'lol.1v1.playerskins.pack.233', 'lol.1v1.playerskins.pack.234', 'lol.1v1.playerskins.pack.235', 'lol.1v1.playerskins.pack.236', 'lol.1v1.playerskins.pack.237', 'lol.1v1.playerskins.pack.238', 'lol.1v1.playerskins.pack.239', 'lol.1v1.playerskins.pack.240'],
+  _LegendarySkins = ['lol.1v1.playerskins.pack.3', 'lol.1v1.playerskins.pack.12', 'lol.1v1.playerskins.pack.26', 'lol.1v1.playerskins.pack.28', 'lol.1v1.playerskins.pack.38', 'lol.1v1.playerskins.pack.46', 'lol.1v1.playerskins.pack.47', 'lol.1v1.playerskins.pack.48', 'lol.1v1.playerskins.pack.53', 'lol.1v1.playerskins.pack.241', 'lol.1v1.playerskins.pack.242', 'lol.1v1.playerskins.pack.243', 'lol.1v1.playerskins.pack.244', 'lol.1v1.playerskins.pack.245', 'lol.1v1.playerskins.pack.247', 'lol.1v1.playerskins.pack.248', 'lol.1v1.playerskins.pack.249', 'lol.1v1.playerskins.pack.250', 'lol.1v1.playerskins.pack.251'],
+  _MythicSkins = ['lol.1v1.playerskins.pack.65', 'lol.1v1.playerskins.pack.66', 'lol.1v1.playerskins.pack.67', 'lol.1v1.playerskins.pack.68', 'lol.1v1.playerskins.pack.69'],
+  _bpBoxPools = {};
+_bpBoxPools['lol.1v1.lootbox.GS1'] = {
+  LootBoxProductsPools: [{
+    Weight: 61,
+    Pool: 'CommonSkins',
+    PoolName: 'Common',
+    RarityType: 0
+  }, {
+    Weight: 29,
+    Pool: 'UncommonSkins',
+    PoolName: 'Uncommon',
+    RarityType: 1
+  }, {
+    Weight: 10,
+    Pool: 'RareSkins',
+    PoolName: 'Rare',
+    RarityType: 2
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.GS2'] = {
+  LootBoxProductsPools: [{
+    Weight: 81,
+    Pool: 'RareSkins',
+    PoolName: 'Rare',
+    RarityType: 2
+  }, {
+    Weight: 15,
+    Pool: 'EpicSkins',
+    PoolName: 'Epic',
+    RarityType: 3
+  }, {
+    Weight: 4,
+    Pool: 'LegendarySkins',
+    PoolName: 'Legendary',
+    RarityType: 4
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.GS3'] = {
+  LootBoxProductsPools: [{
+    Weight: 88,
+    Pool: 'EpicSkins',
+    PoolName: 'Epic',
+    RarityType: 3
+  }, {
+    Weight: 11,
+    Pool: 'LegendarySkins',
+    PoolName: 'Legendary',
+    RarityType: 4
+  }, {
+    Weight: 1,
+    Pool: 'MythicSkins',
+    PoolName: 'Mythic',
+    RarityType: 5
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.GS5'] = {
+  LootBoxProductsPools: [{
+    Weight: 70,
+    Pool: 'LegendarySkins',
+    PoolName: 'Legendary',
+    RarityType: 4
+  }, {
+    Weight: 30,
+    Pool: 'MythicSkins',
+    PoolName: 'Mythic',
+    RarityType: 5
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.DS'] = {
+  LootBoxProductsPools: [{
+    Weight: 1,
+    Pool: 'MythicSkins',
+    PoolName: 'Mythic',
+    RarityType: 5
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.RLB1'] = {
+  LootBoxProductsPools: [{
+    Weight: 1,
+    Pool: 'MythicSkins',
+    PoolName: 'Mythic',
+    RarityType: 5
+  }]
+}, ['RLB2', 'RLB3'].forEach(function (_0x22a683) {
+  _bpBoxPools['lol.1v1.lootbox.' + _0x22a683] = {
+    LootBoxProductsPools: [{
+      Weight: 70,
+      Pool: 'RareSkins',
+      PoolName: 'Rare',
+      RarityType: 2
+    }, {
+      Weight: 30,
+      Pool: 'EpicSkins',
+      PoolName: 'Epic',
+      RarityType: 3
+    }]
+  };
+}), _bpBoxPools['lol.1v1.lootbox.RLB4'] = {
+  LootBoxProductsPools: [{
+    Weight: 60,
+    Pool: 'CommonSkins',
+    PoolName: 'Common',
+    RarityType: 0
+  }, {
+    Weight: 30,
+    Pool: 'UncommonSkins',
+    PoolName: 'Uncommon',
+    RarityType: 1
+  }, {
+    Weight: 10,
+    Pool: 'RareSkins',
+    PoolName: 'Rare',
+    RarityType: 2
+  }]
+};
+const _StreakCoinsWheel = ['lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.90', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.150', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.90', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.90', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50', 'lol.1v1.coins.bp.25', 'lol.1v1.coins.bp.50'];
+_bpBoxPools['lol.1v1.lootbox.StreakBonusCoins'] = {
+  LootBoxProductsPools: [{
+    Weight: 100,
+    Pool: 'StreakCoinsWheel',
+    PoolName: 'Rare',
+    RarityType: 2
+  }]
+}, _bpBoxPools['lol.1v1.lootbox.GSL'] = {
+  LootBoxProductsPools: [{
+    Weight: 100,
+    Pool: 'LegendarySkins',
+    PoolName: 'Legendary',
+    RarityType: 4
+  }]
+};
+const _FpCoin5 = ['lol.1v1.coins.bp.5'],
+  _FpCoin10 = ['lol.1v1.coins.bp.10'],
+  _FpCoin15 = ['lol.1v1.coins.bp.15'],
+  _FpCoin25 = ['lol.1v1.coins.bp.25'],
+  _FpCoin150 = ['lol.1v1.coins.bp.150'],
+  _FpGem1 = ['lol.1v1.tokens.bp.1'],
+  _FpGem3 = ['lol.1v1.tokens.bp.3'],
+  _FpGem5 = ['lol.1v1.tokens.bp.5'],
+  _freePrizeBands = [{
+    Weight: 1800,
+    Pool: 'FpCoin5',
+    PoolName: 'Coins',
+    RarityType: 2
+  }, {
+    Weight: 1350,
+    Pool: 'FpCoin10',
+    PoolName: 'Coins',
+    RarityType: 2
+  }, {
+    Weight: 900,
+    Pool: 'FpCoin15',
+    PoolName: 'Coins',
+    RarityType: 2
+  }, {
+    Weight: 405,
+    Pool: 'FpCoin25',
+    PoolName: 'Coins',
+    RarityType: 2
+  }, {
+    Weight: 45,
+    Pool: 'FpCoin150',
+    PoolName: 'Coins',
+    RarityType: 2
+  }, {
+    Weight: 1860,
+    Pool: 'FpGem1',
+    PoolName: 'Gems',
+    RarityType: 2
+  }, {
+    Weight: 930,
+    Pool: 'FpGem3',
+    PoolName: 'Gems',
+    RarityType: 2
+  }, {
+    Weight: 310,
+    Pool: 'FpGem5',
+    PoolName: 'Gems',
+    RarityType: 2
+  }, {
+    Weight: 1296,
+    Pool: 'CommonSkins',
+    PoolName: 'Common',
+    RarityType: 0
+  }, {
+    Weight: 864,
+    Pool: 'UncommonSkins',
+    PoolName: 'Uncommon',
+    RarityType: 1
+  }, {
+    Weight: 216,
+    Pool: 'RareSkins',
+    PoolName: 'Rare',
+    RarityType: 2
+  }, {
+    Weight: 24,
+    Pool: 'EpicSkins',
+    PoolName: 'Epic',
+    RarityType: 3
+  }],
+  lootBoxesDataV2 = {
+    Configs: {
+      'default': {
+        LootBoxes: Object.assign({
+          v441_mock_empty_lootbox: {
+            LootBoxProductsPools: _freePrizeBands
+          }
+        }, _bpBoxPools),
+        Pools: {
+          spin_common: _spinPool,
+          CommonSkins: _CommonSkins,
+          UncommonSkins: _UncommonSkins,
+          RareSkins: _RareSkins,
+          EpicSkins: _EpicSkins,
+          LegendarySkins: _LegendarySkins,
+          MythicSkins: _MythicSkins,
+          StreakCoinsWheel: _StreakCoinsWheel,
+          FpCoin5: _FpCoin5,
+          FpCoin10: _FpCoin10,
+          FpCoin15: _FpCoin15,
+          FpCoin25: _FpCoin25,
+          FpCoin150: _FpCoin150,
+          FpGem1: _FpGem1,
+          FpGem3: _FpGem3,
+          FpGem5: _FpGem5
+        }
+      }
+    }
+  },
+  _FREE_PRIZES_ON = typeof localStorage !== 'undefined' && localStorage.getItem('FREE_PRIZES') === '1',
+  lootBoxesGacha = _FREE_PRIZES_ON ? {
+    Configs: {
+      'default': {
+        LobbyLootBoxesEnabled: true,
+        NumberOfLootboxSlots: 3,
+        LootBoxes: {
+          'lol.1v1.lootbox.RLB1': {
+            Name: 'RLB1',
+            UnlockTimeHours: 4,
+            GemsToOpen: 50,
+            Contents: []
+          },
+          'lol.1v1.lootbox.RLB2': {
+            Name: 'RLB2',
+            UnlockTimeHours: 4,
+            GemsToOpen: 50,
+            Contents: []
+          },
+          'lol.1v1.lootbox.RLB3': {
+            Name: 'RLB3',
+            UnlockTimeHours: 4,
+            GemsToOpen: 50,
+            Contents: []
+          },
+          'lol.1v1.lootbox.RLB4': {
+            Name: 'RLB4',
+            UnlockTimeHours: 4,
+            GemsToOpen: 50,
+            Contents: []
+          },
+          'lol.1v1.lootbox.GS1': {
+            Name: 'GS1',
+            UnlockTimeHours: 8,
+            GemsToOpen: 100,
+            Contents: []
+          },
+          'lol.1v1.lootbox.GS2': {
+            Name: 'GS2',
+            UnlockTimeHours: 8,
+            GemsToOpen: 100,
+            Contents: []
+          },
+          'lol.1v1.lootbox.GS3': {
+            Name: 'GS3',
+            UnlockTimeHours: 8,
+            GemsToOpen: 100,
+            Contents: []
+          },
+          'lol.1v1.lootbox.GS5': {
+            Name: 'GS5',
+            UnlockTimeHours: 8,
+            GemsToOpen: 100,
+            Contents: []
+          },
+          'lol.1v1.lootbox.DS': {
+            Name: 'DS',
+            UnlockTimeHours: 24,
+            GemsToOpen: 150,
+            Contents: []
+          }
+        },
+        ConfigurationsByRank: {},
+        Pools: {}
+      }
+    }
+  } : {
+    Configs: {
+      'default': {
+        LobbyLootBoxesEnabled: false,
+        NumberOfLootboxSlots: 0,
+        LootBoxes: {},
+        ConfigurationsByRank: {},
+        Pools: {}
+      }
+    }
+  },
+  _RANK_ROAD_ON = !(typeof localStorage !== 'undefined' && localStorage.getItem('RANK_ROAD') === '0'),
+  rankRoad = _RANK_ROAD_ON ? {
+    Configs: {
+      'default': {
+        is_account_road_active: true,
+        is_timer_visible: false,
+        seasons: {},
+        account_road_data: {
+          season_number: 1,
+          start_date: '2020-01-01T00:00:00.000+00:00',
+          end_date: '2099-01-01T00:00:00.000+00:00',
+          tiers: [{
+            xp: 0,
+            rank_id: 'rank_unranked',
+            rank_name: 'Bronze',
+            rank_division: 'BRONZE',
+            rewards: [{
+              RewardType: 1,
+              Amount: 20,
+              ProductID: 'rankroad.t0',
+              TransactionID: '0'
+            }]
+          }, {
+            xp: 60,
+            rank_id: 'rank_bronze_1',
+            rank_name: 'Bronze',
+            rank_division: 'BRONZE',
+            rewards: [{
+              RewardType: 1,
+              Amount: 35,
+              ProductID: 'rankroad.t1',
+              TransactionID: '1'
+            }]
+          }, {
+            xp: 140,
+            rank_id: 'rank_bronze_2',
+            rank_name: 'Bronze',
+            rank_division: 'BRONZE',
+            rewards: [{
+              RewardType: 3,
+              Amount: 8,
+              ProductID: 'rankroad.t2',
+              TransactionID: '2'
+            }]
+          }, {
+            xp: 240,
+            rank_id: 'rank_bronze_3',
+            rank_name: 'Bronze',
+            rank_division: 'BRONZE',
+            rewards: [{
+              RewardType: 1,
+              Amount: 50,
+              ProductID: 'rankroad.t3',
+              TransactionID: '3'
+            }]
+          }, {
+            xp: 360,
+            rank_id: 'rank_silver_1',
+            rank_name: 'Silver',
+            rank_division: 'SILVER',
+            rewards: [{
+              RewardType: 1,
+              Amount: 55,
+              ProductID: 'rankroad.t4',
+              TransactionID: '4'
+            }]
+          }, {
+            xp: 500,
+            rank_id: 'rank_silver_2',
+            rank_name: 'Silver',
+            rank_division: 'SILVER',
+            rewards: [{
+              RewardType: 1,
+              Amount: 60,
+              ProductID: 'rankroad.t5',
+              TransactionID: '5'
+            }]
+          }, {
+            xp: 660,
+            rank_id: 'rank_silver_3',
+            rank_name: 'Silver',
+            rank_division: 'SILVER',
+            rewards: [{
+              RewardType: 3,
+              Amount: 16,
+              ProductID: 'rankroad.t6',
+              TransactionID: '6'
+            }]
+          }, {
+            xp: 840,
+            rank_id: 'rank_gold_1',
+            rank_name: 'Gold',
+            rank_division: 'GOLD',
+            rewards: [{
+              RewardType: 1,
+              Amount: 65,
+              ProductID: 'rankroad.t7',
+              TransactionID: '7'
+            }]
+          }, {
+            xp: 1040,
+            rank_id: 'rank_gold_2',
+            rank_name: 'Gold',
+            rank_division: 'GOLD',
+            rewards: [{
+              RewardType: 3,
+              Amount: 22,
+              ProductID: 'rankroad.t8',
+              TransactionID: '8'
+            }]
+          }, {
+            xp: 1260,
+            rank_id: 'rank_gold_3',
+            rank_name: 'Gold',
+            rank_division: 'GOLD',
+            rewards: [{
+              RewardType: 1,
+              Amount: 70,
+              ProductID: 'rankroad.t9',
+              TransactionID: '9'
+            }]
+          }, {
+            xp: 1500,
+            rank_id: 'rank_platinum_1',
+            rank_name: 'Platinum',
+            rank_division: 'PLATINUM',
+            rewards: [{
+              RewardType: 3,
+              Amount: 28,
+              ProductID: 'rankroad.t10',
+              TransactionID: '10'
+            }]
+          }, {
+            xp: 1760,
+            rank_id: 'rank_platinum_2',
+            rank_name: 'Platinum',
+            rank_division: 'PLATINUM',
+            rewards: [{
+              RewardType: 1,
+              Amount: 60,
+              ProductID: 'rankroad.t11',
+              TransactionID: '11'
+            }]
+          }, {
+            xp: 2040,
+            rank_id: 'rank_platinum_3',
+            rank_name: 'Platinum',
+            rank_division: 'PLATINUM',
+            rewards: [{
+              RewardType: 1,
+              Amount: 50,
+              ProductID: 'rankroad.t12',
+              TransactionID: '12'
+            }]
+          }, {
+            xp: 2340,
+            rank_id: 'rank_champion_1',
+            rank_name: 'Champion',
+            rank_division: 'CHAMPION',
+            rewards: [{
+              RewardType: 3,
+              Amount: 4,
+              ProductID: 'rankroad.t13',
+              TransactionID: '13'
+            }]
+          }, {
+            xp: 2660,
+            rank_id: 'rank_champion_2',
+            rank_name: 'Champion',
+            rank_division: 'CHAMPION',
+            rewards: [{
+              RewardType: 1,
+              Amount: 55,
+              ProductID: 'rankroad.t14',
+              TransactionID: '14'
+            }]
+          }, {
+            xp: 3000,
+            rank_id: 'rank_champion_3',
+            rank_name: 'Champion',
+            rank_division: 'CHAMPION',
+            rewards: [{
+              RewardType: 3,
+              Amount: 4,
+              ProductID: 'rankroad.t15',
+              TransactionID: '15'
+            }]
+          }, {
+            xp: 3260,
+            rank_id: 'rank_elite_1',
+            rank_name: 'Elite',
+            rank_division: 'ELITE',
+            rewards: [{
+              RewardType: 1,
+              Amount: 60,
+              ProductID: 'rankroad.t16',
+              TransactionID: '16'
+            }]
+          }, {
+            xp: 3520,
+            rank_id: 'rank_elite_2',
+            rank_name: 'Elite',
+            rank_division: 'ELITE',
+            rewards: [{
+              RewardType: 3,
+              Amount: 5,
+              ProductID: 'rankroad.t17',
+              TransactionID: '17'
+            }]
+          }, {
+            xp: 3800,
+            rank_id: 'rank_elite_3',
+            rank_name: 'Elite',
+            rank_division: 'ELITE',
+            rewards: [{
+              RewardType: 3,
+              Amount: 18,
+              ProductID: 'rankroad.t18',
+              TransactionID: '18'
+            }]
+          }]
+        }
+      }
+    }
+  } : {
+    Configs: {
+      'default': {
+        is_account_road_active: false,
+        account_road_data: {
+          tiers: []
+        },
+        is_timer_visible: false,
+        seasons: {}
+      }
+    }
+  };
+if (typeof window !== 'undefined') try {
+  window.__RANKROAD_TIERS = rankRoad.Configs && rankRoad.Configs['default'] && rankRoad.Configs['default'].account_road_data && rankRoad.Configs['default'].account_road_data.tiers || [];
+} catch (_0x8e0259) {}
+const rankXPGainPerGameMode = {
+    Configs: {
+      'default': {
+        default_xp_per_rank: {
+          rank_unranked: [20, 0],
+          rank_bronze_1: [20, -2],
+          rank_bronze_2: [10, -2],
+          rank_bronze_3: [20, -4],
+          rank_silver_1: [18, -4],
+          rank_silver_2: [18, -6],
+          rank_silver_3: [18, -8],
+          rank_gold_1: [18, -10],
+          rank_gold_2: [18, -12],
+          rank_gold_3: [16, -16],
+          rank_platinum_1: [16, -18],
+          rank_platinum_2: [14, -18],
+          rank_platinum_3: [14, -20],
+          rank_champion_1: [14, -20],
+          rank_champion_2: [12, -20],
+          rank_champion_3: [12, -20],
+          rank_elite_1: [12, -22],
+          rank_elite_2: [10, -22],
+          rank_elite_3: [10, -24]
+        },
+        gamemode_xp_per_rank_overrides: {
+          GrandBattleRoyale: {
+            rank_unranked: [16, 14, 12, 10, 9, 8, 7, 6, 6, 5, 5, 4, 3, 2, 2, 0],
+            rank_bronze_1: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 2, 0],
+            rank_bronze_2: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 3, 3, 2, 1, 1, 0],
+            rank_bronze_3: [14, 12, 10, 8, 8, 7, 7, 5, 5, 4, 3, 2, 2, 1, 0, -1],
+            rank_silver_1: [14, 12, 9, 8, 7, 7, 6, 5, 5, 4, 3, 2, 1, 0, -1, -2],
+            rank_silver_2: [12, 10, 9, 8, 7, 6, 6, 5, 5, 3, 2, 1, 0, -2, -2, -3],
+            rank_silver_3: [12, 10, 8, 8, 7, 6, 6, 5, 5, 2, 2, 0, -1, -2, -3, -3],
+            rank_gold_1: [12, 9, 8, 7, 6, 5, 4, 3, 3, 2, 0, -1, -1, -2, -3, -4],
+            rank_gold_2: [12, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1, -1, -2, -3, -4, -5],
+            rank_gold_3: [10, 8, 7, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -8],
+            rank_platinum_1: [8, 6, 5, 4, 3, 2, 1, 0, -1, -2, -4, -4, -5, -6, -8, -10],
+            rank_platinum_2: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_platinum_3: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_champion_1: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -8, -12],
+            rank_champion_2: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_champion_3: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_elite_1: [7, 6, 5, 4, 3, 0, -1, -1, -2, -3, -4, -5, -6, -7, -9, -14],
+            rank_elite_2: [7, 6, 5, 4, 3, 0, -1, -2, -2, -3, -4, -5, -6, -8, -10, -14],
+            rank_elite_3: [7, 6, 5, 4, 3, 0, -1, -2, -3, -4, -5, -6, -7, -8, -10, -14]
+          },
+          BattleRoyaleFirstMatch: {
+            rank_unranked: [16, 14, 12, 10, 9, 8, 7, 6, 6, 5, 5, 4, 3, 2, 2, 0],
+            rank_bronze_1: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 2, 0],
+            rank_bronze_2: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 3, 3, 2, 1, 1, 0],
+            rank_bronze_3: [14, 12, 10, 8, 8, 7, 7, 5, 5, 4, 3, 2, 2, 1, 0, -1],
+            rank_silver_1: [14, 12, 9, 8, 7, 7, 6, 5, 5, 4, 3, 2, 1, 0, -1, -2],
+            rank_silver_2: [12, 10, 9, 8, 7, 6, 6, 5, 5, 3, 2, 1, 0, -2, -2, -3],
+            rank_silver_3: [12, 10, 8, 8, 7, 6, 6, 5, 5, 2, 2, 0, -1, -2, -3, -3],
+            rank_gold_1: [12, 9, 8, 7, 6, 5, 4, 3, 3, 2, 0, -1, -1, -2, -3, -4],
+            rank_gold_2: [12, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1, -1, -2, -3, -4, -5],
+            rank_gold_3: [10, 8, 7, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -8],
+            rank_platinum_1: [8, 6, 5, 4, 3, 2, 1, 0, -1, -2, -4, -4, -5, -6, -8, -10],
+            rank_platinum_2: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_platinum_3: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_champion_1: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -8, -12],
+            rank_champion_2: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_champion_3: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_elite_1: [7, 6, 5, 4, 3, 0, -1, -1, -2, -3, -4, -5, -6, -7, -9, -14],
+            rank_elite_2: [7, 6, 5, 4, 3, 0, -1, -2, -2, -3, -4, -5, -6, -8, -10, -14],
+            rank_elite_3: [7, 6, 5, 4, 3, 0, -1, -2, -3, -4, -5, -6, -7, -8, -10, -14]
+          },
+          GrandBattleRoyaleZeroBuilds: {
+            rank_unranked: [16, 14, 12, 10, 9, 8, 7, 6, 6, 5, 5, 4, 3, 2, 2, 0],
+            rank_bronze_1: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 4, 3, 3, 2, 2, 0],
+            rank_bronze_2: [14, 12, 10, 9, 8, 8, 7, 6, 5, 4, 3, 3, 2, 1, 1, 0],
+            rank_bronze_3: [14, 12, 10, 8, 8, 7, 7, 5, 5, 4, 3, 2, 2, 1, 0, -1],
+            rank_silver_1: [14, 12, 9, 8, 7, 7, 6, 5, 5, 4, 3, 2, 1, 0, -1, -2],
+            rank_silver_2: [12, 10, 9, 8, 7, 6, 6, 5, 5, 3, 2, 1, 0, -2, -2, -3],
+            rank_silver_3: [12, 10, 8, 8, 7, 6, 6, 5, 5, 2, 2, 0, -1, -2, -3, -3],
+            rank_gold_1: [12, 9, 8, 7, 6, 5, 4, 3, 3, 2, 0, -1, -1, -2, -3, -4],
+            rank_gold_2: [12, 9, 7, 6, 5, 4, 3, 2, 1, 0, -1, -1, -2, -3, -4, -5],
+            rank_gold_3: [10, 8, 7, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -8],
+            rank_platinum_1: [8, 6, 5, 4, 3, 2, 1, 0, -1, -2, -4, -4, -5, -6, -8, -10],
+            rank_platinum_2: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_platinum_3: [8, 6, 5, 4, 3, 2, 1, 0, -2, -3, -4, -5, -6, -6, -8, -10],
+            rank_champion_1: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -8, -12],
+            rank_champion_2: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_champion_3: [8, 6, 5, 4, 3, 2, 0, -1, -2, -3, -4, -5, -6, -6, -9, -12],
+            rank_elite_1: [7, 6, 5, 4, 3, 0, -1, -1, -2, -3, -4, -5, -6, -7, -9, -14],
+            rank_elite_2: [7, 6, 5, 4, 3, 0, -1, -2, -2, -3, -4, -5, -6, -8, -10, -14],
+            rank_elite_3: [7, 6, 5, 4, 3, 0, -1, -2, -3, -4, -5, -6, -7, -8, -10, -14]
+          },
+          MiniBattleRoyale: {
+            rank_unranked: [15, 12, 10, 8, 6, 5, 4, 3, 2, 1],
+            rank_bronze_1: [14, 12, 10, 8, 6, 4, 3, 2, 1, 1],
+            rank_bronze_2: [14, 11, 10, 8, 5, 4, 3, 2, 1, 0],
+            rank_bronze_3: [14, 12, 9, 7, 5, 3, 2, 1, 0, -1],
+            rank_silver_1: [13, 10, 9, 7, 4, 2, 2, 1, 0, -1],
+            rank_silver_2: [13, 10, 9, 7, 4, 2, 0, -1, -2, -3],
+            rank_silver_3: [12, 9, 9, 7, 4, 2, 0, -1, -2, -3],
+            rank_gold_1: [11, 8, 7, 6, 3, 2, 0, -2, -3, -4],
+            rank_gold_2: [10, 7, 6, 3, 2, 0, -1, -2, -3, -4],
+            rank_gold_3: [8, 6, 5, 3, 0, -1, -2, -3, -4, -5],
+            rank_platinum_1: [7, 5, 3, 2, -1, -2, -3, -4, -6, -8],
+            rank_platinum_2: [7, 5, 3, 2, -2, -3, -4, -5, -6, -8],
+            rank_platinum_3: [7, 5, 3, 2, -2, -3, -4, -5, -6, -8],
+            rank_champion_1: [7, 5, 3, 0, -2, -3, -4, -5, -7, -8],
+            rank_champion_2: [7, 5, 3, 0, -2, -3, -4, -5, -7, -9],
+            rank_champion_3: [7, 5, 3, -1, -2, -3, -4, -5, -7, -9],
+            rank_elite_1: [6, 4, 2, -1, -2, -3, -4, -5, -8, -10],
+            rank_elite_2: [6, 4, 2, -1, -2, -3, -4, -5, -8, -12],
+            rank_elite_3: [6, 4, 2, -1, -2, -3, -4, -5, -10, -12]
+          },
+          GrandBattleRoyale_Duos: {
+            rank_unranked: [15, 11, 9, 7, 5, 4, 2, 1],
+            rank_bronze_1: [13, 10, 8, 7, 5, 3, 2, 1],
+            rank_bronze_2: [13, 10, 8, 6, 4, 3, 2, 1],
+            rank_bronze_3: [13, 9, 7, 6, 5, 3, 1, -1],
+            rank_silver_1: [13, 9, 7, 6, 4, 2, 1, -2],
+            rank_silver_2: [11, 8, 7, 6, 4, 2, -1, -3],
+            rank_silver_3: [11, 8, 7, 6, 3, 1, -2, -3],
+            rank_gold_1: [11, 8, 6, 4, 2, -1, -2, -4],
+            rank_gold_2: [10, 7, 5, 3, 1, -1, -3, -5],
+            rank_gold_3: [9, 6, 4, 2, 0, -3, -5, -7],
+            rank_platinum_1: [7, 5, 3, 1, -2, -4, -6, -9],
+            rank_platinum_2: [7, 5, 3, 1, -3, -5, -6, -9],
+            rank_platinum_3: [7, 5, 3, 1, -3, -5, -6, -9],
+            rank_champion_1: [7, 5, 3, 0, -3, -5, -6, -10],
+            rank_champion_2: [7, 5, 3, 0, -3, -5, -6, -11],
+            rank_champion_3: [7, 5, 3, -1, -3, -5, -6, -11],
+            rank_elite_1: [6, 4, 2, -1, -3, -5, -6, -12],
+            rank_elite_2: [6, 4, 2, -2, -3, -5, -7, -12],
+            rank_elite_3: [6, 4, 2, -2, -4, -6, -7, -12]
+          },
+          MiniBattleRoyale_Duos: {
+            rank_unranked: [13, 9, 6, 4, 1],
+            rank_bronze_1: [13, 9, 5, 3, 1],
+            rank_bronze_2: [12, 9, 4, 2, 0],
+            rank_bronze_3: [12, 8, 4, 2, -1],
+            rank_silver_1: [11, 8, 3, 1, -1],
+            rank_silver_2: [11, 8, 3, 0, -2],
+            rank_silver_3: [10, 8, 3, 0, -2],
+            rank_gold_1: [9, 6, 3, -1, -3],
+            rank_gold_2: [8, 4, 1, -2, -4],
+            rank_gold_3: [7, 4, 0, -3, -5],
+            rank_platinum_1: [6, 3, -1, -4, -7],
+            rank_platinum_2: [6, 3, -2, -4, -7],
+            rank_platinum_3: [6, 2, -2, -5, -7],
+            rank_champion_1: [6, 2, -2, -5, -8],
+            rank_champion_2: [6, 2, -2, -5, -8],
+            rank_champion_3: [6, 2, -3, -5, -8],
+            rank_elite_1: [5, 1, -3, -5, -9],
+            rank_elite_2: [5, 1, -3, -5, -10],
+            rank_elite_3: [5, 1, -3, -5, -11]
+          },
+          Showdown: {
+            rank_unranked: [20, 18, 18, 16, 16, 14, 12, 12, 12, 10, 10, 8, 6, 4, 4, 0],
+            rank_bronze_1: [24, 20, 18, 16, 14, 14, 12, 12, 10, 8, 8, 6, 6, 4, 4, 0],
+            rank_bronze_2: [22, 20, 18, 16, 14, 14, 12, 12, 10, 8, 6, 6, 4, 2, 2, 0],
+            rank_bronze_3: [22, 20, 18, 14, 14, 12, 12, 10, 10, 8, 6, 4, 4, 2, 0, -2],
+            rank_silver_1: [22, 20, 16, 14, 12, 12, 10, 10, 10, 8, 6, 4, 2, 0, -2, -4],
+            rank_silver_2: [18, 16, 16, 14, 12, 10, 10, 10, 10, 6, 4, 2, 0, -4, -4, -6],
+            rank_silver_3: [18, 16, 14, 14, 12, 10, 10, 10, 8, 4, 4, 0, -2, -4, -6, -6],
+            rank_gold_1: [18, 14, 14, 12, 10, 8, 6, 6, 6, 4, 0, -2, -2, -4, -6, -8],
+            rank_gold_2: [18, 14, 12, 10, 8, 6, 4, 4, 2, 0, -2, -2, -4, -6, -8, -10],
+            rank_gold_3: [14, 12, 12, 8, 6, 4, 2, 2, 0, -2, -4, -6, -8, -10, -12, -16],
+            rank_platinum_1: [10, 8, 8, 6, 4, 2, 0, 0, -2, -4, -8, -8, -10, -12, -16, -20],
+            rank_platinum_2: [10, 8, 8, 6, 4, 2, 0, 0, -4, -6, -8, -10, -12, -12, -16, -20],
+            rank_platinum_3: [10, 8, 8, 6, 4, 2, 0, -2, -4, -6, -8, -10, -12, -12, -16, -20],
+            rank_champion_1: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -16, -24],
+            rank_champion_2: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -18, -24],
+            rank_champion_3: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -18, -24],
+            rank_elite_1: [10, 8, 6, 4, 2, -2, -4, -4, -4, -6, -8, -10, -12, -14, -18, -28],
+            rank_elite_2: [10, 8, 6, 4, 2, -2, -4, -4, -6, -6, -8, -10, -12, -16, -20, -28],
+            rank_elite_3: [10, 8, 6, 4, 0, -2, -4, -6, -6, -8, -10, -12, -14, -20, -24, -28]
+          },
+          Showdown_Duos: {
+            rank_unranked: [26, 20, 16, 12, 10, 8, 4, 2],
+            rank_bronze_1: [22, 18, 14, 12, 10, 6, 4, 2],
+            rank_bronze_2: [22, 18, 14, 10, 8, 6, 4, 2],
+            rank_bronze_3: [22, 16, 12, 10, 10, 6, 2, -2],
+            rank_silver_1: [22, 16, 12, 10, 8, 4, 2, -4],
+            rank_silver_2: [18, 14, 12, 10, 8, 4, -2, -6],
+            rank_silver_3: [18, 14, 12, 10, 6, 2, -4, -6],
+            rank_gold_1: [18, 14, 10, 6, 4, -2, -4, -8],
+            rank_gold_2: [16, 12, 8, 4, 2, -2, -6, -10],
+            rank_gold_3: [14, 10, 6, 2, 0, -6, -10, -14],
+            rank_platinum_1: [10, 8, 4, 0, -4, -8, -12, -18],
+            rank_platinum_2: [10, 8, 4, 0, -6, -10, -12, -18],
+            rank_platinum_3: [10, 8, 4, 0, -6, -10, -12, -18],
+            rank_champion_1: [10, 8, 4, -2, -6, -10, -12, -20],
+            rank_champion_2: [10, 8, 4, -2, -6, -10, -12, -22],
+            rank_champion_3: [10, 8, 4, -4, -6, -10, -12, -22],
+            rank_elite_1: [8, 6, 2, -4, -6, -10, -12, -24],
+            rank_elite_2: [8, 6, 2, -6, -6, -10, -14, -24],
+            rank_elite_3: [8, 6, 2, -6, -8, -12, -14, -24]
+          },
+          ShowdownZeroBuilds: {
+            rank_unranked: [20, 18, 18, 16, 16, 14, 12, 12, 12, 10, 10, 8, 6, 4, 4, 0],
+            rank_bronze_1: [24, 20, 18, 16, 14, 14, 12, 12, 10, 8, 8, 6, 6, 4, 4, 0],
+            rank_bronze_2: [22, 20, 18, 16, 14, 14, 12, 12, 10, 8, 6, 6, 4, 2, 2, 0],
+            rank_bronze_3: [22, 20, 18, 14, 14, 12, 12, 10, 10, 8, 6, 4, 4, 2, 0, -2],
+            rank_silver_1: [22, 20, 16, 14, 12, 12, 10, 10, 10, 8, 6, 4, 2, 0, -2, -4],
+            rank_silver_2: [18, 16, 16, 14, 12, 10, 10, 10, 10, 6, 4, 2, 0, -4, -4, -6],
+            rank_silver_3: [18, 16, 14, 14, 12, 10, 10, 10, 8, 4, 4, 0, -2, -4, -6, -6],
+            rank_gold_1: [18, 14, 14, 12, 10, 8, 6, 6, 6, 4, 0, -2, -2, -4, -6, -8],
+            rank_gold_2: [18, 14, 12, 10, 8, 6, 4, 4, 2, 0, -2, -2, -4, -6, -8, -10],
+            rank_gold_3: [14, 12, 12, 8, 6, 4, 2, 2, 0, -2, -4, -6, -8, -10, -12, -16],
+            rank_platinum_1: [10, 8, 8, 6, 4, 2, 0, 0, -2, -4, -8, -8, -10, -12, -16, -20],
+            rank_platinum_2: [10, 8, 8, 6, 4, 2, 0, 0, -4, -6, -8, -10, -12, -12, -16, -20],
+            rank_platinum_3: [10, 8, 8, 6, 4, 2, 0, -2, -4, -6, -8, -10, -12, -12, -16, -20],
+            rank_champion_1: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -16, -24],
+            rank_champion_2: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -18, -24],
+            rank_champion_3: [10, 8, 8, 6, 4, 2, -2, -2, -4, -6, -8, -10, -12, -12, -18, -24],
+            rank_elite_1: [10, 8, 6, 4, 2, -2, -4, -4, -4, -6, -8, -10, -12, -14, -18, -28],
+            rank_elite_2: [10, 8, 6, 4, 2, -2, -4, -4, -6, -6, -8, -10, -12, -16, -20, -28],
+            rank_elite_3: [10, 8, 6, 4, 0, -2, -4, -6, -6, -8, -10, -12, -14, -20, -24, -28]
+          },
+          ShowdownZeroBuilds_Duos: {
+            rank_unranked: [26, 20, 16, 12, 10, 8, 4, 2],
+            rank_bronze_1: [22, 18, 14, 12, 10, 6, 4, 2],
+            rank_bronze_2: [22, 18, 14, 10, 8, 6, 4, 2],
+            rank_bronze_3: [22, 16, 12, 10, 10, 6, 2, -2],
+            rank_silver_1: [22, 16, 12, 10, 8, 4, 2, -4],
+            rank_silver_2: [18, 14, 12, 10, 8, 4, -2, -6],
+            rank_silver_3: [18, 14, 12, 10, 6, 2, -4, -6],
+            rank_gold_1: [18, 14, 10, 6, 4, -2, -4, -8],
+            rank_gold_2: [16, 12, 8, 4, 2, -2, -6, -10],
+            rank_gold_3: [14, 10, 6, 2, 0, -6, -10, -14],
+            rank_platinum_1: [10, 8, 4, 0, -4, -8, -12, -18],
+            rank_platinum_2: [10, 8, 4, 0, -6, -10, -12, -18],
+            rank_platinum_3: [10, 8, 4, 0, -6, -10, -12, -18],
+            rank_champion_1: [10, 8, 4, -2, -6, -10, -12, -20],
+            rank_champion_2: [10, 8, 4, -2, -6, -10, -12, -22],
+            rank_champion_3: [10, 8, 4, -4, -6, -10, -12, -22],
+            rank_elite_1: [8, 6, 2, -4, -6, -10, -12, -24],
+            rank_elite_2: [8, 6, 2, -6, -6, -10, -14, -24],
+            rank_elite_3: [8, 6, 2, -6, -8, -12, -14, -24]
+          }
+        }
+      }
+    }
+  },
+  _TROPHY_LIVE = !(typeof localStorage !== 'undefined' && localStorage.getItem('TROPHY_LIVE') === '0'),
+  _TROPHY_DIAG = typeof localStorage !== 'undefined' && localStorage.getItem('TROPHY_DIAG') || '',
+  _TROPHY_DIAG_SEASON = _TROPHY_DIAG === 'notiers' ? {
+    is_timer_visible: true,
+    seasons: {
+      '1': {
+        start_date: '2020-01-01T00:00:00.000Z',
+        end_date: '2030-01-01T00:00:00.000Z',
+        tiers: []
+      }
+    }
+  } : _TROPHY_DIAG === 'xponly' ? {
+    is_timer_visible: true,
+    seasons: {
+      '1': {
+        start_date: '2020-01-01T00:00:00.000Z',
+        end_date: '2030-01-01T00:00:00.000Z',
+        tiers: [{
+          xp: 0
+        }, {
+          xp: 100
+        }, {
+          xp: 200
+        }, {
+          xp: 300
+        }, {
+          xp: 400
+        }]
+      }
+    }
+  } : {
+    is_timer_visible: true,
+    seasons: {
+      '1': {
+        start_date: '2020-01-01T00:00:00.000Z',
+        end_date: '2030-01-01T00:00:00.000Z',
+        tiers: [{
+          xp: 0,
+          free_rewards: []
+        }, {
+          xp: 100,
+          free_rewards: []
+        }, {
+          xp: 200,
+          free_rewards: []
+        }, {
+          xp: 300,
+          free_rewards: []
+        }, {
+          xp: 400,
+          free_rewards: []
+        }]
+      }
+    }
+  },
+  trophyRoadV2 = _TROPHY_DIAG === 'empty' || _TROPHY_DIAG === 'notiers' || _TROPHY_DIAG === 'xponly' ? {
+    Configs: {
+      'default': _TROPHY_DIAG_SEASON
+    }
+  } : _TROPHY_LIVE ? {
+    Configs: {
+      'default': {
+        is_timer_visible: true,
+        seasons: {
+          '1': {
+            start_date: '2020-01-01T00:00:00.000Z',
+            end_date: '2030-01-01T00:00:00.000Z',
+            tiers: [{
+              xp: 0,
+              free_rewards: []
+            }, {
+              xp: 5,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 20,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 50,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }, {
+              xp: 80,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 140,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 200,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 50
+              }]
+            }, {
+              xp: 290,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 380,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }, {
+              xp: 500,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 10
+              }]
+            }, {
+              xp: 620,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 860,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 1100,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 10
+              }]
+            }, {
+              xp: 1340,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }, {
+              xp: 1580,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 1740,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 2060,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 2300,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 30
+              }]
+            }, {
+              xp: 2540,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }, {
+              xp: 2780,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 90
+              }]
+            }, {
+              xp: 3020,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 3260,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 3500,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 100
+              }]
+            }, {
+              xp: 3740,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 3980,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 100
+              }]
+            }, {
+              xp: 4220,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }, {
+              xp: 4460,
+              free_rewards: [{
+                RewardType: 'LOLCoins',
+                Amount: 150
+              }]
+            }, {
+              xp: 4700,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 4940,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 5180,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB1'
+              }]
+            }, {
+              xp: 5420,
+              free_rewards: [{
+                RewardType: 'Product',
+                ProductID: 'lol.1v1.lootbox.RLB2'
+              }]
+            }]
+          }
+        }
+      }
+    }
+  } : {
+    Configs: {
+      'default': {
+        is_timer_visible: false,
+        seasons: {}
+      }
+    }
+  };
+try {
+  var _trd = trophyRoadV2 && trophyRoadV2.Configs && trophyRoadV2.Configs['default'] || {},
+    _s1 = _trd.seasons && _trd.seasons['1'];
+  console.log('%c[TROPHY-RC] diag=' + (_TROPHY_DIAG || '(off)') + ' live=' + _TROPHY_LIVE + ' → season1.tiers served = ' + (_s1 && _s1.tiers ? _s1.tiers.length : 'NO SEASON-1'), 'color:#0ff;font-weight:bold;font-size:13px');
+} catch (_0xca7581) {}
+const _BISECT = function () {
+  try {
+    return /[?&]rcbisect=1/.test(location.search) && window.localStorage && localStorage.getItem('RC_BISECT') || '';
+  } catch (_0xd6553e) {
+    return '';
+  }
+}();
+if (_BISECT) try {
+  console.warn('[RC_BISECT ACTIVE] ' + _BISECT + ' — RC payloads are being MUTATED (debug mode)');
+} catch (_0x130e60) {}
+const equipmentV1 = {
+    Configs: {
+      'default': {
+        are_loadouts_enabled: false
+      }
+    }
+  },
+  subscriptions = {
+    Configs: {
+      'default': {
+        subscriptions: {}
+      }
+    }
+  };
+function setDefaultValuesDirect(_0xa1fb4e) {
+  const _0x529505 = 'default';
+  try {
+    const _0x1a592d = gameModesV4.Configs['default'].modes_info;
+    for (const _0x1e97df in _0x1a592d) {
+      if (_0x1a592d[_0x1e97df].OverridenBattlePassPlacementXP != null) continue;
+      _0x1a592d[_0x1e97df].OverridenBattlePassPlacementXP = _0x1e97df === '1v1_Clash' ? [10, 3] : [0, 0];
+    }
+  } catch (_0x1a7ffa) {}
+  const _0x2fe77d = [['BattlePassV3', 'BattlePassID', battlePassV3], ['GameModesV4', 'GameModesID', gameModesV4], ['ProductsV7', 'ProductsID', productsV6], ['GeneralConfigV4', 'GeneralConfigID', generalConfigV4], ['StoreSettingsV9', 'StoreSettingsID', storeSettingsV8], ['GameEventsV4', 'GameEventsID', gameEventsV4], ['DailyRewardsV2', 'DailyRewardsID', dailyRewardsV2], ['XPBank', 'XPBankID', xpBank], ['ChallengesV2', 'ChallengesID', challengesV2], ['DailySpinsConfig', 'DailySpinsId', dailySpinsConfig], ['FTUEConfigV1', 'FTUEConfigID', ftueConfigV1], ['GameplaySettings', 'GameplaySettingsID', gameplaySettings], ['Leaderboards', 'LeaderboardsID', leaderboards], ['LimitedLockerSpinsConfig', 'LimitedLockerSpinID', limitedLockerSpinsConfig], ['LootBoxesDataV2', 'LootBoxesId', lootBoxesDataV2], ['LootBoxesGacha', 'LootBoxesId', lootBoxesGacha], ['RankRoad', 'RankRoadID', rankRoad], ['RankXPGainPerGameMode', 'RankXPGainPerGameModeId', rankXPGainPerGameMode], ['TrophyRoadV2', 'TrophyRoadID', trophyRoadV2], ['EquipmentV1', 'EquipmentID', equipmentV1], ['Subscriptions', 'SubscriptionsId', subscriptions]],
+    _0xe6d47e = {
+      Configs: {}
+    };
+  console.log('[Bisect] mode=' + _BISECT), _0x2fe77d.forEach(([_0x664ac9, _0xcda8d1, _0x4d990d], _0x12543a) => {
+    let _0x1c26d8 = _0x4d990d;
+    if (_BISECT === 'ALL-EMPTY') _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MODES' && _0x12543a !== 1) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MODES-BP' && _0x12543a !== 0 && _0x12543a !== 1) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MODES-BP-DR' && _0x12543a !== 0 && _0x12543a !== 1 && _0x12543a !== 6) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MODES-BP-DR-GE' && _0x12543a !== 0 && _0x12543a !== 1 && _0x12543a !== 5 && _0x12543a !== 6) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MODES-BP-DR-GE-GC' && _0x12543a !== 0 && _0x12543a !== 1 && _0x12543a !== 3 && _0x12543a !== 5 && _0x12543a !== 6) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-EXCEPT-MAIN-PLUS-SMALL' && ![0, 1, 3, 5, 6, 7, 11, 17, 20].includes(_0x12543a)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-PLUS-PRODUCTS' && ![0, 1, 2, 3, 5, 6, 7, 11, 17, 20].includes(_0x12543a)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'EMPTY-PLUS-STORE' && ![0, 1, 3, 4, 5, 6, 7, 11, 17, 20].includes(_0x12543a)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'PLUS-PRODUCTS-STORE' && ![0, 1, 2, 3, 4, 5, 6, 7, 11, 17, 20].includes(_0x12543a)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A' && _0x12543a < 9) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'B' && _0x12543a >= 9) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A1' && _0x12543a < 4) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A2' && _0x12543a >= 4 && _0x12543a < 9) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A1a' && _0x12543a < 2) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A1b' && _0x12543a >= 2 && _0x12543a < 4) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A1a1' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'A1a2' && _0x12543a === 1) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'C-only-pascal' && _0x12543a !== 1 && _0x12543a !== 2 && _0x12543a !== 3 && _0x12543a !== 4 && _0x12543a !== 5 && _0x12543a !== 6) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'C-no-products' && (_0x12543a === 2 || _0x12543a === 3 || _0x12543a === 0)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'C-no-general' && (_0x12543a === 4 || _0x12543a === 0)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'C-no-modes' && (_0x12543a === 1 || _0x12543a === 0)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'C-no-store' && (_0x12543a === 5 || _0x12543a === 6 || _0x12543a === 0)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'OOB-no-products' && (_0x12543a === 2 || _0x12543a === 3)) _0x1c26d8 = _0xe6d47e;
+    _BISECT === 'OOB-products-no-skins' && (_0x12543a === 2 || _0x12543a === 3) && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].skins_data = {});
+    _BISECT === 'OOB-products-no-bppremium' && (_0x12543a === 2 || _0x12543a === 3) && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass_premium_data = {});
+    _BISECT === 'OOB-products-no-influencer' && (_0x12543a === 2 || _0x12543a === 3) && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].influencer_campaign_data = null);
+    _BISECT === 'OOB-products-no-coins' && (_0x12543a === 2 || _0x12543a === 3) && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].coins_data = {});
+    if (_BISECT === 'PRODUCTS-malformed' && (_0x12543a === 2 || _0x12543a === 3)) {
+      _0xa1fb4e.ProductsV6 = '{invalid_json', _0xa1fb4e.ProductsV7 = '{invalid_json', _0xa1fb4e.ProductsID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'GENERAL-malformed' && _0x12543a === 4) {
+      _0xa1fb4e.GeneralConfigV4 = '{invalid_json', _0xa1fb4e.GeneralConfigID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'CHALLENGES-malformed' && _0x12543a === 8) {
+      _0xa1fb4e.ChallengesV2 = '{invalid_json', _0xa1fb4e.ChallengesID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'FTUE-malformed' && _0x12543a === 10) {
+      _0xa1fb4e.FTUEConfigV1 = '{invalid_json', _0xa1fb4e.FTUEConfigID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'LEADERBOARDS-malformed' && _0x12543a === 12) {
+      _0xa1fb4e.Leaderboards = '{invalid_json', _0xa1fb4e.LeaderboardsID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'EQUIPMENT-malformed' && _0x12543a === 19) {
+      _0xa1fb4e.EquipmentV1 = '{invalid_json', _0xa1fb4e.EquipmentID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'GACHA-malformed' && _0x12543a === 15) {
+      _0xa1fb4e.LootBoxesGacha = '{invalid_json', _0xa1fb4e.LootBoxesId = _0x529505;
+      return;
+    }
+    _BISECT === 'OOB-products-no-skus' && (_0x12543a === 2 || _0x12543a === 3) && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].skins_data = {}, _0x1c26d8.Configs['default'].coins_data = {}, _0x1c26d8.Configs['default'].battle_pass_premium_data = {}, _0x1c26d8.Configs['default'].influencer_campaign_data = null);
+    if (_BISECT === 'OOB-no-general' && _0x12543a === 4) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'OOB-no-store' && (_0x12543a === 5 || _0x12543a === 6)) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'OOB-no-bp' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'BP-minimal' && _0x12543a === 0) _0x1c26d8 = {
+      Configs: {
+        'default': {
+          current_season: 1
+        }
+      }
+    };
+    _BISECT === 'BP-no-tiers' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass.tiers = []);
+    _BISECT === 'BP-no-banner' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), delete _0x1c26d8.Configs['default'].banner_image, delete _0x1c26d8.Configs['default'].premium_popup_config);
+    _BISECT === 'BP-no-dates' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), delete _0x1c26d8.Configs['default'].start_date, delete _0x1c26d8.Configs['default'].end_date);
+    _BISECT === 'BP-empty-rewards' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass.tiers = _0x1c26d8.Configs['default'].battle_pass.tiers.map(function (_0x54d064) {
+      return {
+        xp: _0x54d064.xp,
+        free_rewards: [],
+        premium_rewards: []
+      };
+    }));
+    _BISECT === 'BP-1tier' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass.tiers = [{
+      xp: 100,
+      free_rewards: [],
+      premium_rewards: []
+    }]);
+    _BISECT === 'BP-1tier-placement' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass.tiers = [{
+      xp: 100,
+      free_rewards: [],
+      premium_rewards: []
+    }], _0x1c26d8.Configs['default'].battle_pass.placement_xp = [50]);
+    _BISECT === 'BP-empty-tier-obj' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].battle_pass.tiers = [{}]);
+    if (_BISECT === 'MODES-min' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    _BISECT === 'MODES-min' && _0x12543a === 1 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].ModesInfo = {
+      '1v1': {
+        OverridenRangeIncreaseFactor: 12000,
+        OverridenBattlePassPlacementXP: []
+      }
+    });
+    if (_BISECT === 'MODES-empty' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    _BISECT === 'MODES-empty' && _0x12543a === 1 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), _0x1c26d8.Configs['default'].ModesInfo = {});
+    if (_BISECT === 'MODES-omit' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    _BISECT === 'MODES-omit' && _0x12543a === 1 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), delete _0x1c26d8.Configs['default'].ModesInfo);
+    if (_BISECT === 'MODES-omit-key' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'MODES-omit-key' && _0x12543a === 1) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'MODES-malformed' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'MODES-malformed' && _0x12543a === 1) {
+      _0xa1fb4e.GameModesV4 = '{invalid_json', _0xa1fb4e.GameModesID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'MODES-null' && _0x12543a === 1) {
+      _0xa1fb4e.GameModesV4 = 'null', _0xa1fb4e.GameModesID = _0x529505;
+      return;
+    }
+    if (_BISECT === 'MODES-skip' && _0x12543a === 0) _0x1c26d8 = _0xe6d47e;
+    if (_BISECT === 'MODES-skip' && _0x12543a === 1) {
+      _0xa1fb4e.GameModesID = _0x529505;
+      return;
+    }
+    _BISECT === 'BP-only-battle-pass' && _0x12543a === 0 && (_0x1c26d8 = {
+      Configs: {
+        'default': {
+          battle_pass: {
+            placement_xp: [],
+            tiers: [{
+              xp: 0,
+              free_rewards: [],
+              premium_rewards: []
+            }]
+          }
+        }
+      }
+    }), _BISECT === 'BP-no-battle-pass-field' && _0x12543a === 0 && (_0x1c26d8 = JSON.parse(JSON.stringify(_0x4d990d)), delete _0x1c26d8.Configs['default'].battle_pass), _0xa1fb4e[_0x664ac9] = JSON.stringify(_0x1c26d8), _0xa1fb4e[_0xcda8d1] = _0x529505;
+  });
 }
