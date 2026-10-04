@@ -1,6 +1,6 @@
-# 1v1lol
 
 <img width="1080" height="499" alt="de1c37eca6cc944c7d6f1e55c07d91ca" src="https://github.com/user-attachments/assets/b27f1769-e950-497d-abb2-7d0f620bc6b4" />
+# 1v1lol
 
 <p align="center">
   
