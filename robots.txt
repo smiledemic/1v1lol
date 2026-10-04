@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /donotreadme.txt
+Disallow: /ExternalBuild/
