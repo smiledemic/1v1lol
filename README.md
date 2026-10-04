@@ -2,6 +2,11 @@
 
 ## 1v1lol: Reloaded
 
+[![GitHub stars](https://img.shields.io/github/stars/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/watchers)
+[![GitHub issues](https://img.shields.io/github/issues/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/issues)
+[![GitHub last commit](https://img.shields.io/github/last-commit/smiledemic/1v1lol?style=flat)](https://github.com/smiledemic/1v1lol/commits/main/)
 A working HTML5 revival of **1v1.LOL**, based on **v446.UNITY**.
 
 ## Game Modes
